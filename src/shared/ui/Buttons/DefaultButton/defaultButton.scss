@@ -1,0 +1,25 @@
+@import "../../../../app/style/colors.scss";
+
+.default-button {
+  width: 100%;
+}
+.default-button-item {
+  max-width: 100%;
+  width: 343px;
+  padding: 20px;
+  background-color: $purple;
+  border-radius: 10px;
+  color: $white;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+
+  &:disabled {
+    background-color: $grayLight;
+    cursor: not-allowed;
+  }
+}
+
+.default-button-item:hover {
+  background-color: $hoverPurple;
+}

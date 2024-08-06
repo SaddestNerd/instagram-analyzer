@@ -1,22 +1,21 @@
-@import "../app/style/colors.scss";
-@import "../app/fonts/FuturaPT/stylesheet.css";
+@import "./style/colors.scss";
 
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-
+.Main-Wrapper {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  // overflow-x: hidden;
 }
-
-
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-input[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
+html{
+  background-color: $backgroundPurple;
 }

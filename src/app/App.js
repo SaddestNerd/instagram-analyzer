@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom"
 import { useRoutes } from "./routes/general.routes"
 import "./style/normalize.css"
 import "./style/reset.css"
+import "./style/fonts.scss"
 
 function App() {
   const routes = useRoutes()

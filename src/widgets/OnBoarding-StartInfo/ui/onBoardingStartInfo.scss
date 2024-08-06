@@ -1,0 +1,25 @@
+@import "../../../app//style//colors.scss";
+
+.onboarding-startinfo-section {
+  position: relative;
+  z-index: 2;
+  margin-top: 380px;
+  background-color: $white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 40px 30px;
+  .onboarding-startinfo-block {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      width: 80%;
+      color: $black;
+    }
+    p + p {
+      color: $darkGray;
+    }
+  }
+}
