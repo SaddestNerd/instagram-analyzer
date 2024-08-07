@@ -4,29 +4,32 @@ import { StartNavigation } from "../../../../features"
 import NavigationSteps from "../../NavigationSteps/ui"
 
 const UnderInfoNavigation = ({
-  title,
-  description,
-  buttonText,
+  currentForm,
   nextForm,
-  currentStep,
-  totalSteps,
-  onStepChange,
-  isLastForm,
+  setCurrentForm,
+  onboardingForms,
 }) => {
+  const form = onboardingForms[currentForm]
+  const isLastForm = currentForm === onboardingForms.length - 1
+
   return (
     <div className="onboarding-navigation-section">
       <div className="onboarding-navigation-block">
-        <p className="title30-semibold-outfit">{title}</p>
-        <p className="title16-regular-outfit">{description}</p>
+        <p className="title30-semibold-outfit">{form.title}</p>
+        <p className="title16-regular-outfit">{form.description}</p>
         <NavigationSteps
-          currentStep={currentStep}
-          totalSteps={totalSteps}
-          onStepChange={onStepChange}
+          currentStep={currentForm}
+          totalSteps={onboardingForms.length}
+          onStepChange={setCurrentForm}
         />
         <StartNavigation
-          text={buttonText}
+          text={form.buttonText}
           onClick={nextForm}
-          link={isLastForm ? "/main" : "/onboarding"}
+          link={isLastForm ? "/user-enter" : "/onboarding"}
+          typeIcon="arrow"
+          widthSize="18"
+          heightSize="14"
+          altIcon="arrow"
         />
       </div>
     </div>

@@ -1,28 +1,23 @@
 @import "../../../../app/style/colors.scss";
 
-.default-button {
+.default-input{
   width: 100%;
 }
-.default-button-item {
+.default-input-item {
   max-width: 100%;
   width: 343px;
   height: 56px;
-  background-color: $purple;
+  background-color: $BG;
   border-radius: 10px;
   color: $white;
-  cursor: pointer;
   text-transform: uppercase;
-  transition: 0.3s ease;
   position: relative;
+  outline: none;
+  border: 1px solid $cardBorders;
+
   &:disabled {
     background-color: $grayLight;
     cursor: not-allowed;
-  }
-  svg {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 

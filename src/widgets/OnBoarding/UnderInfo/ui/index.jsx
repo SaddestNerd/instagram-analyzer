@@ -1,7 +1,7 @@
 import React from "react"
 import "./underInfo.scss"
 import Icon from "../../../../shared/ui/Icons"
-import { StartAction } from "../../../../features"
+import { StartNavigation } from "../../../../features"
 const OnBoadrdingUnder = () => {
   return (
     <div className="onboarding-startinfo-section">
@@ -13,7 +13,7 @@ const OnBoadrdingUnder = () => {
           visits your page, how interesting your friends' profiles are, and
           more!
         </p>
-        <StartAction />
+        <StartNavigation text="Start analysing" link="/onboarding" />
       </div>
     </div>
   )

@@ -4,6 +4,8 @@ import * as Icons from "../../lib/icons/icons"
 const iconMapping = {
   arrow: Icons.Arrow,
   logo: Icons.Logo,
+  inst: Icons.Inst,
+  email: Icons.Email
 }
 
 const Icon = ({ type, width, height, color, alt = "icon", className }) => {
