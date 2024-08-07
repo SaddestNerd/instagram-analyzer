@@ -1,15 +1,15 @@
 import React from "react"
-import * as Icons from "../lib/icons/icons"
+import * as Icons from "../../lib/icons/icons"
 
 const iconMapping = {
+  arrow: Icons.Arrow,
   logo: Icons.Logo,
 }
 
-const Icon = ({ type, width, height, color = "inherit", alt = "icon" }) => {
+const Icon = ({ type, width, height, color, alt = "icon", className }) => {
   const SvgIcon = iconMapping[type]
 
   if (!SvgIcon) {
-    console.error(`Icon type "${type}" not found.`)
     return null
   }
 
@@ -21,7 +21,7 @@ const Icon = ({ type, width, height, color = "inherit", alt = "icon" }) => {
   }
 
   if (typeof SvgIcon === "string") {
-    return <img src={SvgIcon} alt={alt} style={styles} />
+    return <img src={SvgIcon} alt={alt} style={styles} className={className} />
   }
 
   return <SvgIcon aria-label={alt} style={styles} />

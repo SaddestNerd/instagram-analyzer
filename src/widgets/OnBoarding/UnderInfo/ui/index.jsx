@@ -1,8 +1,8 @@
 import React from "react"
-import "./onBoardingStartInfo.scss"
-import Icon from "../../../shared/ui/Icons"
-import { StartAction } from "../../../features"
-const OnBoardingStart = () => {
+import "./underInfo.scss"
+import Icon from "../../../../shared/ui/Icons"
+import { StartAction } from "../../../../features"
+const OnBoadrdingUnder = () => {
   return (
     <div className="onboarding-startinfo-section">
       <div className="onboarding-startinfo-block">
@@ -19,4 +19,4 @@ const OnBoardingStart = () => {
   )
 }
 
-export default OnBoardingStart
+export default OnBoadrdingUnder

@@ -1,0 +1,21 @@
+@import "../../../../app//style//colors.scss";
+
+.onboarding-navigation-steps {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.step-dot {
+  width: 20px;
+  height: 4px;
+  border-radius: 34px;
+  background-color: $grayLight;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &.active {
+    background-color: $black;
+  }
+}

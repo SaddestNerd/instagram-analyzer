@@ -13,10 +13,16 @@
   cursor: pointer;
   text-transform: uppercase;
   transition: 0.3s ease;
-
+  position: relative;
   &:disabled {
     background-color: $grayLight;
     cursor: not-allowed;
+  }
+  svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

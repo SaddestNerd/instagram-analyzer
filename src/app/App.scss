@@ -1,21 +1,12 @@
 @import "./style/colors.scss";
 
 .Main-Wrapper {
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-flex: 1;
-  flex: 1 1 auto;
+  position: absolute;
   width: 100%;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  height: 100vh;
-  min-height: 100vh;
-  position: relative;
-  // overflow-x: hidden;
+  top: 0px;
+  bottom: 0px;
+  box-sizing: border-box;
 }
-html{
+html {
   background-color: $backgroundPurple;
 }
