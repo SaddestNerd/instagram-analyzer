@@ -21,8 +21,10 @@
     .forgotten-block {
       color: $darkGray;
       margin-bottom: 15px;
-      span{
-        color: $purple
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        color: $purple;
       }
     }
     .copyright-block {

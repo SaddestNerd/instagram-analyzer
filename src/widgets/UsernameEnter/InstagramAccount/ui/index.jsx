@@ -1,14 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import "./instagramAccount.scss"
 import { StartNavigation, EnterUserWithIcon } from "../../../../features"
+import { Link } from "react-router-dom"
 
-const InstagramAccount = ({
-  title,
-  description,
-  buttonText,
-  nextForm,
-  isLastForm,
-}) => {
+const InstagramAccount = ({ nextForm }) => {
+  const [username, setUsername] = useState("")
+
+  const handleInputChange = (value) => {
+    setUsername(value)
+  }
   return (
     <div className="instagram-account-section">
       <div className="instagram-account-block">
@@ -16,15 +16,17 @@ const InstagramAccount = ({
         <p className="title16-regular-outfit">
           Enter your Instagram username to get full data analysis
         </p>
-        <EnterUserWithIcon/>
+        <EnterUserWithIcon onInputChange={handleInputChange} />
         <StartNavigation
           text="start analysis"
           onClick={nextForm}
-          link={isLastForm ? "/main" : "/onboarding"}
+          isDisabled={username.length < 3}
         />
         <p className="title14-regular-outfit forgotten-block">
           Forgotten your account name?{" "}
-          <span className="title16-semibold-outfit">Skip step</span>
+          <Link to="/" className="title16-semibold-outfit">
+            Skip step
+          </Link>
         </p>
         <p className="title11-regular-outfit copyright-block">
           Copyright ® 2024 FollowStats: Profile Analyzer. All Rights Reserved

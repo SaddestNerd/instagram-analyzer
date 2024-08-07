@@ -18,11 +18,14 @@
 }
 
 .background-pic5 {
-//   background-image: url("../../../shared/assets/Pic2.png"),
-//     url("../../../shared/assets/BG.png");
-//   background-position:
-//     center center,
-//     center top;
-//   background-size: 60%, contain;
-//   background-repeat: no-repeat, no-repeat;
+  background-image: url("../../../shared/assets/Instlogo.svg");
+  background-position: center 20%;
+  background-size: 35%;
+  background-repeat: no-repeat;
+}
+.background-pic6 {
+  background-image: url("../../../shared/assets/BG6.png");
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

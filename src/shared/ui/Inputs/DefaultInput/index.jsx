@@ -1,25 +1,15 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import "./defaultInput.scss"
-import Icon from "../../Icons"
-const DefaultInput = ({
-  onClick,
-  id,
-  widthSize,
-  heightSize,
-  colorIcon,
-  altIcon,
-  classNameIcon,
-  placeholder,
-}) => {
+
+const DefaultInput = ({ onChange, placeholder }) => {
   return (
     <div className="default-input">
       <input
-        className="default-input-item"
+        className="title16-regular-outfit default-input-item"
         placeholder={placeholder}
-        onClick={onClick}
-      >
-      </input>
+        type="text"
+        onChange={onChange}
+      ></input>
     </div>
   )
 }

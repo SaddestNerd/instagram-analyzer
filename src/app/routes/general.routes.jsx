@@ -1,6 +1,10 @@
 import React from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
-import { OnBoardingNavigationPage, OnBoardingPage, UsernameEnterPage } from "../../pages"
+import {
+  OnBoardingNavigationPage,
+  OnBoardingPage,
+  UsernameEnterPage,
+} from "../../pages"
 
 export const useRoutes = () => {
   return (

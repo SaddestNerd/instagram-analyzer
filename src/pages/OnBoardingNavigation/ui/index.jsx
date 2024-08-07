@@ -1,19 +1,21 @@
-import React, { useState } from "react";
-import "./onBoardingNavigation.scss";
-import { UnderInfoNavigation } from "../../../widgets";
-import { onboardingForms } from "../../../shared/model/onboardingModel";
+import React, { useState } from "react"
+import "./onBoardingNavigation.scss"
+import { UnderInfoNavigation } from "../../../widgets"
+import { onboardingForms } from "../model/onboardingModel"
 
 const OnBoardingNavigationPage = () => {
-  const [currentForm, setCurrentForm] = useState(0);
+  const [currentForm, setCurrentForm] = useState(0)
 
   const nextForm = () => {
     if (currentForm < onboardingForms.length - 1) {
-      setCurrentForm((prev) => prev + 1);
+      setCurrentForm((prev) => prev + 1)
     }
-  };
+  }
 
   return (
-    <div className={`onboarding-navigation-wrapper ${onboardingForms[currentForm].className1}`}>
+    <div
+      className={`onboarding-navigation-wrapper ${onboardingForms[currentForm].className1}`}
+    >
       <UnderInfoNavigation
         currentForm={currentForm}
         nextForm={nextForm}
@@ -21,7 +23,7 @@ const OnBoardingNavigationPage = () => {
         onboardingForms={onboardingForms}
       />
     </div>
-  );
-};
+  )
+}
 
-export default OnBoardingNavigationPage;
+export default OnBoardingNavigationPage

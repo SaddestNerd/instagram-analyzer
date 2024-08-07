@@ -12,10 +12,15 @@ const DefaultButton = ({
   colorIcon,
   altIcon,
   classNameIcon,
+  isDisabled,
 }) => {
   return (
     <Link to={link} className="default-button">
-      <button className="default-button-item" onClick={onClick}>
+      <button
+        className="default-button-item"
+        onClick={onClick}
+        disabled={isDisabled}
+      >
         <span className="title16-semibold-outfit">{text}</span>
         <Icon
           type={typeIcon}

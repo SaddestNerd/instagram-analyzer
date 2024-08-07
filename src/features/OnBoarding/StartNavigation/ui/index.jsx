@@ -1,7 +1,16 @@
 import React from "react"
 import { DefaultButton } from "../../../../shared"
 
-const StartNavigation = ({ text, onClick, link, typeIcon, widthSize, heightSize, altIcon }) => {
+const StartNavigation = ({
+  text,
+  onClick,
+  link,
+  typeIcon,
+  widthSize,
+  heightSize,
+  altIcon,
+  isDisabled,
+}) => {
   return (
     <DefaultButton
       text={text}
@@ -11,7 +20,7 @@ const StartNavigation = ({ text, onClick, link, typeIcon, widthSize, heightSize,
       widthSize={widthSize}
       heightSize={heightSize}
       altIcon={altIcon}
-      
+      isDisabled={isDisabled}
     />
   )
 }

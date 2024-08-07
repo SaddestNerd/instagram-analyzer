@@ -18,6 +18,10 @@
     background-color: $grayLight;
     cursor: not-allowed;
   }
+  &:disabled:hover {
+    background-color: $grayLight;
+    cursor: not-allowed;
+  }
   svg {
     position: absolute;
     right: 20px;

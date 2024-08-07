@@ -1,0 +1,17 @@
+@import "../../../../app/style/colors.scss";
+.searching-section {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Outfit-Regular";
+  color: $white;
+  .searching-margin {
+    margin-bottom: 20px;
+  }
+  .procent-title {
+    font-size: 140px;
+    span {
+      font-size: 80px;
+    }
+  }
+}

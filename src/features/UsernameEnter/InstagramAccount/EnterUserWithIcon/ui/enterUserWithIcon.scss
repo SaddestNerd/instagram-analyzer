@@ -1,0 +1,17 @@
+.enteruser-input-block {
+  position: relative;
+  width: 100%;
+  max-width: 343px;
+  .default-input {
+    input {
+      padding-left: 55px;
+    }
+  }
+  svg {
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
