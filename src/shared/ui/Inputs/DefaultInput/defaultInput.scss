@@ -3,6 +3,11 @@
 .default-input {
   width: 100%;
 
+  .default-input-text{
+    margin-bottom: 5px;
+    text-align: left;
+    color: $black
+  }
   .default-input-item {
     max-width: 100%;
     width: 343px;

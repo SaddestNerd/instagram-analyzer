@@ -1,14 +1,10 @@
 import React, { useState } from "react"
 import "./instagramAccount.scss"
-import { StartNavigation, EnterUserWithIcon } from "../../../../features"
+import { DataAnalysisInst, EnterUserWithIcon } from "../../../../features"
 import { Link } from "react-router-dom"
 
 const InstagramAccount = ({ nextForm }) => {
-  const [username, setUsername] = useState("")
-
-  const handleInputChange = (value) => {
-    setUsername(value)
-  }
+ 
   return (
     <div className="instagram-account-section">
       <div className="instagram-account-block">
@@ -16,12 +12,7 @@ const InstagramAccount = ({ nextForm }) => {
         <p className="title16-regular-outfit">
           Enter your Instagram username to get full data analysis
         </p>
-        <EnterUserWithIcon onInputChange={handleInputChange} />
-        <StartNavigation
-          text="start analysis"
-          onClick={nextForm}
-          isDisabled={username.length < 3}
-        />
+        <DataAnalysisInst  onClick={nextForm} />
         <p className="title14-regular-outfit forgotten-block">
           Forgotten your account name?{" "}
           <Link to="/" className="title16-semibold-outfit">
