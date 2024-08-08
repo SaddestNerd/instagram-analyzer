@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Outfit-SemiBold";
+  src: url("../fonts/Outfit/Outfit-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit-Regular";
+  src: url("../fonts/Outfit/Outfit-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Urbanist-Medium";
+  src: url("../fonts/Urbanist/Urbanist-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Urbanist-Regular";
+  src: url("../fonts/Urbanist/Urbanist-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  .title40-semibold-outfit {
+    font-size: 40px;
+    font-family: "Outfit-Semibold";
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0%;
+  }
+  .title30-semibold-outfit {
+    font-size: 30px;
+    font-family: "Outfit-SemiBold";
+    font-weight: 600;
+    letter-spacing: 0%;
+  }
+  .title24-semibold-outfit {
+    font-size: 24px;
+    font-family: "Outfit-SemiBold";
+    font-weight: 600;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  } 
+  .title20-semibold-outfit {
+    font-size: 20px;
+    font-family: "Outfit-SemiBold";
+    font-weight: 600;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  } 
+  .title18-semibold-outfit {
+    font-size: 20px;
+    font-family: "Outfit-SemiBold";
+    font-weight: 600;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  } 
+
+  .title16-semibold-outfit {
+    font-size: 16px;
+    font-family: "Outfit-SemiBold";
+    font-weight: 600;
+    letter-spacing: 0%;
+  }
+  .title14-semibold-outfit {
+    font-size: 14px;
+    font-family: "Outfit-SemiBold";
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: 0%;
+  }
+
+  .title16-regular-outfit {
+    font-size: 16px;
+    font-family: "Outfit-Regular";
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 0%;
+  }
+  .title14-regular-outfit {
+    font-size: 14px;
+    font-family: "Outfit-Regular";
+    font-weight: 400;
+    line-height: 129.99999523162842%;
+    letter-spacing: 0%;
+  }
+  .title11-regular-outfit {
+    font-size: 11px;
+    font-family: "Outfit-Regular";
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 0%;
+  }
+
+  .title32-medium-urbanist {
+    font-size: 32px;
+    font-family: "Urbanist-Medium";
+    font-weight: 500;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title24-medium-urbanist {
+    font-size: 24px;
+    font-family: "Urbanist-Medium";
+    font-weight: 500;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title20-medium-urbanist {
+    font-size: 20px;
+    font-family: "Urbanist-Medium";
+    font-weight: 500;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title16-medium-urbanist {
+    font-size: 16px;
+    font-family: "Urbanist-Medium";
+    font-weight: 500;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title14-medium-urbanist {
+    font-size: 14px;
+    font-family: "Urbanist-Medium";
+    font-weight: 500;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+
+  .title14-regular-urbanist {
+    font-size: 14px;
+    font-family: "Urbanist-Regular";
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: -1%;
+  }
+  .title12-regular-urbanist {
+    font-size: 12px;
+    font-family: "Urbanist-Regular";
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0%;
+  }
+}

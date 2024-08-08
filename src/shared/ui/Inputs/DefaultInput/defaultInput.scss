@@ -1,0 +1,37 @@
+@import "../../../../app/style/colors.scss";
+
+.default-input {
+  width: 100%;
+  .flex{
+    display: flex;
+    gap: 8px;
+    justify-content: right;
+  }
+  .desciption{
+    text-align: left;
+    margin-bottom: 4px;
+  }
+
+  .default-input-item {
+    max-width: 100%;
+    width: 343px;
+    height: 56px;
+    background-color: $BG;
+    border-radius: 10px;
+    color: $black;
+    position: relative;
+    outline: none;
+    border: 1px solid $cardBorders;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+    &:focus {
+      border: 1px solid $purple;
+    }
+  }
+}
+
+.fixed-width{
+  width: auto;
+}

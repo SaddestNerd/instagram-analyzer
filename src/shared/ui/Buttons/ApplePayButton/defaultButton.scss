@@ -1,0 +1,36 @@
+@import "../../../../app/style/colors.scss";
+
+.apple-button {
+  width: 100%;  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.apple-button-item {
+  max-width: 100%;
+  width: 343px;
+  height: 56px;
+  background-color: #000000;
+  border-radius: 10px;
+  color: $white;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:disabled {
+    background-color: $grayLight;
+    cursor: not-allowed;
+  }
+  &:disabled:hover {
+    background-color: $grayLight;
+    cursor: not-allowed;
+  }
+}
+
+.default-button-item:hover {
+  background-color: $hoverPurple;
+}

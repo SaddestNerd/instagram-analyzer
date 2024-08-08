@@ -1,0 +1,48 @@
+@import "../../../app//style//colors.scss";
+
+.onboarding-navigation-wrapper {
+  text-align: center;
+  display: flex;
+  height: 100%;
+  max-width: 480px;
+  margin: auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  background-color: $backgroundPurple;
+}
+
+.background-pic2 {
+  background-image: url("../../../shared/assets/Pic2.png"),
+    url("../../../shared/assets/BG.png");
+  background-position:
+    center center,
+    center top;
+  background-size: 60%, contain;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.background-pic3 {
+  background-image: url("../../../shared/assets/Pic3.png"),
+    url("../../../shared/assets/BG.png");
+  background-position:
+    center center,
+    center top;
+  background-size: 70%, contain;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.background-pic4 {
+  background-image: url("../../../shared/assets/Pic4.png"),
+    url("../../../shared/assets/BG.png");
+  background-position:
+    center center,
+    center top;
+  background-size: 80%, contain;
+  background-repeat: no-repeat, no-repeat;
+}

@@ -1,0 +1,12 @@
+@import "./style/colors.scss";
+
+.Main-Wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  box-sizing: border-box;
+}
+html {
+  background-color: $backgroundPurple;
+}
