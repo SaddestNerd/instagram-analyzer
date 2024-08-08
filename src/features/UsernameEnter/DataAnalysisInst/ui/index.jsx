@@ -19,6 +19,7 @@ const DataAnalysisInst = ({onClick }) => {
           placeholder="Enter your username"
           onChange={handleChange}
           value={username}
+          type="text"
         />
       </div>
       <DefaultButton

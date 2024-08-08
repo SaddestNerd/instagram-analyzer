@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react"
 
-const useUsernameEnter = (currentForm) => {
+const useUsernameEnter = (currentForm, navigate) => {
   const [progress, setProgress] = useState(0)
-  const [navigate, setNavigate] = useState(false)
 
   useEffect(() => {
     if (currentForm === 1) {
@@ -13,16 +12,16 @@ const useUsernameEnter = (currentForm) => {
           } else {
             clearInterval(interval)
             setTimeout(() => {
-              setNavigate(true)
+              navigate("/account-create")
             }, 1000)
             return prev
           }
         })
       }, 300)
     }
-  }, [currentForm])
+  }, [currentForm, navigate])
 
-  return { progress, navigate }
+  return { progress }
 }
 
 export default useUsernameEnter

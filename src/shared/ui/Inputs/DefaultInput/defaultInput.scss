@@ -6,7 +6,8 @@
   .default-input-text{
     margin-bottom: 5px;
     text-align: left;
-    color: $black
+    color: $black;
+    
   }
   .default-input-item {
     max-width: 100%;
@@ -24,6 +25,9 @@
 
     &:focus {
       border: 1px solid $purple;
+    }
+    &.error {
+      color: $pink;
     }
   }
 }

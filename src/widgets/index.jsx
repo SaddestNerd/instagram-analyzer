@@ -6,3 +6,6 @@ export { default as OnboardingNavigationSteps } from "./OnBoarding/NavigationSte
 //Username enter
 export { default as InstagramAccount } from "./UsernameEnter/InstagramAccount/ui"
 export { default as Searching } from "./UsernameEnter/Searching/ui"
+
+//Account Creating
+export { default as CreateAcc } from "./AccountCreating/CreateAcc/ui"

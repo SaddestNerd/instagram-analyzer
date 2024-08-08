@@ -6,9 +6,13 @@ const iconMapping = {
   logo: Icons.Logo,
   inst: Icons.Inst,
   email: Icons.Email,
+  openEye: Icons.OpenEye,
+  closedEye: Icons.ClosedEye,
+  userIcon: Icons.UserIcon,
+
 }
 
-const Icon = ({ type, width, height, color, alt = "icon", className }) => {
+const Icon = ({ type, width, height, color, alt = "icon", className, strokeColor }) => {
   const SvgIcon = iconMapping[type]
 
   if (!SvgIcon) {
@@ -20,6 +24,7 @@ const Icon = ({ type, width, height, color, alt = "icon", className }) => {
     height: height,
     display: "inline-block",
     fill: color,
+    "--stroke-color": strokeColor,
   }
 
   if (typeof SvgIcon === "string") {

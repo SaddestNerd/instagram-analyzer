@@ -1,0 +1,31 @@
+@import "../../../../app/style/colors.scss";
+
+.access-app-block {
+    position: relative;
+    width: 100%;
+    max-width: 343px;
+    margin-top: 14px;
+  .acess-app-input {
+    margin-top: 20px;
+    position: relative;
+    svg {
+        position: absolute;
+        z-index: 1;
+        right: 20px;
+        top: 63%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+  }
+  .error-message {
+    color: $pink;
+    text-align: left;
+    margin-top: 8px;
+  }
+  .acess-app-button{
+    border-top: 1px solid $cardBorders;
+    padding-top: 30px;
+    margin-top: 60px;
+  }
+}
