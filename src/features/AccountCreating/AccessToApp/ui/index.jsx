@@ -58,7 +58,7 @@ const AccessToApp = ({ onClick }) => {
       )}
       <div className="acess-app-button">
       <DefaultButton
-        text="start analysis"
+        text="sign up"
         onClick={onClick}
         isDisabled={isButtonDisabled}
       />

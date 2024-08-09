@@ -7,7 +7,11 @@
     margin-bottom: 5px;
     text-align: left;
     color: $black;
-    
+  }
+  .flex{
+    display: flex;
+    gap: 8px;
+    justify-content: right;
   }
   .default-input-item {
     max-width: 100%;
@@ -30,4 +34,7 @@
       color: $pink;
     }
   }
+}
+.fixed-width{
+  width: auto;
 }

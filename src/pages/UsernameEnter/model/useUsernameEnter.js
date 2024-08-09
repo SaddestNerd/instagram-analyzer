@@ -12,7 +12,7 @@ const useUsernameEnter = (currentForm, navigate) => {
           } else {
             clearInterval(interval)
             setTimeout(() => {
-              navigate("/account-create")
+              navigate("/get-account")
             }, 1000)
             return prev
           }
