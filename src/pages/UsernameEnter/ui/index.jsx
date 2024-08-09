@@ -1,12 +1,13 @@
 import React, { useState } from "react"
 import "./usernameEnter.scss"
 import { InstagramAccount, Searching } from "../../../widgets"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import useUsernameEnter from "../model/useUsernameEnter"
 
 const UsernameEnterPage = () => {
   const [currentForm, setCurrentForm] = useState(0)
-  const { progress, navigate } = useUsernameEnter(currentForm)
+  const navigate = useNavigate()
+  const { progress } = useUsernameEnter(currentForm, navigate)
 
   const nextForm = () => {
     setCurrentForm(1)
@@ -18,8 +19,6 @@ const UsernameEnterPage = () => {
     >
       {currentForm === 0 ? (
         <InstagramAccount nextForm={nextForm} />
-      ) : navigate ? (
-        <Link to="/main" />
       ) : (
         <Searching progress={progress} />
       )}

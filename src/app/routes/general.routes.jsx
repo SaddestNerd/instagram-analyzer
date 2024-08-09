@@ -4,7 +4,8 @@ import {
   OnBoardingNavigationPage,
   OnBoardingPage,
   UsernameEnterPage,
-  GetPaidAccountPage
+  GetPaidAccountPage,
+  AccountCreatingPage,
 } from "../../pages"
 
 export const useRoutes = () => {
@@ -14,6 +15,7 @@ export const useRoutes = () => {
       <Route path="/onboarding" exact element={<OnBoardingNavigationPage />} />
       <Route path="/user-enter" exact element={<UsernameEnterPage />} />
       <Route path="/get-account" exact element={<GetPaidAccountPage />} />
+      <Route path="/account-create" exact element={<AccountCreatingPage />} />
       <Route path="/*" element={<Navigate replace to="/main" />} />
     </Routes>
   )

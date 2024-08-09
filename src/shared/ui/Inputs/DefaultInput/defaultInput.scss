@@ -2,14 +2,11 @@
 
 .default-input {
   width: 100%;
-  .flex{
-    display: flex;
-    gap: 8px;
-    justify-content: right;
-  }
-  .desciption{
+
+  .default-input-text {
+    margin-bottom: 5px;
     text-align: left;
-    margin-bottom: 4px;
+    color: $black;
   }
 
   .default-input-item {
@@ -29,9 +26,11 @@
     &:focus {
       border: 1px solid $purple;
     }
+    &.error {
+      color: $pink;
+    }
   }
 }
-
-.fixed-width{
+.fixed-width {
   width: auto;
 }

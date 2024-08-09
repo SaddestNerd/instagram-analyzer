@@ -7,12 +7,10 @@ export { default as OnboardingNavigationSteps } from "./OnBoarding/NavigationSte
 export { default as InstagramAccount } from "./UsernameEnter/InstagramAccount/ui"
 export { default as Searching } from "./UsernameEnter/Searching/ui"
 
-//Timer
 
-export { default as Timer } from "./Timer/ui"
 
-//Emoji
-
-export { default as EmojiBlock } from "./EmojiBlock/ui"
-
-export {default as PayWindow} from "./PayWindow/ui"
+export { default as CenterDescription } from "./GetPaidAccount/CenterDescription/ui"
+export { default as FooterInformation } from "./GetPaidAccount/FooterInformation/ui"
+export { default as TimerBlock } from "./GetPaidAccount/TimerBlock/ui"
+//Account Creating
+export { default as CreateAcc } from "./AccountCreating/CreateAcc/ui"

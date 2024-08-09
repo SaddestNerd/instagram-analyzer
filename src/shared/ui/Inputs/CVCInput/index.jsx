@@ -1,19 +1,18 @@
 import React from "react"
 
-
-const DefaultInput = ({ onChange, placeholder, description }) => {
+const CardInfoInput = ({ onChange, placeholder, text, maxLength }) => {
   return (
     <div className="default-input fixed-width">
-      <p className="title11-regular-outfit ">CVC</p>
+      <p className="title11-regular-outfit default-input-text">{text}</p>
       <input
         className="title16-regular-outfit default-input-item"
-        placeholder={"CVC"}
+        placeholder={placeholder}
         type="text"
         onChange={onChange}
-        maxlength="3"
+        maxLength={maxLength}
       ></input>
     </div>
   )
 }
 
-export default DefaultInput
+export default CardInfoInput

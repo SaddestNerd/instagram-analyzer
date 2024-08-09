@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./defaultButton.scss"
 import Icon from "../../Icons"
-import { ApplePay } from "../../../lib/icons/icons"
+import { ApplePay, GooglePay } from "../../../lib/icons/icons"
 const DefaultButton = ({
   text,
   link,
@@ -14,16 +14,19 @@ const DefaultButton = ({
   altIcon,
   classNameIcon,
   isDisabled,
+  type,
 }) => {
   return (
-    <Link to={link} className="apple-button">
+    <Link to={link} className={type === "apple" ? "apple-button" : "google-button"}>
       <button
-        className="apple-button-item"
+        className={type === "apple" ? "apple-button-item" : "google-button-item"}
         onClick={onClick}
         disabled={isDisabled}
       >
         <span className="title16-semibold-outfit">{text}</span>
-        <ApplePay/>
+        {type === "apple" ?
+          <ApplePay /> : <GooglePay/>
+        }
       </button>
     </Link>
   )
