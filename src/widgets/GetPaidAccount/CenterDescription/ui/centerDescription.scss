@@ -6,7 +6,8 @@
   padding-top: 24px;
   background-color: $BG;
   margin-top: 40px;
-
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   .under-wrapper-flex {
     display: flex;
     background-size: contain;
