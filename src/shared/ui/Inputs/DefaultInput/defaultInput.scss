@@ -3,12 +3,12 @@
 .default-input {
   width: 100%;
 
-  .default-input-text{
+  .default-input-text {
     margin-bottom: 5px;
     text-align: left;
     color: $black;
   }
-  .flex{
+  .flex {
     display: flex;
     gap: 8px;
     justify-content: right;
@@ -35,6 +35,6 @@
     }
   }
 }
-.fixed-width{
+.fixed-width {
   width: auto;
 }

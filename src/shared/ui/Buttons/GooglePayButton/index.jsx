@@ -19,9 +19,9 @@ const DefaultButton = ({
       <button
         className="default-button-item"
         onClick={onClick}
-        disabled={isDisabled}>
-                 <GooglePay
-                 />
+        disabled={isDisabled}
+      >
+        <GooglePay />
       </button>
     </Link>
   )

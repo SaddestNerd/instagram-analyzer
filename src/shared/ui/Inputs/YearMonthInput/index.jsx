@@ -10,17 +10,16 @@ const DefaultInput = ({ onChange }) => {
           placeholder={"MM"}
           type="text"
           onChange={onChange}
-          maxlength="2"
+          maxLength={2}
         ></input>
         <input
           className="title16-regular-outfit default-input-item"
           placeholder={"YY"}
           type="text"
           onChange={onChange}
-          maxlength="2"
+          maxLength={2}
         ></input>
       </div>
-
     </div>
   )
 }

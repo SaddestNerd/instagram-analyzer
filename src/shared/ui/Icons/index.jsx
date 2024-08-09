@@ -9,10 +9,17 @@ const iconMapping = {
   openEye: Icons.OpenEye,
   closedEye: Icons.ClosedEye,
   userIcon: Icons.UserIcon,
-
 }
 
-const Icon = ({ type, width, height, color, alt = "icon", className, strokeColor }) => {
+const Icon = ({
+  type,
+  width,
+  height,
+  color,
+  alt = "icon",
+  className,
+  strokeColor,
+}) => {
   const SvgIcon = iconMapping[type]
 
   if (!SvgIcon) {

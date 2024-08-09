@@ -1,6 +1,5 @@
 @import "../../../app//style/colors.scss";
 
-
 .get-paid-account {
   text-align: center;
 
@@ -11,7 +10,7 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  background-color: #8D6DF3;
+  background-color: #8d6df3;
 
   .background-wrapper {
     position: absolute;
@@ -21,8 +20,7 @@
     max-width: 480px;
     width: 100%;
     margin: auto;
-    background-image:
-      url("../../../shared/assets/BG2.png");
+    background-image: url("../../../shared/assets/BG2.png");
     background-position:
       40% 10%,
       center top;
@@ -33,7 +31,7 @@
     align-items: center;
     -webkit-box-pack: end;
     justify-content: flex-end;
-    background-color: #8D6DF3;
+    background-color: #8d6df3;
     z-index: 1;
   }
 
@@ -80,9 +78,6 @@
     background-color: $BG;
     margin-top: 40px;
 
-
-
-
     .under-wrapper-flex {
       display: flex;
       background-size: contain;
@@ -96,9 +91,7 @@
       margin-right: auto;
       max-width: 360px;
       padding: 0 21px;
-      
     }
-
   }
 
   .emoji-wrapper-grid {
@@ -109,17 +102,17 @@
     margin-top: 24px;
     margin-bottom: 24px;
   }
-  .form-element{
+  .form-element {
     margin-top: 24px;
     text-align: left;
     width: calc(100%);
 
-    .text-element{
+    .text-element {
       margin-bottom: 14px;
       margin-left: 8px;
     }
   }
-  .form-wrapper{
+  .form-wrapper {
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
@@ -127,21 +120,19 @@
     border-radius: 10px;
     max-width: 304px;
 
-    border: solid 2px $grayLight; 
+    border: solid 2px $grayLight;
     background-color: $white;
-    .default-input{
+    .default-input {
       margin-top: 20px;
     }
-    .default-input:last-child{
+    .default-input:last-child {
       margin-bottom: 20px;
-
     }
-    .form-flex{
+    .form-flex {
       display: flex;
       justify-content: space-between;
-      .default-input-item{
+      .default-input-item {
         width: 70px;
-       
       }
     }
   }
@@ -150,7 +141,7 @@
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 10px;
-    border: solid 2px $grayLight; 
+    border: solid 2px $grayLight;
     margin-top: 24px;
     background-color: $white;
     .offer-header {
@@ -165,11 +156,10 @@
         text-align: right;
         color: $lightGreen;
       }
-      img{
+      img {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
       }
-
     }
 
     .first-line {
@@ -179,10 +169,10 @@
       margin-right: 20px;
       position: relative;
       margin-top: 16px;
-      .right{
+      .right {
         display: flex;
         gap: 10px;
-        .purple{
+        .purple {
           color: $purple;
           text-decoration: line-through;
         }
@@ -198,14 +188,13 @@
       bottom: -12px;
       opacity: 1;
     }
-    .second-line{
+    .second-line {
       display: flex;
       justify-content: space-between;
       margin-top: 24px;
       margin-bottom: 24px;
       margin-left: 20px;
       margin-right: 20px;
-      
     }
   }
 
@@ -225,7 +214,7 @@
       margin-left: auto;
       margin-right: auto;
       padding-top: 40px;
-      opacity: .4;
+      opacity: 0.4;
       padding-bottom: 60px;
       position: relative;
     }
@@ -238,7 +227,7 @@
       height: 1px;
       left: 0;
       bottom: 30px;
-      opacity: .4;
+      opacity: 0.4;
     }
   }
 
@@ -295,7 +284,7 @@
     width: 100%;
     content: "";
     background-color: $grayLight;
-    opacity: .2;
+    opacity: 0.2;
     height: 1px;
     left: 0;
     bottom: -30px;
@@ -312,7 +301,6 @@
   }
 
   .pay-wrapper {
-
     padding: 50px 21px;
 
     .or-wrapper {
@@ -342,15 +330,14 @@
       max-width: 335px;
       content: "";
       background-color: #494b55;
-      opacity: .2;
+      opacity: 0.2;
       height: 1px;
       left: 50%;
       transform: translate(-50%);
       bottom: 7px;
     }
-
   }
-  .upper-window-background{
+  .upper-window-background {
     position: fixed;
     z-index: 100;
     max-width: 480px;
@@ -358,7 +345,7 @@
     height: 100%;
     background-color: #494b55c2;
     top: 0;
-    .pay-window{
+    .pay-window {
       position: absolute;
       top: 50%;
       left: 50%;

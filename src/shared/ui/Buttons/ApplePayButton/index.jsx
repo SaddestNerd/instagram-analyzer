@@ -23,7 +23,7 @@ const DefaultButton = ({
         disabled={isDisabled}
       >
         <span className="title16-semibold-outfit">{text}</span>
-        <ApplePay/>
+        <ApplePay />
       </button>
     </Link>
   )

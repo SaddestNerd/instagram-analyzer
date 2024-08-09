@@ -10,5 +10,3 @@ export { default as GetPaidAccountPage } from "./GetPaidAccount/ui"
 
 //Account creating
 export { default as AccountCreatingPage } from "./AccountCreating/ui"
-
-

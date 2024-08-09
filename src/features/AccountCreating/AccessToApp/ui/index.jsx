@@ -3,24 +3,24 @@ import { DefaultInput, DefaultButton } from "../../../../shared"
 import { Icon } from "../../../../shared"
 import "./accessToApp.scss"
 const AccessToApp = ({ onClick }) => {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
-  
-    const togglePasswordVisibility = () => {
-      setShowPassword((prevShowPassword) => !prevShowPassword);
-    };
-  
-    const handleUsernameChange = (e) => {
-      setUsername(e.target.value);
-    };
-  
-    const handlePasswordChange = (e) => {
-      setPassword(e.target.value);
-    };
-  
-    const isButtonDisabled = username.length < 6 || password.length < 6;
-    const isPasswordShort = password.length < 6 && password.length > 0;
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [showPassword, setShowPassword] = useState(false)
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword)
+  }
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value)
+  }
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value)
+  }
+
+  const isButtonDisabled = username.length < 6 || password.length < 6
+  const isPasswordShort = password.length < 6 && password.length > 0
 
   return (
     <div className="access-app-block">
@@ -54,14 +54,16 @@ const AccessToApp = ({ onClick }) => {
         </span>
       </div>
       {isPasswordShort && (
-        <p className="title11-regular-outfit error-message">The password must be 6 characters long or more.</p>
+        <p className="title11-regular-outfit error-message">
+          The password must be 6 characters long or more.
+        </p>
       )}
       <div className="acess-app-button">
-      <DefaultButton
-        text="sign up"
-        onClick={onClick}
-        isDisabled={isButtonDisabled}
-      />
+        <DefaultButton
+          text="sign up"
+          onClick={onClick}
+          isDisabled={isButtonDisabled}
+        />
       </div>
     </div>
   )

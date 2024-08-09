@@ -1,6 +1,5 @@
 import React from "react"
 
-
 const DefaultInput = ({ onChange, placeholder, description }) => {
   return (
     <div className="default-input fixed-width">
@@ -10,7 +9,7 @@ const DefaultInput = ({ onChange, placeholder, description }) => {
         placeholder={"CVC"}
         type="text"
         onChange={onChange}
-        maxlength="3"
+        maxLength={3}
       ></input>
     </div>
   )

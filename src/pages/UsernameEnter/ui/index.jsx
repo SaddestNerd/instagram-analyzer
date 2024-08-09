@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./usernameEnter.scss"
 import { InstagramAccount, Searching } from "../../../widgets"
-import { useNavigate  } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import useUsernameEnter from "../model/useUsernameEnter"
 
 const UsernameEnterPage = () => {
@@ -15,14 +15,14 @@ const UsernameEnterPage = () => {
 
   return (
     <div
-    className={`username-enter-wrapper ${currentForm === 0 ? "background-pic5" : "background-pic6"}`}
-  >
-    {currentForm === 0 ? (
-      <InstagramAccount nextForm={nextForm} />
-    ) : (
-      <Searching progress={progress} />
-    )}
-  </div>
+      className={`username-enter-wrapper ${currentForm === 0 ? "background-pic5" : "background-pic6"}`}
+    >
+      {currentForm === 0 ? (
+        <InstagramAccount nextForm={nextForm} />
+      ) : (
+        <Searching progress={progress} />
+      )}
+    </div>
   )
 }
 

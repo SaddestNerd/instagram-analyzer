@@ -4,7 +4,6 @@ import { DataAnalysisInst, EnterUserWithIcon } from "../../../../features"
 import { Link } from "react-router-dom"
 
 const InstagramAccount = ({ nextForm }) => {
- 
   return (
     <div className="instagram-account-section">
       <div className="instagram-account-block">
@@ -12,7 +11,7 @@ const InstagramAccount = ({ nextForm }) => {
         <p className="title16-regular-outfit">
           Enter your Instagram username to get full data analysis
         </p>
-        <DataAnalysisInst  onClick={nextForm} />
+        <DataAnalysisInst onClick={nextForm} />
         <p className="title14-regular-outfit forgotten-block">
           Forgotten your account name?{" "}
           <Link to="/" className="title16-semibold-outfit">

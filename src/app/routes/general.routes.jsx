@@ -5,7 +5,7 @@ import {
   OnBoardingPage,
   UsernameEnterPage,
   GetPaidAccountPage,
-  AccountCreatingPage
+  AccountCreatingPage,
 } from "../../pages"
 
 export const useRoutes = () => {

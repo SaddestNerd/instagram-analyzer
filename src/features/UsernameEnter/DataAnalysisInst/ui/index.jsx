@@ -3,7 +3,7 @@ import { DefaultInput, DefaultButton } from "../../../../shared"
 import "./enterUserWithIcon.scss"
 import Icon from "../../../../shared/ui/Icons"
 
-const DataAnalysisInst = ({onClick }) => {
+const DataAnalysisInst = ({ onClick }) => {
   const [username, setUsername] = useState("")
 
   const handleChange = (e) => {

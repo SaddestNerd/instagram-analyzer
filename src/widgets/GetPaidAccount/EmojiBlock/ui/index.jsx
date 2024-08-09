@@ -1,7 +1,7 @@
 import React from "react"
 import "./emojiBlock.scss"
 
-const EmojiBlock = ({text, emoji}) => {
+const EmojiBlock = ({ text, emoji }) => {
   return (
     <div className="emoji-block">
       <div className="center-wrapper">
