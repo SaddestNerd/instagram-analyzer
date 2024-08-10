@@ -8,9 +8,12 @@ export { default as InstagramAccount } from "./UsernameEnter/InstagramAccount/ui
 export { default as Searching } from "./UsernameEnter/Searching/ui"
 
 //GetPaidAccount
-export { default as Timer } from "./GetPaidAccount/Timer/ui"
-export { default as EmojiBlock } from "./GetPaidAccount/EmojiBlock/ui"
-export { default as PayWindow } from "./GetPaidAccount/PayWindow/ui"
+export { default as CenterDescription } from "./GetPaidAccount/CenterDescription/ui"
+export { default as FooterInformation } from "./GetPaidAccount/FooterInformation/ui"
+export { default as TimerBlock } from "./GetPaidAccount/TimerBlock/ui"
 
 //Account Creating
 export { default as CreateAcc } from "./AccountCreating/CreateAcc/ui"
+
+//Enter Account
+export { default as GetAnalysis } from "./EnterAccount/GetAnalysis/ui"

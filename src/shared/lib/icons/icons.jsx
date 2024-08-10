@@ -5,6 +5,7 @@ import { ReactComponent as Email } from "../../assets/Email.svg"
 import { ReactComponent as OpenEye } from "../../assets/EyeOpen.svg"
 import { ReactComponent as ClosedEye } from "../../assets/EyeClose.svg"
 import { ReactComponent as Discount } from "../../assets/Discount.svg"
+import { ReactComponent as Defence } from "../../assets/defence.svg"
 
 //PaySvg
 import { ReactComponent as ApplePay } from "../../assets/logos_apple-pay.svg"
@@ -27,7 +28,7 @@ import Emoji9 from "../../assets/emoji/9.png"
 import Logo from "../../assets/logo.png"
 import UserIcon from "../../assets/UserIcon.png"
 import BGCost from "../../assets/BGCost.png"
-
+import InstCreate from "../../assets/InstCreate.png"
 export {
   Arrow,
   Logo,
@@ -51,4 +52,6 @@ export {
   BGCost,
   ApplePayBig,
   GooglePayBig,
+  InstCreate,
+  Defence,
 }

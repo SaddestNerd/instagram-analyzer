@@ -8,11 +8,7 @@
     text-align: left;
     color: $black;
   }
-  .flex {
-    display: flex;
-    gap: 8px;
-    justify-content: right;
-  }
+
   .default-input-item {
     max-width: 100%;
     width: 343px;
@@ -32,7 +28,11 @@
     }
     &.error {
       color: $pink;
+      border: 1px solid $pink;
     }
+  }
+  .app-input-item:focus {
+    border: 1px solid $appBlue;
   }
 }
 .fixed-width {

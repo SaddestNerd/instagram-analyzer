@@ -9,6 +9,8 @@ const iconMapping = {
   openEye: Icons.OpenEye,
   closedEye: Icons.ClosedEye,
   userIcon: Icons.UserIcon,
+  instCreate: Icons.InstCreate,
+  defence: Icons.Defence,
 }
 
 const Icon = ({

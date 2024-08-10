@@ -14,7 +14,7 @@ const DataAnalysisInst = ({ onClick }) => {
   return (
     <div className="data-analys-block">
       <div className="data-analys-input">
-        <Icon type="email" alt="email" width={30} height={32} />
+        <Icon type="email" alt="email" width={30} height={32} color="#6B3CFF" />
         <DefaultInput
           placeholder="Enter your username"
           onChange={handleChange}

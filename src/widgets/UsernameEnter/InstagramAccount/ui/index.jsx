@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import "./instagramAccount.scss"
-import { DataAnalysisInst, EnterUserWithIcon } from "../../../../features"
+import { DataAnalysisInst } from "../../../../features"
 import { Link } from "react-router-dom"
 
 const InstagramAccount = ({ nextForm }) => {

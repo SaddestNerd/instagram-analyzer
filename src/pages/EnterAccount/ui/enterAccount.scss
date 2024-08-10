@@ -1,0 +1,14 @@
+@import "../../../app/style/colors.scss";
+.enter-account-wrapper {
+  max-width: 480px;
+
+  margin: 0px auto;
+  text-align: center;
+  background-color: #e6edff;
+  background-image: url(../../../shared/assets/BG5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
