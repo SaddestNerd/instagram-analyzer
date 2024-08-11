@@ -1,7 +1,7 @@
 import React from "react"
 import "./underInfoNavigation.scss"
-import { StartNavigation } from "../../../../features"
 import NavigationSteps from "../../NavigationSteps/ui"
+import { DefaultButton } from "../../../../shared"
 
 const UnderInfoNavigation = ({
   currentForm,
@@ -22,7 +22,7 @@ const UnderInfoNavigation = ({
           totalSteps={onboardingForms.length}
           onStepChange={setCurrentForm}
         />
-        <StartNavigation
+        <DefaultButton
           text={form.buttonText}
           onClick={nextForm}
           link={isLastForm ? "/user-enter" : "/onboarding"}

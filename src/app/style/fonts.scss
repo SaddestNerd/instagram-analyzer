@@ -26,6 +26,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Urbanist-SemiBold";
+  src: url("../fonts/Urbanist/Urbanist-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
 html {
   .title40-semibold-outfit {
     font-size: 40px;
@@ -144,6 +151,13 @@ html {
     font-size: 12px;
     font-family: "Urbanist-Regular";
     font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0%;
+  }
+  .title14-semibold-urbanist {
+    font-size: 14px;
+    font-family: "Urbanist-SemiBold";
+    font-weight: 600;
     line-height: 139.9999976158142%;
     letter-spacing: 0%;
   }

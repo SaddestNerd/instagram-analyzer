@@ -1,0 +1,51 @@
+@import "../../../../app//style/colors.scss";
+
+.analysing-profile-section {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  .analysing-profile-block {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 16px;
+    color: $black;
+
+    .analysing-profile-p {
+      color: $darkGray;
+      margin-bottom: 14px;
+    }
+    .analysing-profile-clock {
+      max-width: 100%;
+      margin-top: 40px;
+      background-color: #eef1ff;
+      border: 1px solid #c8d4fd;
+      border-radius: 10px;
+      width: 343px;
+      box-sizing: border-box;
+      padding: 12px 29px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .analysing-profile-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $appBlue;
+        border-radius: 169px;
+        width: 28px;
+        height: 28px;
+      }
+
+      .clock-text {
+        margin-top: 10px;
+      }
+      .clock-text-second {
+        color: $appBlue;
+      }
+    }
+  }
+}

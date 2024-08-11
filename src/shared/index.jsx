@@ -10,3 +10,5 @@ export { default as MobilePayButton } from "./ui/Buttons/MobilePayButton"
 export { default as EmojiBlock } from "./ui/EmojiBlock"
 
 export { default as Timer } from "./ui/Timer"
+
+export { default as CircleProgressBar } from "./ui/ProgressCircle"

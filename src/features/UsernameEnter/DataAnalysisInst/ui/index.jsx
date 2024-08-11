@@ -25,7 +25,7 @@ const DataAnalysisInst = ({ onClick }) => {
       <DefaultButton
         text="start analysis"
         onClick={onClick}
-        isDisabled={username.length < 3}
+        isDisabled={username.length < 1}
       />
     </div>
   )

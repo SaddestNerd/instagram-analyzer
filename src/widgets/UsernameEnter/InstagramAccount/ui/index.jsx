@@ -14,7 +14,7 @@ const InstagramAccount = ({ nextForm }) => {
         <DataAnalysisInst onClick={nextForm} />
         <p className="title14-regular-outfit forgotten-block">
           Forgotten your account name?{" "}
-          <Link to="/" className="title16-semibold-outfit">
+          <Link to="/get-account" className="title16-semibold-outfit">
             Skip step
           </Link>
         </p>

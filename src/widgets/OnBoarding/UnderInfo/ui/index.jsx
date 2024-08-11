@@ -1,7 +1,8 @@
 import React from "react"
 import "./underInfo.scss"
 import Icon from "../../../../shared/ui/Icons"
-import { StartNavigation } from "../../../../features"
+import { DefaultButton } from "../../../../shared"
+
 const OnBoadrdingUnder = () => {
   return (
     <div className="onboarding-startinfo-section">
@@ -13,7 +14,7 @@ const OnBoadrdingUnder = () => {
           visits your page, how interesting your friends' profiles are, and
           more!
         </p>
-        <StartNavigation text="Start analysing" link="/onboarding" />
+        <DefaultButton text="Start analysing" link="/onboarding" />
       </div>
     </div>
   )

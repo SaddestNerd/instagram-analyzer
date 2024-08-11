@@ -21,6 +21,7 @@
       margin-bottom: 14px;
     }
     .get-analysis-defence {
+      max-width: 100%;
       margin-top: 40px;
       background-color: #eef1ff;
       border: 1px solid #c8d4fd;
@@ -28,6 +29,9 @@
       width: 343px;
       box-sizing: border-box;
       padding: 12px 29px;
+      .get-analysis-defence123 {
+        margin-top: 200px;
+      }
 
       .defence-text {
         margin-top: 10px;

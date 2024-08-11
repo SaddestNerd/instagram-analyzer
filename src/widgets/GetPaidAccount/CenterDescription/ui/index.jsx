@@ -29,14 +29,14 @@ const CenterDescription = ({ onActiveModal }) => {
         </p>
 
         <div className="emoji-wrapper-grid">
-          <EmojiBlock text={"Secret fans"} emoji={Emoji1} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji2} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji3} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji4} />
           <EmojiBlock text={"Secret fans"} emoji={Emoji5} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji6} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji7} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji8} />
+          <EmojiBlock text={"Blocked you"} emoji={Emoji6} />
+          <EmojiBlock text={"Top likers"} emoji={Emoji7} />
+          <EmojiBlock text={"Deleted likes"} emoji={Emoji8} />
+          <EmojiBlock text={"New followers"} emoji={Emoji1} />
+          <EmojiBlock text={"Lost followers"} emoji={Emoji2} />
+          <EmojiBlock text={"Top comments"} emoji={Emoji4} />
+          <EmojiBlock text={"Deleted comments"} emoji={Emoji3} />
         </div>
 
         <p className="title24-semibold-outfit">Limited time special offer</p>

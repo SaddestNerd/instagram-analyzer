@@ -11,6 +11,11 @@ const iconMapping = {
   userIcon: Icons.UserIcon,
   instCreate: Icons.InstCreate,
   defence: Icons.Defence,
+  clock: Icons.Clock,
+  instCircleLoad: Icons.InstCircleLoad,
+  privateIcon: Icons.PrivateIcon,
+  notFoundIcon: Icons.NotFoundIcon,
+  wrongIcon: Icons.WrongIcon,
 }
 
 const Icon = ({

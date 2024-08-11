@@ -1,22 +1,19 @@
 @import "../../../app//style//colors.scss";
 
 .onboarding-wrapper {
-  text-align: center;
   display: flex;
   height: 100%;
   max-width: 480px;
   margin: auto;
-  background-image: url("../../../shared/assets/Pic1.png"),
-    url("../../../shared/assets/BG1.png");
+  background-image: url("../../../shared/assets/Pic1.webp"),
+    url("../../../shared/assets/BG1.webp");
   background-position:
     center 30%,
     center top;
   background-size: 90%, contain;
   background-repeat: no-repeat, no-repeat;
   flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
   justify-content: flex-end;
   background-color: $backgroundPurple;
+  text-align: center;
 }

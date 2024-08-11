@@ -15,13 +15,13 @@ const AppButton = ({
   isDisabled,
 }) => {
   return (
-    <Link to={link} className="app-button">
+    <Link to={link} className="app-button" rel="noopener">
       <button
         className="app-button-item"
         onClick={onClick}
         disabled={isDisabled}
       >
-        <span className="title16-semibold-outfit">{text}</span>
+        <span className="title16-medium-urbanist">{text}</span>
         <Icon
           type={typeIcon}
           width={widthSize}

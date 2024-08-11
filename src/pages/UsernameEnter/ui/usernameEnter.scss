@@ -10,9 +10,7 @@
   background-position: center;
   background-repeat: no-repeat;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: end;
   justify-content: flex-end;
   background-color: $backgroundPurple;
 }
@@ -24,7 +22,7 @@
   background-repeat: no-repeat;
 }
 .background-pic6 {
-  background-image: url("../../../shared/assets/BG6.png");
+  background-image: url("../../../shared/assets/BG6.webp");
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;

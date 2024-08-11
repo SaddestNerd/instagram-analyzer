@@ -3,7 +3,7 @@ import "./getAnalysis.scss"
 import { InstAnalysis } from "../../../../features"
 import { Icon } from "../../../../shared"
 
-const GetAnalysis = ({ nextForm }) => {
+const GetAnalysis = ({ nextForm, showPopup }) => {
   return (
     <div className="get-analysis-section">
       <div className="get-analysis-block">
@@ -20,18 +20,21 @@ const GetAnalysis = ({ nextForm }) => {
         </p>
         <InstAnalysis onClick={nextForm} />
         <div className="get-analysis-defence">
-          <Icon
-            type="defence"
-            width={28}
-            height={28}
-            alt="icon"
-            className="get-analysis-img"
-          ></Icon>
+          <Icon type="defence" width={28} height={28} alt="icon"></Icon>
           <p className="title14-regular-urbanist defence-text">
             Your instagram account is safe. We don’t see or store your password.
             We will never action on your behalf.
           </p>
         </div>
+        <button onClick={() => showPopup("privateAccount")}>
+          Test Private Account Popup
+        </button>
+        <button onClick={() => showPopup("accountNotFound")}>
+          Test Account Not Found Popup
+        </button>
+        <button onClick={() => showPopup("somethingWentWrong")}>
+          Test Something Went Wrong Popup
+        </button>
       </div>
     </div>
   )

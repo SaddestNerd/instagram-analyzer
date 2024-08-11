@@ -10,16 +10,14 @@
   background-position: center;
   background-repeat: no-repeat;
   flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
+
   justify-content: flex-end;
   background-color: $backgroundPurple;
 }
 
 .background-pic2 {
-  background-image: url("../../../shared/assets/Pic2.png"),
-    url("../../../shared/assets/BG.png");
+  background-image: url("../../../shared/assets/Pic2.webp"),
+    url("../../../shared/assets/BG.webp");
   background-position:
     center center,
     center top;
@@ -28,8 +26,8 @@
 }
 
 .background-pic3 {
-  background-image: url("../../../shared/assets/Pic3.png"),
-    url("../../../shared/assets/BG.png");
+  background-image: url("../../../shared/assets/Pic3.webp"),
+    url("../../../shared/assets/BG.webp");
   background-position:
     center center,
     center top;
@@ -38,8 +36,8 @@
 }
 
 .background-pic4 {
-  background-image: url("../../../shared/assets/Pic4.png"),
-    url("../../../shared/assets/BG.png");
+  background-image: url("../../../shared/assets/Pic4.webp"),
+    url("../../../shared/assets/BG.webp");
   background-position:
     center center,
     center top;
