@@ -26,7 +26,7 @@ const InstAnalysis = ({ onClick }) => {
       <AppButton
         text="Get my analysis"
         onClick={onClick}
-        isDisabled={username.length < 3}
+        isDisabled={username.length < 1}
       />
     </div>
   )
