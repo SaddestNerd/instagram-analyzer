@@ -64,6 +64,17 @@ const PopupWindow = ({ type, onClose }) => {
             <AppButton text="Continue" onClick={onClose}></AppButton>
           </>
         )
+        case "checkYourEmail":
+        return (
+          <>
+            <Icon type="checkEmailIcon" alt="CheckEmailIcon" width={90} height={90} />
+            <p className="title24-medium-urbanist">Check your email</p>
+            <p className="title14-regular-urbanist">
+            We have sent instructions for changing your password to the specified email address.
+            </p>
+            <AppButton text="Got it" onClick={onClose}></AppButton>
+          </>
+        )
       default:
         return null
     }

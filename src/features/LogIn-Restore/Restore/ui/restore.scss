@@ -1,0 +1,23 @@
+@import "../../../../app/style/colors.scss";
+
+.restore-block {
+  width: 100%;
+  max-width: 343px;
+  margin-top: 14px;
+
+  .error-message {
+    color: $pink;
+    text-align: right;
+    margin-top: 8px;
+  }
+  .restore-button {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

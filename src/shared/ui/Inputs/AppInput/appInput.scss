@@ -1,15 +1,15 @@
 @import "../../../../app/style/colors.scss";
 
-.default-input {
+.app-input {
   width: 100%;
 
-  .default-input-text {
+  .app-input-text {
     margin-bottom: 5px;
     text-align: left;
-    color: $black;
+    color: $appTextColor;
   }
 
-  .default-input-item {
+  .app-input-item {
     max-width: 100%;
     width: 343px;
     height: 56px;
@@ -24,7 +24,7 @@
     box-sizing: border-box;
 
     &:focus {
-      border: 1px solid $purple;
+      border: 1px solid $appBlue;
     }
     &.error {
       color: $pink;

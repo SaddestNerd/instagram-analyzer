@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { DefaultInput, AppButton } from "../../../../shared"
+import { AppInput, AppButton } from "../../../../shared"
 import "./instAnalysis.scss"
 import Icon from "../../../../shared/ui/Icons"
 
@@ -15,12 +15,11 @@ const InstAnalysis = ({ onClick }) => {
     <div className="data-analys-inst-block">
       <div className="data-analys-inst-input">
         <Icon type="email" alt="email" width={30} height={32} color="#315DF4" />
-        <DefaultInput
+        <AppInput
           placeholder="“Sherlock” for example"
           onChange={handleChange}
           value={username}
           type="text"
-          classAppInput="app-input-item"
         />
       </div>
       <AppButton

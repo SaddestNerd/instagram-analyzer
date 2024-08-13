@@ -7,6 +7,7 @@ import { ReactComponent as ClosedEye } from "../../assets/EyeClose.svg"
 import { ReactComponent as Discount } from "../../assets/Discount.svg"
 import { ReactComponent as Defence } from "../../assets/Defence.svg"
 import { ReactComponent as Clock } from "../../assets/Clock.svg"
+import { ReactComponent as BackIcon } from "../../assets/Arrow-left.svg"
 
 //PaySvg
 import { ReactComponent as ApplePay } from "../../assets/logos_apple-pay.svg"
@@ -32,9 +33,11 @@ import BGCost from "../../assets/BGCost.webp"
 import InstCreate from "../../assets/InstCreate.webp"
 import InstCircleLoad from "../../assets/InstCircleLoad.webp"
 
+//PopUp
 import PrivateIcon from "../../assets/PrivateIcon.webp"
 import NotFoundIcon from "../../assets/NotFoundIcon.webp"
 import WrongIcon from "../../assets/WrongIcon.webp"
+import CheckEmailIcon from "../../assets/CheckEmailIcon.webp"
 
 export {
   Arrow,
@@ -66,4 +69,6 @@ export {
   PrivateIcon,
   NotFoundIcon,
   WrongIcon,
+  BackIcon,
+  CheckEmailIcon
 }

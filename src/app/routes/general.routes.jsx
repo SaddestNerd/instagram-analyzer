@@ -7,6 +7,7 @@ import {
   GetPaidAccountPage,
   AccountCreatingPage,
   EnterAccountPage,
+  LoginRestorePage,
 } from "../../pages"
 
 export const useRoutes = () => {
@@ -18,6 +19,8 @@ export const useRoutes = () => {
       <Route path="/get-account" exact element={<GetPaidAccountPage />} />
       <Route path="/account-create" exact element={<AccountCreatingPage />} />
       <Route path="/enter-account" exact element={<EnterAccountPage />} />
+
+      <Route path="/login" exact element={<LoginRestorePage />} />
       <Route path="/*" element={<Navigate replace to="/main" />} />
     </Routes>
   )

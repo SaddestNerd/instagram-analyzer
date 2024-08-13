@@ -22,15 +22,17 @@ const UnderInfoNavigation = ({
           totalSteps={onboardingForms.length}
           onStepChange={setCurrentForm}
         />
-        <DefaultButton
-          text={form.buttonText}
-          onClick={nextForm}
-          link={isLastForm ? "/user-enter" : "/onboarding"}
-          typeIcon="arrow"
-          widthSize="18"
-          heightSize="14"
-          altIcon="arrow"
-        />
+        <div className="onboarding-navigation-button">
+          <DefaultButton
+            text={form.buttonText}
+            onClick={nextForm}
+            link={isLastForm ? "/user-enter" : "/onboarding"}
+            typeIcon="arrow"
+            widthSize="18"
+            heightSize="14"
+            altIcon="arrow"
+          />
+        </div>
       </div>
     </div>
   )

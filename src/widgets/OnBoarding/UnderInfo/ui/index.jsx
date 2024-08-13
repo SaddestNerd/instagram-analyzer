@@ -14,7 +14,9 @@ const OnBoadrdingUnder = () => {
           visits your page, how interesting your friends' profiles are, and
           more!
         </p>
-        <DefaultButton text="Start analysing" link="/onboarding" />
+        <div className="onboarding-startinfo-button">
+          <DefaultButton text="Start analysing" link="/onboarding" />
+        </div>
       </div>
     </div>
   )

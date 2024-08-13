@@ -1,0 +1,41 @@
+@import "../../../../app/style/colors.scss";
+
+.authorization-block {
+  position: relative;
+  width: 100%;
+  max-width: 343px;
+  margin-top: 14px;
+  .authorization-input {
+    margin-top: 20px;
+    position: relative;
+    svg {
+      position: absolute;
+      z-index: 1;
+      right: 20px;
+      top: 63%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+  .error-message {
+    color: $pink;
+    text-align: right;
+    margin-top: 8px;
+  }
+  .authorization-button {
+    margin-top: 35px;
+  }
+  .forgot-message{
+    text-align: right;
+    margin-top: 8px;
+    button{
+      color: $appBlue;
+      text-decoration: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+  .error-center{
+    text-align: center;
+  }
+}

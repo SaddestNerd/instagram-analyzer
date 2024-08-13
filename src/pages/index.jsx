@@ -13,3 +13,6 @@ export { default as AccountCreatingPage } from "./AccountCreating/ui"
 
 //Enter Account
 export { default as EnterAccountPage } from "./EnterAccount/ui"
+
+//Login&Restore
+export { default as LoginRestorePage } from "./LogIn-Restore/ui"

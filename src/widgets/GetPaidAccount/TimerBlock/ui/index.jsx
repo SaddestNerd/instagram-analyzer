@@ -12,7 +12,7 @@ const CenterDescription = () => {
       <p className="upper-big-text">Time limited sale</p>
       <p className="upper-little-text">Grab the deal before it’s too late!</p>
       <Timer />
-      <DefaultButton text={"Get Follow Stats: Profile Analyzer"} />
+      <DefaultButton text={"Get Follow Stats: Profile Analyzer"} link="/account-create"/>
     </div>
   )
 }

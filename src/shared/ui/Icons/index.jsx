@@ -16,6 +16,8 @@ const iconMapping = {
   privateIcon: Icons.PrivateIcon,
   notFoundIcon: Icons.NotFoundIcon,
   wrongIcon: Icons.WrongIcon,
+  backIcon: Icons.BackIcon,
+  checkEmailIcon: Icons.CheckEmailIcon,
 }
 
 const Icon = ({
