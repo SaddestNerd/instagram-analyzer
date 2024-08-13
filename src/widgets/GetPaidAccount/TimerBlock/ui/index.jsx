@@ -3,7 +3,8 @@ import "./timerBlock.scss"
 import { DefaultButton, Timer } from "../../../../shared"
 import { Discount } from "../../../../shared/lib/icons/icons"
 
-const CenterDescription = () => {
+
+const TimerBlock = ({onScrollToOffer }) => {
   return (
     <div className="upper-wrapper">
       <div className="svg-wrapper">
@@ -12,9 +13,11 @@ const CenterDescription = () => {
       <p className="upper-big-text">Time limited sale</p>
       <p className="upper-little-text">Grab the deal before it’s too late!</p>
       <Timer />
-      <DefaultButton text={"Get Follow Stats: Profile Analyzer"} link="/account-create"/>
+      <div className="get-follow-button-block">
+      <DefaultButton text="Get Follow Stats: Profile Analyzer" onClick={onScrollToOffer}/>
+      </div>
     </div>
   )
 }
 
-export default CenterDescription
+export default TimerBlock

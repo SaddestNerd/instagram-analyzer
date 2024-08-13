@@ -8,6 +8,8 @@ const DefaultInput = ({
   type,
   isError,
   classAppInput,
+  inputMode,
+  maxLength
 }) => {
   return (
     <div className="default-input">
@@ -16,7 +18,9 @@ const DefaultInput = ({
         className={`title16-regular-outfit default-input-item ${classAppInput} ${isError ? "error" : ""}`}
         placeholder={placeholder}
         type={type}
+        inputMode={inputMode}
         onChange={onChange}
+        maxLength={maxLength}
       ></input>
     </div>
   )

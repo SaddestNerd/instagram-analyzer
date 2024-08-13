@@ -21,9 +21,12 @@ const RegisterPayment = () => {
       <div className="form-element">
         <p className="title18-semibold-outfit text-element">Credit card</p>
         <div className="form-wrapper">
-          <DefaultInput
+          <CardInfoInput
             text={"Card number"}
             placeholder={"XXXX XXXX XXXX XXXX"}
+            type="number"
+            inputMode="numeric"
+            maxLength={19}
           />
           <div className="form-flex">
             <div className="flex">

@@ -1,21 +1,17 @@
-import React, { useState } from "react"
+import React from "react"
 import { AppInput, AppButton } from "../../../../shared"
 import "./restore.scss"
+import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
 
 const Restore = ({ onClick, nextForm }) => {
-  const [username, setUsername] = useState("")
-
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value)
-  }
-
-  const emailRegex =
-    /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
-  const isValidUsername = emailRegex.test(username)
-  const isMissingAt = !username.includes("@")
-  const isMissingDot = username.includes("@") && !username.includes(".")
-
-  const isButtonDisabled = username.length < 6 || !isValidUsername
+  const {
+    username,
+    handleUsernameChange,
+    isValidUsername,
+    isMissingAt,
+    isMissingDot,
+    isButtonDisabled,
+  } = useAccessForm(); 
   return (
     <div className="restore-block">
       <div>

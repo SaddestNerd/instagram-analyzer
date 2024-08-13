@@ -1,7 +1,6 @@
-// PopupWindow.jsx
 import React, { useEffect, useState } from "react"
 import "./popupWindow.scss"
-import { AppButton, Icon } from "../../../../shared"
+import { AppButton, Icon } from "../../../shared"
 
 const PopupWindow = ({ type, onClose }) => {
   const [show, setShow] = useState(false)

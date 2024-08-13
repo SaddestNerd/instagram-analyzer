@@ -3,7 +3,7 @@ import "./footerInformation.scss"
 
 import { Emoji9 } from "../../../../shared/lib/icons/icons"
 
-const CenterDescription = () => {
+const FooterInformation = () => {
   return (
     <div className="footer-flex-wrapper">
       <div className="text-wrapper">
@@ -47,4 +47,4 @@ const CenterDescription = () => {
   )
 }
 
-export default CenterDescription
+export default FooterInformation

@@ -18,7 +18,7 @@ export { default as CreateAcc } from "./AccountCreating/CreateAcc/ui"
 //Enter Account
 export { default as GetAnalysis } from "./EnterAccount/GetAnalysis/ui"
 export { default as AnalysingProfile } from "./EnterAccount/AnalysingProfile/ui"
-export { default as PopupWindow } from "./EnterAccount/PopupWindow/ui"
+export { default as PopupWindow } from "./PopupWindow/ui"
 
 //Login&Restore
 export { default as Login } from "./Login-Restore/Login/ui"

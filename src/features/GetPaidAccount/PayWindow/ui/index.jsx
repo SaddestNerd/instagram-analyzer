@@ -10,8 +10,10 @@ const PayWindow = ({ svg }) => {
       <p className="title16-regular-outfit">
         Enter your e-mail to get an invoice
       </p>
+      <div className="pay-window-block">
       <DefaultInput placeholder={"Enter your e-mail"} text={"Email"} />
       <DefaultButton text={"COMPLETE PAYMENT"} isDisabled={true} />
+      </div>
     </div>
   )
 }
