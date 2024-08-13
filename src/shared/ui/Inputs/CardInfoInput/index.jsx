@@ -1,8 +1,13 @@
-import React from "react";
-import { useFormatNuber } from "../../../lib/hooks/useFormatNuber";
+import React from "react"
+import { useFormatNuber } from "../../../lib/hooks/useFormatNuber"
 
-const CardInfoInput = ({ onChange = () => {}, placeholder, text, maxLength }) => {
-  const { inputValue, handleInputChange } = useFormatNuber(maxLength, onChange);
+const CardInfoInput = ({
+  onChange = () => {},
+  placeholder,
+  text,
+  maxLength,
+}) => {
+  const { inputValue, handleInputChange } = useFormatNuber(maxLength, onChange)
 
   return (
     <div className="default-input fixed-width">

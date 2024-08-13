@@ -1,4 +1,4 @@
-import React, { useState, useRef} from "react";
+import React, { useState, useRef } from "react"
 import "./centerDescription.scss"
 import { DefaultButton, EmojiBlock, MobilePayButton } from "../../../../shared"
 import {
@@ -14,13 +14,13 @@ import {
 } from "../../../../shared/lib/icons/icons"
 import { RegisterPayment } from "../../../../features"
 
-const CenterDescription = ({ onActiveModal, scrollToOffer  }) => {
+const CenterDescription = ({ onActiveModal, scrollToOffer }) => {
   const [openForm, setOpenForm] = useState(false)
-  const offerRef = useRef(null);
+  const offerRef = useRef(null)
 
   scrollToOffer.current = () => {
-    offerRef.current.scrollIntoView({ behavior: "smooth" });
-  };
+    offerRef.current.scrollIntoView({ behavior: "smooth" })
+  }
   return (
     <div className="under-wrapper">
       <div className="under-wrapper-flex">
@@ -43,7 +43,9 @@ const CenterDescription = ({ onActiveModal, scrollToOffer  }) => {
           <EmojiBlock text={"Deleted comments"} emoji={Emoji3} />
         </div>
 
-        <p className="title24-semibold-outfit" ref={offerRef}>Limited time special offer</p>
+        <p className="title24-semibold-outfit" ref={offerRef}>
+          Limited time special offer
+        </p>
         <p className="title16-regular-outfit">
           Complete your profile and get valuable insights today!
         </p>

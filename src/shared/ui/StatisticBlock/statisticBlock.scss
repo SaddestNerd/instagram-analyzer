@@ -1,0 +1,19 @@
+@import "../../../app/style/colors.scss";
+
+.avatar-wrapper-block {
+  text-align: center;
+  .img-wrapper {
+    svg {
+      width: 24px;
+    }
+    padding: 18px;
+    background-color: #f0deff;
+    border-radius: 10px;
+  }
+  p {
+    margin-top: 6px;
+  }
+  p + p {
+    margin-top: 2px;
+  }
+}

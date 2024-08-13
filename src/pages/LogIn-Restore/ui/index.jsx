@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import "./logIn-restore.scss"
 import { Login, RestorePassword, PopupWindow } from "../../../widgets"
 
-
 const LoginRestorePage = () => {
   const [currentForm, setCurrentForm] = useState(0)
   const [popupType, setPopupType] = useState(null)
@@ -23,7 +22,7 @@ const LoginRestorePage = () => {
         {currentForm === 0 ? (
           <Login nextForm={nextForm} />
         ) : (
-          <RestorePassword goBack={goBack} showPopup={setPopupType}/>
+          <RestorePassword goBack={goBack} showPopup={setPopupType} />
         )}
       </div>
       {popupType && (

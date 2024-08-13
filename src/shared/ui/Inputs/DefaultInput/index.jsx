@@ -9,7 +9,7 @@ const DefaultInput = ({
   isError,
   classAppInput,
   inputMode,
-  maxLength
+  maxLength,
 }) => {
   return (
     <div className="default-input">

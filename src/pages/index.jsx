@@ -16,3 +16,6 @@ export { default as EnterAccountPage } from "./EnterAccount/ui"
 
 //Login&Restore
 export { default as LoginRestorePage } from "./LogIn-Restore/ui"
+
+//AccountInformation
+export { default as AccountInformation } from "./AccountInformation/ui"

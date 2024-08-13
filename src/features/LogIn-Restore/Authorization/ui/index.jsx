@@ -17,7 +17,7 @@ const Authorization = ({ onClick, nextForm }) => {
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
-  } = useAccessForm(); 
+  } = useAccessForm()
   return (
     <div className="authorization-block">
       <div>

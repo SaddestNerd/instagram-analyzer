@@ -1,0 +1,33 @@
+@import "../../../app/style/colors.scss";
+.header-menu-element {
+  padding-top: 9px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 9px;
+  transition: 0.2s ease;
+  text-align: left;
+  .flex-element {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    .icon {
+      padding: 8px;
+      border-radius: 100px;
+      background-color: $white;
+    }
+  }
+}
+
+.header-menu-element:hover {
+  background-color: #ccc5d4;
+}
+
+.header-menu-element.red {
+  padding-bottom: 20px;
+  padding-top: 18px;
+  .flex-element {
+    .text {
+      color: $appRed;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../../../app/style/colors.scss";
+
+.header-exit-button {
+  background-color: #dfdfdf74;
+  border-radius: 100px;
+  padding: 18px;
+  svg {
+    width: 24px;
+  }
+}

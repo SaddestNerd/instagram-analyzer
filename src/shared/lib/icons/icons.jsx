@@ -1,3 +1,42 @@
+//------------------------------------MAIN------------------------------------
+
+//MainSvg
+import { ReactComponent as MenuIcon } from "../../assets/main/svg/Menu.svg"
+import { ReactComponent as Following } from "../../assets/main/svg/Following.svg"
+import { ReactComponent as Followers } from "../../assets/main/svg/Followers.svg"
+import { ReactComponent as Posts } from "../../assets/main/svg/Posts.svg"
+import { ReactComponent as UpArrow } from "../../assets/main/svg/Menu.svg"
+
+//Analytics
+import { ReactComponent as Likes } from "../../assets/main/svg/Posts.svg"
+import { ReactComponent as Comments } from "../../assets/main/svg/Comments.svg"
+import { ReactComponent as LostFollowers } from "../../assets/main/svg/Comments.svg"
+import { ReactComponent as NewFollowers } from "../../assets/main/svg/Comments.svg"
+import { ReactComponent as InactiveFollowers } from "../../assets/main/svg/Menu.svg"
+import { ReactComponent as SecretFans } from "../../assets/main/svg/Following.svg"
+import { ReactComponent as YourFriends } from "../../assets/main/svg/Followers.svg"
+import { ReactComponent as YourFans } from "../../assets/main/svg/Posts.svg"
+import { ReactComponent as UpdateClock } from "../../assets/main/svg/UpdateClock.svg"
+
+//Tips & Insights
+import { ReactComponent as Reccomend } from "../../assets/main/svg/Following.svg"
+import { ReactComponent as CrookedArrow } from "../../assets/main/svg/Followers.svg"
+
+//MainHeaderSvg
+import { ReactComponent as Analytics } from "../../assets/main/svg/Analytics.svg"
+import { ReactComponent as Insights } from "../../assets/main/svg/Insights.svg"
+import { ReactComponent as News } from "../../assets/main/svg/News.svg"
+import { ReactComponent as PrivacyPolicy } from "../../assets/main/svg/PrivacyPolicy.svg"
+import { ReactComponent as SwitchInstagramAccount } from "../../assets/main/svg/SwitchInstagramAccount.svg"
+import { ReactComponent as TermOfService } from "../../assets/main/svg/TermOfService.svg"
+import { ReactComponent as Exit } from "../../assets/main/svg/Exit.svg"
+import { ReactComponent as BlueCross } from "../../assets/main/svg/BlueCross.svg"
+
+//OtherMain
+import TestAvatar from "../../assets/main/avatartest.png"
+
+//------------------------------------ANOTHER------------------------------------
+
 //Svg
 import { ReactComponent as Arrow } from "../../assets/svg/Arrow.svg"
 import { ReactComponent as Inst } from "../../assets/svg/Instlogo.svg"
@@ -26,7 +65,7 @@ import Emoji7 from "../../assets/emoji/7.webp"
 import Emoji8 from "../../assets/emoji/8.webp"
 import Emoji9 from "../../assets/emoji/9.webp"
 
-//OtherPng
+//Other
 import Logo from "../../assets/logo.webp"
 import UserIcon from "../../assets/UserIcon.webp"
 import BGCost from "../../assets/BGCost.webp"
@@ -40,6 +79,18 @@ import WrongIcon from "../../assets/WrongIcon.webp"
 import CheckEmailIcon from "../../assets/CheckEmailIcon.webp"
 
 export {
+  UpArrow,
+  Likes,
+  Comments,
+  LostFollowers,
+  NewFollowers,
+  InactiveFollowers,
+  SecretFans,
+  YourFriends,
+  YourFans,
+  UpdateClock,
+  Reccomend,
+  CrookedArrow,
   Arrow,
   Logo,
   Inst,
@@ -70,5 +121,18 @@ export {
   NotFoundIcon,
   WrongIcon,
   BackIcon,
-  CheckEmailIcon
+  CheckEmailIcon,
+  MenuIcon,
+  Posts,
+  Followers,
+  Following,
+  Analytics,
+  Insights,
+  News,
+  PrivacyPolicy,
+  SwitchInstagramAccount,
+  TermOfService,
+  TestAvatar,
+  BlueCross,
+  Exit,
 }

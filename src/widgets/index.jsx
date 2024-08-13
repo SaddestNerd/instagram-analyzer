@@ -23,3 +23,8 @@ export { default as PopupWindow } from "./PopupWindow/ui"
 //Login&Restore
 export { default as Login } from "./Login-Restore/Login/ui"
 export { default as RestorePassword } from "./Login-Restore/RestorePassword/ui"
+
+//Account Information
+export { default as AccountHeader } from "./AccountInformation/AccountHeader"
+export { default as AccountFooter } from "./AccountInformation/AccountFooter"
+export { default as AccountUpperStatistic } from "./AccountInformation/AccountUpperStatistic"

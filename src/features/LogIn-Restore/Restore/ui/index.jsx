@@ -11,7 +11,7 @@ const Restore = ({ onClick, nextForm }) => {
     isMissingAt,
     isMissingDot,
     isButtonDisabled,
-  } = useAccessForm(); 
+  } = useAccessForm()
   return (
     <div className="restore-block">
       <div>

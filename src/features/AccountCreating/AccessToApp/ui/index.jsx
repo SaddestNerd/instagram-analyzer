@@ -17,7 +17,7 @@ const AccessToApp = ({ onClick }) => {
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
-  } = useAccessForm(); 
+  } = useAccessForm()
   return (
     <div className="access-app-block">
       <div>

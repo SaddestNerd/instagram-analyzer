@@ -3,17 +3,17 @@ import "./restorePassword.scss"
 import { Restore } from "../../../../features"
 import { BackButton } from "../../../../shared"
 
-const RestorePassword = ({ showPopup, goBack}) => {
+const RestorePassword = ({ showPopup, goBack }) => {
   const handleClick = () => {
-    goBack();
-    showPopup("checkYourEmail");
-  };
+    goBack()
+    showPopup("checkYourEmail")
+  }
 
   return (
     <div className="restore-password-section">
       <div className="restore-password-block">
         <div className="restore-password-backicon-block">
-          <BackButton onClick={goBack}/>
+          <BackButton onClick={goBack} />
         </div>
         <p className="title24-medium-urbanist">Restore Password</p>
         <p className="title14-regular-urbanist">
