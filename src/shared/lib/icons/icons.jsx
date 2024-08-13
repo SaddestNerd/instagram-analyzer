@@ -1,19 +1,19 @@
 //Svg
-import { ReactComponent as Arrow } from "../../assets/Arrow.svg"
-import { ReactComponent as Inst } from "../../assets/Instlogo.svg"
-import { ReactComponent as Email } from "../../assets/Email.svg"
-import { ReactComponent as OpenEye } from "../../assets/EyeOpen.svg"
-import { ReactComponent as ClosedEye } from "../../assets/EyeClose.svg"
-import { ReactComponent as Discount } from "../../assets/Discount.svg"
-import { ReactComponent as Defence } from "../../assets/Defence.svg"
-import { ReactComponent as Clock } from "../../assets/Clock.svg"
-import { ReactComponent as BackIcon } from "../../assets/Arrow-left.svg"
+import { ReactComponent as Arrow } from "../../assets/svg/Arrow.svg"
+import { ReactComponent as Inst } from "../../assets/svg/Instlogo.svg"
+import { ReactComponent as Email } from "../../assets/svg/Email.svg"
+import { ReactComponent as OpenEye } from "../../assets/svg/EyeOpen.svg"
+import { ReactComponent as ClosedEye } from "../../assets/svg/EyeClose.svg"
+import { ReactComponent as Discount } from "../../assets/svg/Discount.svg"
+import { ReactComponent as Defence } from "../../assets/svg/Defence.svg"
+import { ReactComponent as Clock } from "../../assets/svg/Clock.svg"
+import { ReactComponent as BackIcon } from "../../assets/svg/Arrow-left.svg"
 
 //PaySvg
-import { ReactComponent as ApplePay } from "../../assets/logos_apple-pay.svg"
-import { ReactComponent as GooglePay } from "../../assets/logos_google-pay.svg"
-import { ReactComponent as ApplePayBig } from "../../assets/ApplePayBig.svg"
-import { ReactComponent as GooglePayBig } from "../../assets/GooglePayBig.svg"
+import { ReactComponent as ApplePay } from "../../assets/svg/logos_apple-pay.svg"
+import { ReactComponent as GooglePay } from "../../assets/svg/logos_google-pay.svg"
+import { ReactComponent as ApplePayBig } from "../../assets/svg/ApplePayBig.svg"
+import { ReactComponent as GooglePayBig } from "../../assets/svg/GooglePayBig.svg"
 
 // EmojiPng
 import Emoji1 from "../../assets/emoji/1.webp"
