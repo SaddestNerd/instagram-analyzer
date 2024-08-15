@@ -25,6 +25,7 @@ const AnalyticsPage = () => {
           altIcon="InsightsIcon"
           btnText="View insights"
           text="We have prepared for you a number of tips and insights to improve your profile"
+          link="/insights"
         />
       </div>
       <NextUpdate />

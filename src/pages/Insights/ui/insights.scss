@@ -21,7 +21,10 @@
     padding: 160px 0px 16px 0px;
 
     .text {
+      padding-left: 16px;
+      padding-right: 16px;
       text-align: center;
+      color: $black;
     }
     .blue {
       color: $appBlue;

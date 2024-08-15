@@ -18,17 +18,44 @@ const HeaderMenu = ({ onClickExit, headerOpen, onClickPopup }) => {
         <HeaderMenuElement
           IconComponent={SwitchInstagramAccount}
           text={"Switch Instagram Account"}
+          link="/enter-account"
+          rel="noopener noreferrer"
+          onClick={onClickExit}
         />
-        <HeaderMenuElement IconComponent={Analytics} text={"Analytics"} />
-        <HeaderMenuElement IconComponent={Insights} text={"Insights"} />
-        <HeaderMenuElement IconComponent={News} text={"News"} />
+        <HeaderMenuElement
+          IconComponent={Analytics}
+          text={"Analytics"}
+          link="/account-analytics"
+          rel="noopener noreferrer"
+          onClick={onClickExit}
+        />
+        <HeaderMenuElement
+          IconComponent={Insights}
+          text={"Insights"}
+          link="/insights"
+          rel="noopener noreferrer"
+          onClick={onClickExit}
+        />
+        <HeaderMenuElement
+          IconComponent={News}
+          text={"News"}
+          link="/news"
+          rel="noopener noreferrer"
+          onClick={onClickExit}
+        />
         <HeaderMenuElement
           IconComponent={TermOfService}
           text={"Term of Service"}
+          // link="/account-analytics"
+          rel="noopener noreferrer"
+          onClick={onClickExit}
         />
         <HeaderMenuElement
           IconComponent={PrivacyPolicy}
           text={"Privacy Policy"}
+          // link="/account-analytics"
+          rel="noopener noreferrer"
+          onClick={onClickExit}
         />
         <HeaderMenuElement
           IconComponent={Exit}
@@ -38,10 +65,9 @@ const HeaderMenu = ({ onClickExit, headerOpen, onClickPopup }) => {
         />
       </div>
 
-      <div className={"exit-button-wrapper" + (headerOpen ? " isActive" : "")} >
+      <div className={"exit-button-wrapper" + (headerOpen ? " isActive" : "")}>
         <HeaderMenuExitButton onClick={onClickExit} />
       </div>
-
     </div>
   )
 }

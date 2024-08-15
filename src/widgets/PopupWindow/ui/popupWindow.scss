@@ -41,6 +41,13 @@
   padding: 32px 16px;
   text-align: center;
 
+  .title24-medium-urbanist {
+    color: $appBlack;
+  }
+  .title14-regular-urbanist {
+    color: $appTextColor;
+  }
+
   .cancel-button {
     background-color: transparent;
     color: $appBlue;

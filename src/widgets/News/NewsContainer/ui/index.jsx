@@ -3,7 +3,7 @@ import "./newsContainer.scss"
 import { NewsBlock } from "../../../../features"
 import { TestNews } from "../../../../shared/lib/icons/icons"
 
-const InfoBlocks = ({ text, onClick }) => {
+const InfoBlocks = () => {
   return (
     <div className="info-blocks">
       <NewsBlock

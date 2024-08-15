@@ -1,11 +1,11 @@
 import React from "react"
 import "./blueButton.scss"
 
-const BlueButton = ({ onClick, link, IconComponent }) => {
+const BlueButton = ({ onClick, IconComponent }) => {
   return (
-    <button className="blue-button" onClick={onClick}>
+    <div className="blue-button" onClick={onClick}>
       <IconComponent />
-    </button>
+    </div>
   )
 }
 

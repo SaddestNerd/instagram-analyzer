@@ -13,12 +13,12 @@ const AppButton = ({
   altIcon,
   classNameIcon,
   isDisabled,
-  color
+  color,
 }) => {
   return (
-    <Link to={link} className="app-button" rel="noopener">
+    <Link to={link} className="app-button" rel="noopener noreferrer">
       <button
-       className={"app-button-item " + color}
+        className={"app-button-item " + color}
         onClick={onClick}
         disabled={isDisabled}
       >

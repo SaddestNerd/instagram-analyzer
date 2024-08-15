@@ -138,5 +138,5 @@ export {
   TestAvatar,
   BlueCross,
   Exit,
-  RedExit
+  RedExit,
 }

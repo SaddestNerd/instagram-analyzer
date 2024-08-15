@@ -1,4 +1,8 @@
 @import "../../../app/style/colors.scss";
+.header-menu-link {
+  text-decoration: none;
+  color: $black;
+}
 .header-menu-element {
   padding-top: 9px;
   padding-left: 24px;
@@ -7,6 +11,7 @@
   transition: 0.2s ease;
   text-align: left;
   cursor: pointer;
+
   .flex-element {
     display: flex;
     gap: 14px;

@@ -12,17 +12,18 @@ import {
   AnalyticsPage,
   InsightsPage,
   NewsPage,
-  NewsArticle
+  NewsArticle,
 } from "../../pages"
 import { AccountFooter, AccountHeader } from "../../widgets"
+import ScrollToTop from "../../shared/lib/hooks/useScrollToTop"
 
 export const useRoutes = () => {
-  const AccountHeaderFooter = ({ element }) => {
+  const AccountHeaderFooter = ({ element, isLogo }) => {
     const location = useLocation()
     const hasNextUpdate = location.pathname === "/account-analytics"
     return (
       <>
-        <AccountHeader />
+        <AccountHeader isLogo={isLogo} />
         {element}
         <AccountFooter hasNextUpdate={hasNextUpdate} />
       </>
@@ -30,41 +31,53 @@ export const useRoutes = () => {
   }
 
   return (
-    <Routes>
-      <Route path="/main" exact element={<OnBoardingPage />} />
-      <Route path="/onboarding" exact element={<OnBoardingNavigationPage />} />
-      <Route path="/user-enter" exact element={<UsernameEnterPage />} />
-      <Route path="/get-account" exact element={<GetPaidAccountPage />} />
-      <Route path="/account-create" exact element={<AccountCreatingPage />} />
-      <Route path="/enter-account" exact element={<EnterAccountPage />} />
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/main" exact element={<OnBoardingPage />} />
+        <Route
+          path="/onboarding"
+          exact
+          element={<OnBoardingNavigationPage />}
+        />
+        <Route path="/user-enter" exact element={<UsernameEnterPage />} />
+        <Route path="/get-account" exact element={<GetPaidAccountPage />} />
+        <Route path="/account-create" exact element={<AccountCreatingPage />} />
+        <Route path="/enter-account" exact element={<EnterAccountPage />} />
 
-      <Route
-        path="/account-information"
-        exact
-        element={<AccountHeaderFooter element={<AccountInformationPage />} />}
-      />
-      <Route
-        path="/account-analytics"
-        exact
-        element={<AccountHeaderFooter element={<AnalyticsPage />} />}
-      />
-      <Route
-        path="/insights"
-        exact
-        element={<AccountHeaderFooter element={<InsightsPage />} />}
-      />
-      <Route
-        path="/news"
-        exact
-        element={<AccountHeaderFooter element={<NewsPage />} />}
-      />
-      <Route
-        path="/news-article"
-        exact
-        element={<AccountHeaderFooter element={< NewsArticle/>} />}
-      />
-      <Route path="/login" exact element={<LoginRestorePage />} />
-      <Route path="/*" element={<Navigate replace to="/main" />} />
-    </Routes>
+        <Route
+          path="/account-information"
+          exact
+          element={
+            <AccountHeaderFooter
+              isLogo={true}
+              element={<AccountInformationPage />}
+            />
+          }
+        />
+        <Route
+          path="/account-analytics"
+          exact
+          element={<AccountHeaderFooter element={<AnalyticsPage />} />}
+        />
+        <Route
+          path="/insights"
+          exact
+          element={<AccountHeaderFooter element={<InsightsPage />} />}
+        />
+        <Route
+          path="/news"
+          exact
+          element={<AccountHeaderFooter element={<NewsPage />} />}
+        />
+        <Route
+          path="/news-article"
+          exact
+          element={<AccountHeaderFooter element={<NewsArticle />} />}
+        />
+        <Route path="/login" exact element={<LoginRestorePage />} />
+        <Route path="/*" element={<Navigate replace to="/main" />} />
+      </Routes>
+    </>
   )
 }

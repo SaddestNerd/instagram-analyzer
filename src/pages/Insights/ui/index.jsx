@@ -8,9 +8,9 @@ const InsightsPage = () => {
     <div className="insights-page">
       <div className="upper-gradient"></div>
       <div className="content-wrapper">
-        <p className="text title20-medium-urbanist">
+        <p className="text title24-medium-urbanist">
           We have prepared some tips to help{" "}
-          <span className="blue title20-bold-urbanist">
+          <span className="blue title24-bold-urbanist">
             improve the performance
           </span>{" "}
           of your Instagram account.
@@ -31,9 +31,14 @@ const InsightsPage = () => {
                   "To summarize all of above, we can formulate the following basic recommendations:"
                 }
               />
-               <ViewInsights typeIcon="news" altIcon="NewsIcon" btnText="Read news" text="Keep up to date with the latest news in the field of promotion of Instagram account and learn new things"/>
+              <ViewInsights
+                typeIcon="news"
+                altIcon="NewsIcon"
+                btnText="Read news"
+                text="Keep up to date with the latest news in the field of promotion of Instagram account and learn new things"
+                link="/news"
+              />
             </div>
-      
           </div>
         </div>
       </div>

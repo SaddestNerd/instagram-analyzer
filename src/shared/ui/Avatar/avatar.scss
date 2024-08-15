@@ -1,7 +1,12 @@
 @import "../../../app/style/colors.scss";
 
 .avatar-wrapper {
-  padding-top: 100px;
+  padding-top: 120px;
   position: relative;
   text-align: center;
+  color: $appBlack;
+
+  .title14-regular-urbanist {
+    color: $appTextColor;
+  }
 }

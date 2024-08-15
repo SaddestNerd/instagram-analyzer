@@ -1,7 +1,7 @@
 import React from "react"
 import "./viewInsights.scss"
 import { AppButton, Icon } from "../../../../shared"
-const ViewInsights = ({typeIcon, btnText, text, altIcon}) => {
+const ViewInsights = ({ typeIcon, btnText, text, altIcon, link }) => {
   return (
     <div className="view-insights-section">
       <div className="view-insights-block">
@@ -14,15 +14,14 @@ const ViewInsights = ({typeIcon, btnText, text, altIcon}) => {
             height={24}
           ></Icon>
         </div>
-        <p className="title24-semibold-urbanist view-insights-text">
-          {text}
-        </p>
+        <p className="title24-semibold-urbanist view-insights-text">{text}</p>
         <AppButton
           text={btnText}
           typeIcon="arrow"
           altIcon="ArrowIcon"
           widthSize={24}
           heightSize={24}
+          link={link}
         />
       </div>
     </div>
