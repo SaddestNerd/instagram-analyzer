@@ -1,0 +1,66 @@
+@import "../../../app/style/colors.scss";
+
+.news-page {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+  // height: 100%;
+  position: relative;
+
+  .upper-gradient {
+    z-index: 0;
+    background: linear-gradient(#e4c9ff, #ffffff);
+    width: 100%;
+    height: 280px;
+    position: absolute;
+  }
+  .content-wrapper {
+    z-index: 10;
+    position: relative;
+    padding: 160px 16px 16px 16px;
+
+    .title20-medium-urbanist {
+      color: $black;
+    }
+    .info-blocks {
+      margin-top: 8px;
+    }
+    .text {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .blue {
+      color: $appBlue;
+    }
+  }
+  .blocks-wrapper {
+    padding-top: 80px;
+  }
+  .color-blue-background {
+    background-color: $appBlue;
+    .white-background {
+      background-color: $white;
+      padding: 34px 16px 34px 16px;
+      border-bottom-right-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
+  }
+  .color-purple-background {
+    background-color: $appPurple;
+    .white-background {
+      background-color: $white;
+      padding: 34px 16px 34px 16px;
+      border-top-right-radius: 24px;
+      border-top-left-radius: 24px;
+    }
+  }
+  .gradient-background {
+    background: linear-gradient(#315df4, #ea48da);
+    padding: 34px 16px 34px 16px;
+    .title20-bold-urbanist {
+      color: white;
+      font-size: 24px;
+    }
+  }
+}

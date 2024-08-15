@@ -15,7 +15,18 @@ export { default as AccountCreatingPage } from "./AccountCreating/ui"
 export { default as EnterAccountPage } from "./EnterAccount/ui"
 
 //Login&Restore
-export { default as LoginRestorePage } from "./LogIn-Restore/ui"
+export { default as LoginRestorePage } from "./LogInRestore/ui"
+
+//-------------------Main-------------------
 
 //AccountInformation
-export { default as AccountInformation } from "./AccountInformation/ui"
+export { default as AccountInformationPage } from "./AccountInformation/ui"
+
+//Analytics
+export { default as AnalyticsPage } from "./AccountAnalytic/ui"
+
+//Insights
+export { default as InsightsPage } from "./Insights/ui"
+
+//News
+export { default as NewsPage } from "./News/ui"

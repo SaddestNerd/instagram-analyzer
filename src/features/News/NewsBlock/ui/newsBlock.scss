@@ -1,0 +1,20 @@
+@import "../../../../app/style/colors.scss";
+
+.news-block {
+  background-color: $appCard;
+  border-radius: 24px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  img {
+    height: 120px;
+    width: 100px;
+    object-fit: cover;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+  .title16-bold-urbanist {
+    padding: 16px;
+    color: $black;
+  }
+}

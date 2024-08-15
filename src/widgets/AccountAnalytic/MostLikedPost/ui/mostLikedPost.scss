@@ -1,0 +1,13 @@
+@import "../../../../app/style/colors.scss";
+
+.most-liked-section {
+  width: 100%;
+  color: $appBlack;
+  position: relative;
+  margin-top: 32px;
+
+  .most-liked-block {
+    width: 100%;
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../app/style/colors.scss";
+
+.analytic-block-component {
+  padding: 12px 24px;
+  background-color: $appCard;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .analytic-block-iconbg {
+    border-radius: 71px;
+    background-color: $white;
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+  .analytic-block-iconClockbg {
+    display: none;
+  }
+  p {
+    color: $appTextColor;
+    margin-bottom: 6px;
+  }
+  p + p {
+    color: $black;
+    margin-bottom: 0px;
+  }
+}

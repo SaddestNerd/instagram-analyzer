@@ -3,7 +3,7 @@ import "./accountFooter.scss"
 import { Icon } from "../../../shared"
 import { Link } from "react-router-dom"
 
-const CreateAcc = () => {
+const AccountFooter = () => {
   return (
     <div className="account-footer">
       <Icon type="logo" alt="logo" width={64} height={64}></Icon>
@@ -20,14 +20,14 @@ const CreateAcc = () => {
       </ul>
       <ul className="flex-footer-menu">
         <li className="title12-medium-urbanist">
-          <Link>Analytics</Link>
+          <Link>Terms of Servise</Link>
         </li>
         <li className="title12-medium-urbanist">
-          <Link>Insights</Link>
+          <Link>Privacy Policy</Link>
         </li>
       </ul>
     </div>
   )
 }
 
-export default CreateAcc
+export default AccountFooter

@@ -1,0 +1,26 @@
+@import "../../../app/style/colors.scss";
+
+.analytics-wrapper {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+
+  position: relative;
+
+  .analytics-padding {
+    padding-top: 154px;
+    padding-left: 16px;
+    padding-right: 16px;
+    .analytic-widget-title-color {
+      color: $black;
+    }
+  }
+  .upper-gradient {
+    z-index: 0;
+    background: linear-gradient(#e4c9ff, #ffffff);
+    width: 100%;
+    height: 400px;
+    position: absolute;
+  }
+}

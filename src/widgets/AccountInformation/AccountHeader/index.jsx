@@ -4,7 +4,7 @@ import { Icon } from "../../../shared"
 import { MenuIcon } from "../../../shared/lib/icons/icons"
 import { HeaderMenu } from "../../../features"
 
-const CreateAcc = () => {
+const AccountHeader = () => {
   const [headerOpen, setHeaderOpen] = useState(false)
   return (
     <div className="account-header">
@@ -31,4 +31,4 @@ const CreateAcc = () => {
   )
 }
 
-export default CreateAcc
+export default AccountHeader

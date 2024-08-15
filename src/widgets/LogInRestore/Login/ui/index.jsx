@@ -2,7 +2,6 @@ import React from "react"
 import "./login.scss"
 import { Authorization } from "../../../../features"
 
-
 const Login = ({ nextForm, onClick }) => {
   return (
     <div className="login-section">

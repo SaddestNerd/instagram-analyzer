@@ -8,7 +8,10 @@ import {
   AccountCreatingPage,
   EnterAccountPage,
   LoginRestorePage,
-  AccountInformation,
+  AccountInformationPage,
+  AnalyticsPage,
+  InsightsPage,
+  NewsPage,
 } from "../../pages"
 import { AccountFooter, AccountHeader } from "../../widgets"
 
@@ -35,7 +38,22 @@ export const useRoutes = () => {
       <Route
         path="/account-information"
         exact
-        element={<AccountHeaderFooter element={<AccountInformation />} />}
+        element={<AccountHeaderFooter element={<AccountInformationPage />} />}
+      />
+      <Route
+        path="/account-analytics"
+        exact
+        element={<AccountHeaderFooter element={<AnalyticsPage />} />}
+      />
+      <Route
+        path="/insights"
+        exact
+        element={<AccountHeaderFooter element={<InsightsPage />} />}
+      />
+      <Route
+        path="/news"
+        exact
+        element={<AccountHeaderFooter element={<NewsPage />} />}
       />
       <Route path="/login" exact element={<LoginRestorePage />} />
       <Route path="/*" element={<Navigate replace to="/main" />} />

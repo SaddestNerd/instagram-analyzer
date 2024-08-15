@@ -1,0 +1,43 @@
+@import "../../../app/style/colors.scss";
+
+.overall-rate-component {
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $appCard;
+  border-radius: 24px;
+  color: $appTextColor;
+
+  .overall-rate-calculated {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    .overall-rate-calculated-item {
+      padding: 12px 30px;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+    .overall-rate-calculated-item:first-child {
+      background-color: $appRed;
+    }
+  }
+  .very-low {
+    margin-top: 12px;
+    color: $appRed;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .overall-rate-calculated-item {
+    padding: 8px 20px !important;
+  }
+}
+@media screen and (max-width: 280px) {
+  .overall-rate-calculated-item {
+    padding: 4px 10px !important;
+  }
+}

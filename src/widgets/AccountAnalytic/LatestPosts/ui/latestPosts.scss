@@ -1,0 +1,21 @@
+@import "../../../../app/style/colors.scss";
+
+.latest-posts-section {
+  width: 100%;
+  color: $appBlack;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .latest-posts-count {
+    margin-top: 40px;
+    padding: 6px 25px;
+    background-color: $appSecondaryButton;
+    border-radius: 16px;
+    p + p {
+      color: #524d57;
+    }
+  }
+}
