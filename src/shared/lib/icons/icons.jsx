@@ -44,6 +44,7 @@ import { ReactComponent as Discount } from "../../assets/svg/Discount.svg"
 import { ReactComponent as Defence } from "../../assets/svg/Defence.svg"
 import { ReactComponent as Clock } from "../../assets/svg/Clock.svg"
 import { ReactComponent as BackIcon } from "../../assets/svg/Arrow-left.svg"
+import { ReactComponent as RedExit } from "../../assets/main/svg/RedExit.svg"
 
 //PaySvg
 import { ReactComponent as ApplePay } from "../../assets/svg/logos_apple-pay.svg"
@@ -137,4 +138,5 @@ export {
   TestAvatar,
   BlueCross,
   Exit,
+  RedExit
 }

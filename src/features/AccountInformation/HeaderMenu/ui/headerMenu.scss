@@ -5,6 +5,16 @@
   left: 50%;
   transform: translate(-50%);
   text-align: center;
+
+  .exit-button-wrapper{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease all;
+  }
+  .exit-button-wrapper.isActive{
+    opacity: 1;
+    visibility: visible;
+  }
   button {
     margin-top: 20px;
   }

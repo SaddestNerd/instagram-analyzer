@@ -30,3 +30,6 @@ export { default as InsightsPage } from "./Insights/ui"
 
 //News
 export { default as NewsPage } from "./News/ui"
+
+//NewsArticle
+export { default as NewsArticle } from "./NewsArticle/ui"

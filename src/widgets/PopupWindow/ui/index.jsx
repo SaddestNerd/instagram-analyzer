@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import "./popupWindow.scss"
 import { AppButton, Icon } from "../../../shared"
 
-const PopupWindow = ({ type, onClose }) => {
+const PopupWindow = ({ type, onClose, isRed }) => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -80,13 +80,35 @@ const PopupWindow = ({ type, onClose }) => {
             <AppButton text="Got it" onClick={onClose}></AppButton>
           </>
         )
+        case "logOut":
+        return (
+          <>
+            <Icon type="redExit" alt="RedExitIcon" width={90} height={90} />
+            <p className="title24-medium-urbanist">Are you sure?</p>
+            <p className="title14-regular-urbanist">
+              Are you sure you want to log out of your account? You can return at any time convenient for you
+            </p>
+            <div className="button-flex-wrapper">
+              <AppButton
+                color="red"
+                text="Yes, log out"
+              
+              ></AppButton>
+              <AppButton
+                 color="white"
+                text="Not now"
+                onClick={onClose}
+              ></AppButton>
+            </div>
+          </>
+        )
       default:
         return null
     }
   }
 
   return (
-    <div className={`popup ${show ? "show" : "hide"}`}>
+    <div className={`popup ${show ? "show" : "hide"} ${isRed ? " red" : ""}`}>
       <div className="popup-content">{renderContent()}</div>
     </div>
   )

@@ -6,9 +6,9 @@ import {
   LikesAndComments,
   MostLikedPost,
   Audience,
-  ViewInsights,
   NextUpdate,
 } from "../../../widgets"
+import { ViewInsights } from "../../../features"
 
 const AnalyticsPage = () => {
   return (
@@ -20,7 +20,12 @@ const AnalyticsPage = () => {
         <LikesAndComments />
         <MostLikedPost />
         <Audience />
-        <ViewInsights />
+        <ViewInsights
+          typeIcon="insights"
+          altIcon="InsightsIcon"
+          btnText="View insights"
+          text="We have prepared for you a number of tips and insights to improve your profile"
+        />
       </div>
       <NextUpdate />
     </div>

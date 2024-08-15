@@ -11,7 +11,7 @@ import {
   TermOfService,
 } from "../../../../shared/lib/icons/icons"
 
-const HeaderMenu = ({ onClickExit, headerOpen }) => {
+const HeaderMenu = ({ onClickExit, headerOpen, onClickPopup }) => {
   return (
     <div className="header-menu-wrapper">
       <div className={"header-menu" + (headerOpen ? " isActive" : "")}>
@@ -34,9 +34,14 @@ const HeaderMenu = ({ onClickExit, headerOpen }) => {
           IconComponent={Exit}
           text={"Log Out"}
           isRed={"true"}
+          onClick={onClickPopup}
         />
       </div>
-      <HeaderMenuExitButton onClick={onClickExit} />
+
+      <div className={"exit-button-wrapper" + (headerOpen ? " isActive" : "")} >
+        <HeaderMenuExitButton onClick={onClickExit} />
+      </div>
+
     </div>
   )
 }

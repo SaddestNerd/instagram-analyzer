@@ -12,6 +12,7 @@ import {
   AnalyticsPage,
   InsightsPage,
   NewsPage,
+  NewsArticle
 } from "../../pages"
 import { AccountFooter, AccountHeader } from "../../widgets"
 
@@ -56,6 +57,11 @@ export const useRoutes = () => {
         path="/news"
         exact
         element={<AccountHeaderFooter element={<NewsPage />} />}
+      />
+      <Route
+        path="/news-article"
+        exact
+        element={<AccountHeaderFooter element={< NewsArticle/>} />}
       />
       <Route path="/login" exact element={<LoginRestorePage />} />
       <Route path="/*" element={<Navigate replace to="/main" />} />

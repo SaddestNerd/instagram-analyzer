@@ -30,6 +30,8 @@ const iconMapping = {
   insights: Icons.Insights,
   reccomend: Icons.Reccomend,
   crookedArrow: Icons.CrookedArrow,
+  news: Icons.News,
+  redExit: Icons.RedExit,
 }
 
 const Icon = ({

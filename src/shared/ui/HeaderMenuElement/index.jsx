@@ -1,9 +1,9 @@
 import React from "react"
 import "./headerMenuElement.scss"
 
-const HeaderMenuElement = ({ IconComponent, text, isRed }) => {
+const HeaderMenuElement = ({ IconComponent, text, isRed, onClick }) => {
   return (
-    <div className={"header-menu-element" + (isRed ? " red" : "")}>
+    <div onClick={onClick} className={"header-menu-element" + (isRed ? " red" : "")}>
       <div className="flex-element">
         <div className="icon">
           <IconComponent />

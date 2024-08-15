@@ -1,6 +1,7 @@
 import React from "react"
 import "./insights.scss"
 import { InfoBlocks, InfoBlocksV2, InfoBlocksV3 } from "../../../widgets"
+import { ViewInsights } from "../../../features"
 
 const InsightsPage = () => {
   return (
@@ -30,7 +31,9 @@ const InsightsPage = () => {
                   "To summarize all of above, we can formulate the following basic recommendations:"
                 }
               />
+               <ViewInsights typeIcon="news" altIcon="NewsIcon" btnText="Read news" text="Keep up to date with the latest news in the field of promotion of Instagram account and learn new things"/>
             </div>
+      
           </div>
         </div>
       </div>

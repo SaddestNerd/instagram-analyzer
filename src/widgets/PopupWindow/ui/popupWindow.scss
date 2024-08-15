@@ -15,6 +15,14 @@
   z-index: 10;
   max-width: 100%;
   opacity: 0;
+  .button-flex-wrapper {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
 }
 .popup.show {
   bottom: 0;
@@ -38,4 +46,8 @@
     color: $appBlue;
     cursor: pointer;
   }
+}
+
+.popup.red {
+  background-color: $appCard;
 }
