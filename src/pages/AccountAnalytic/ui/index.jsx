@@ -7,6 +7,7 @@ import {
   MostLikedPost,
   Audience,
   ViewInsights,
+  NextUpdate,
 } from "../../../widgets"
 
 const AnalyticsPage = () => {
@@ -21,6 +22,7 @@ const AnalyticsPage = () => {
         <Audience />
         <ViewInsights />
       </div>
+      <NextUpdate />
     </div>
   )
 }

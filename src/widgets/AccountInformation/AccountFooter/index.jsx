@@ -3,9 +3,11 @@ import "./accountFooter.scss"
 import { Icon } from "../../../shared"
 import { Link } from "react-router-dom"
 
-const AccountFooter = () => {
+const AccountFooter = ({ hasNextUpdate }) => {
   return (
-    <div className="account-footer">
+    <div
+      className={`account-footer ${hasNextUpdate ? "with-next-update" : ""}`}
+    >
       <Icon type="logo" alt="logo" width={64} height={64}></Icon>
       <ul className="flex-footer-menu">
         <li className="title16-medium-urbanist">

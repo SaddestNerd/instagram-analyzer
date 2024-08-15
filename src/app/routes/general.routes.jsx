@@ -1,5 +1,5 @@
 import React from "react"
-import { Routes, Route, Navigate } from "react-router-dom"
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import {
   OnBoardingNavigationPage,
   OnBoardingPage,
@@ -17,11 +17,13 @@ import { AccountFooter, AccountHeader } from "../../widgets"
 
 export const useRoutes = () => {
   const AccountHeaderFooter = ({ element }) => {
+    const location = useLocation()
+    const hasNextUpdate = location.pathname === "/account-analytics"
     return (
       <>
         <AccountHeader />
         {element}
-        <AccountFooter />
+        <AccountFooter hasNextUpdate={hasNextUpdate} />
       </>
     )
   }

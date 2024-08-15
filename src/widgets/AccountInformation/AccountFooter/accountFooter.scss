@@ -12,6 +12,10 @@
   transform: translateX(-50%);
   background-color: $white;
   padding-top: 48px;
+
+  &.with-next-update {
+    padding-bottom: 100px;
+  }
   img {
     margin-left: auto;
     margin-right: auto;

@@ -38,6 +38,7 @@ export { default as LikesAndComments } from "./AccountAnalytic/LikesAndComments/
 export { default as MostLikedPost } from "./AccountAnalytic/MostLikedPost/ui"
 export { default as Audience } from "./AccountAnalytic/Audience/ui"
 export { default as ViewInsights } from "./AccountAnalytic/ViewInsights/ui"
+export { default as NextUpdate } from "./AccountAnalytic/NextUpdate/ui"
 
 //Insights
 export { default as InfoBlocks } from "./Insights/InfoBlocks/ui"
