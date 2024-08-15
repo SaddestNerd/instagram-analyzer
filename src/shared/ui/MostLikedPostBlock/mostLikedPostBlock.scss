@@ -1,0 +1,55 @@
+@import "../../../app/style/colors.scss";
+
+.most-liked-post-component {
+  padding: 21px;
+  margin-bottom: 8px;
+  background-color: $appCard;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .most-liked-post-img-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 106px;
+    height: 100%;
+    z-index: 1;
+    .liked-post-img-block {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px 0 0 10px;
+    }
+  }
+  .most-liked-post-details {
+    margin-left: 115px;
+    p {
+      color: $appTextColor;
+      margin-bottom: 8px;
+    }
+
+    .most-liked-post-likes {
+      display: flex;
+      align-items: center;
+      p {
+        color: $black;
+        margin-bottom: 0px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .most-liked-post-block-iconbg {
+    border-radius: 71px;
+    background-color: $white;
+    padding: 8px;
+  }
+}
+
+.most-liked-post-component:last-child {
+  margin-bottom: 0px;
+}

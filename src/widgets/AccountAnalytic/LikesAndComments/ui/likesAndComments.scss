@@ -1,0 +1,17 @@
+@import "../../../../app/style/colors.scss";
+
+.like-comment-section {
+  width: 100%;
+  color: $appBlack;
+  position: relative;
+  margin-top: 32px;
+
+  .like-comment-block {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    column-gap: 9px;
+    row-gap: 8px;
+    margin-top: 16px;
+  }
+}

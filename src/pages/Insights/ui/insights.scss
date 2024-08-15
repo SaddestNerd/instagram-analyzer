@@ -15,46 +15,48 @@
     height: 280px;
     position: absolute;
   }
-  .content-wrapper{
-    z-index: 10;
+  .content-wrapper {
+    z-index: 0;
     position: relative;
-    padding: 160px 0px 16px  0px;
+    padding: 160px 0px 16px 0px;
 
-    .text{
+    .text {
       text-align: center;
     }
-    .blue{
+    .blue {
       color: $appBlue;
     }
   }
-  .blocks-wrapper{
+  .blocks-wrapper {
     padding-top: 80px;
   }
-  .color-blue-background{
+  .color-blue-background {
     background-color: $appBlue;
-    .white-background{
+    .white-background {
       background-color: $white;
       padding: 34px 16px 34px 16px;
       border-bottom-right-radius: 24px;
       border-bottom-left-radius: 24px;
     }
   }
-  .color-purple-background{
+  .color-purple-background {
     background-color: $appPurple;
-    .white-background{
+    .white-background {
       background-color: $white;
       padding: 34px 16px 34px 16px;
       border-top-right-radius: 24px;
       border-top-left-radius: 24px;
+      .app-button-item {
+        width: 100%;
+      }
     }
   }
-  .gradient-background{
-    background: linear-gradient(#315DF4, #EA48DA);
+  .gradient-background {
+    background: linear-gradient(#315df4, #ea48da);
     padding: 34px 16px 34px 16px;
-    .title20-bold-urbanist{
+    .title20-bold-urbanist {
       color: white;
       font-size: 24px;
-   
     }
   }
 }

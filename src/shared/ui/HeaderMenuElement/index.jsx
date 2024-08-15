@@ -1,9 +1,9 @@
 import React from "react"
 import "./headerMenuElement.scss"
 
-const ProgressBar = ({ IconComponent, text, isRed, onClick }) => {
+const HeaderMenuElement = ({ IconComponent, text, isRed, onClick }) => {
   return (
-    <div className={"header-menu-element" + (isRed ? " red" : "")} onClick={onClick}>
+    <div onClick={onClick} className={"header-menu-element" + (isRed ? " red" : "")}>
       <div className="flex-element">
         <div className="icon">
           <IconComponent />
@@ -14,4 +14,4 @@ const ProgressBar = ({ IconComponent, text, isRed, onClick }) => {
   )
 }
 
-export default ProgressBar
+export default HeaderMenuElement

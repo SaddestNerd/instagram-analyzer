@@ -30,7 +30,7 @@ const EnterAccountPage = () => {
       {popupType && (
         <>
           <div className="overlay"></div>
-          <PopupWindow type={popupType} onClose={closePopup}/>
+          <PopupWindow type={popupType} onClose={closePopup} />
         </>
       )}
     </div>

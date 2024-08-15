@@ -1,18 +1,43 @@
 import React from "react"
 import "./infoBlocks.scss"
-import { Icon, InsightBlock } from "../../../../shared"
+import { InsightBlock } from "../../../../shared"
 
-
-
-const InfoBlocks = ({ text, onClick }) => {
+const InfoBlocks = ({ text }) => {
   return (
     <div className="info-blocks">
-        
-        <div className="title20-bold-urbanist">{text}</div>
-        <InsightBlock svgType="recommendation"  bigText={"Post More Frequently"} littleText={"Write captions that encourage your followers to comment, share their thoughts, or tag friends. "}/>
-        <InsightBlock svgType="recommendation" bigText={"Post More Frequently"} littleText={"Write captions that encourage your followers to comment, share their thoughts, or tag friends. "}/>
-        <InsightBlock svgType="recommendation"  bigText={"Post More Frequently"} littleText={"Write captions that encourage your followers to comment, share their thoughts, or tag friends. "}/>
-        <InsightBlock svgType="recommendation"  bigText={"Post More Frequently"} littleText={"Write captions that encourage your followers to comment, share their thoughts, or tag friends. "}/>
+      <p className="title24-medium-urbanist">{text}</p>
+      <InsightBlock
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Post More Frequently"}
+        littleText={
+          "Write captions that encourage your followers to comment, share their thoughts, or tag friends. "
+        }
+      />
+      <InsightBlock
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Post More Frequently"}
+        littleText={
+          "Write captions that encourage your followers to comment, share their thoughts, or tag friends. "
+        }
+      />
+      <InsightBlock
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Post More Frequently"}
+        littleText={
+          "Write captions that encourage your followers to comment, share their thoughts, or tag friends. "
+        }
+      />
+      <InsightBlock
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Post More Frequently"}
+        littleText={
+          "Write captions that encourage your followers to comment, share their thoughts, or tag friends. "
+        }
+      />
     </div>
   )
 }

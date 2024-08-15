@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import "./popupWindow.scss"
 import { AppButton, Icon } from "../../../shared"
 
-const PopupWindow = ({ type, onClose, headerShow }) => {
+const PopupWindow = ({ type, onClose, isRed }) => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -45,12 +45,12 @@ const PopupWindow = ({ type, onClose, headerShow }) => {
               <AppButton
                 color="red"
                 text="Yes, log out"
-                link="https://help.instagram.com/284802804971822/?helpref=hc_fnav"
+              
               ></AppButton>
               <AppButton
                  color="white"
                 text="Not now"
-                link="https://help.instagram.com/284802804971822/?helpref=hc_fnav"
+                onClick={onClose}
               ></AppButton>
             </div>
           </>
@@ -108,10 +108,11 @@ const PopupWindow = ({ type, onClose, headerShow }) => {
   }
 
   return (
-    <div className={`popup ${show ? "show" : "hide"} `}>
+    <div className={`popup ${show ? "show" : "hide"} ${isRed ? " red" : ""}`}>
       <div className="popup-content">{renderContent()}</div>
     </div>
   )
 }
 
 export default PopupWindow
+

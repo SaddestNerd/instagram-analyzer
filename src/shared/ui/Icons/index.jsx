@@ -18,11 +18,20 @@ const iconMapping = {
   wrongIcon: Icons.WrongIcon,
   backIcon: Icons.BackIcon,
   checkEmailIcon: Icons.CheckEmailIcon,
-  redExit: Icons.RedExit,
-  reccomend: Icons.Reccomend,
+  likes: Icons.Likes,
+  comments: Icons.Comments,
+  lostFollowers: Icons.LostFollowers,
+  newFollowers: Icons.NewFollowers,
+  inactiveFollowers: Icons.InactiveFollowers,
+  secretFans: Icons.SecretFans,
+  yourFriends: Icons.YourFriends,
+  yourFans: Icons.YourFans,
+  updateClock: Icons.UpdateClock,
   insights: Icons.Insights,
-  recommendation: Icons.Recommendation,
+  reccomend: Icons.Reccomend,
   crookedArrow: Icons.CrookedArrow,
+  redExit: Icons.RedExit,
+  news: Icons.News,
 }
 
 const Icon = ({

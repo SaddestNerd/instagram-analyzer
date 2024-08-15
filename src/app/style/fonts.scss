@@ -32,7 +32,6 @@
   font-weight: 600;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Urbanist-Bold";
   src: url("../fonts/Urbanist/Urbanist-Bold.ttf");
@@ -62,13 +61,6 @@ html {
     letter-spacing: 0%;
   }
   .title20-semibold-outfit {
-    font-size: 20px;
-    font-family: "Outfit-SemiBold";
-    font-weight: 600;
-    line-height: 124.00000095367432%;
-    letter-spacing: 0%;
-  }
-    .title20-semibold-outfit {
     font-size: 20px;
     font-family: "Outfit-SemiBold";
     font-weight: 600;
@@ -140,13 +132,6 @@ html {
     line-height: 124.00000095367432%;
     letter-spacing: 0%;
   }
-  .title24-bold-urbanist {
-    font-size: 24px;
-    font-family: "Urbanist-SemiBold";
-    font-weight: 500;
-    line-height: 124.00000095367432%;
-    letter-spacing: 0%;
-  }
   .title20-medium-urbanist {
     font-size: 20px;
     font-family: "Urbanist-Medium";
@@ -154,24 +139,10 @@ html {
     line-height: 124.00000095367432%;
     letter-spacing: 0%;
   }
-  .title20-bold-urbanist {
-    font-size: 20px;
-    font-family: "Urbanist-bold";
-    font-weight: 700;
-    line-height: 124.00000095367432%;
-    letter-spacing: 0%;
-  }
   .title16-medium-urbanist {
     font-size: 16px;
     font-family: "Urbanist-Medium";
     font-weight: 500;
-    line-height: 124.00000095367432%;
-    letter-spacing: 0%;
-  }
-  .title16-bold-urbanist {
-    font-size: 16px;
-    font-family: "Urbanist-bold";
-    font-weight: 700;
     line-height: 124.00000095367432%;
     letter-spacing: 0%;
   }
@@ -216,6 +187,55 @@ html {
     font-family: "Urbanist-SemiBold";
     font-weight: 600;
     line-height: 139.9999976158142%;
+    letter-spacing: 0%;
+  }
+  .title40-bold-urbanist {
+    font-size: 40px;
+    font-family: "Urbanist-Bold";
+    font-weight: 700;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title40-medium-urbanist {
+    font-size: 40px;
+    font-family: "Urbanist-Medium";
+    font-weight: 500;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title18-medium-urbanist {
+    font-size: 18px;
+    font-family: "Urbanist-Medium";
+    font-weight: 500;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title20-bold-urbanist {
+    font-size: 20px;
+    font-family: "Urbanist-Bold";
+    font-weight: 700;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title24-semibold-urbanist {
+    font-size: 24px;
+    font-family: "Urbanist-Semibold";
+    font-weight: 600;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0%;
+  }
+  .title16-bold-urbanist {
+    font-size: 16px;
+    font-family: "Urbanist-Bold";
+    font-weight: 700;
+    line-height: 124.00000095367432%;
+    letter-spacing: 0%;
+  }
+  .title24-bold-urbanist {
+    font-size: 24px;
+    font-family: "Urbanist-Bold";
+    font-weight: 700;
+    line-height: 124.00000095367432%;
     letter-spacing: 0%;
   }
 }

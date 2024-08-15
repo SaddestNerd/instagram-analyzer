@@ -7,7 +7,7 @@
   background-color: $white;
   // height: 100%;
   position: relative;
-
+  width: 100%;
   .upper-gradient {
     z-index: 0;
     background: linear-gradient(#e4c9ff, #ffffff);
@@ -24,8 +24,8 @@
     left: 50%;
     transform: translateX(-50%);
     backdrop-filter: blur(3px);
+ 
     z-index: 10;
-    height: 100%;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease all;
@@ -34,7 +34,7 @@
     opacity: 1;
     visibility: visible;
   }
-  .center-block-wrapper{
+  .center-block-wrapper {
     padding-bottom: 16px;
   }
 }

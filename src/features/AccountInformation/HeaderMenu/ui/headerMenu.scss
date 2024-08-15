@@ -1,10 +1,6 @@
-@import "../../../../app/style/colors.scss";
-
-
 .header-menu-wrapper {
   width: 100%;
-  position: fixed;
-  height: 100vh;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%);
@@ -27,21 +23,11 @@
   .header-menu.isActive {
     transform: translateY(0);
   }
-  .popup-window-wrapper{
-    position: fixed;
-    bottom: -0%;
-    width: 100%;
-    text-align: center;
-    .popup {
-      background-color: $appCard;
-    }
-    visibility: hidden;
-    opacity: 0;
-    transition: .2s ease;
-  }
-  .popup-window-wrapper.isActive{
-    transition: .2s ease;
-    visibility: visible;
+  .exit-button-wrapper.isActive{
     opacity: 1;
+  }
+  .exit-button-wrapper{
+    transition: 0.2s ease all;
+    opacity: 0;
   }
 }

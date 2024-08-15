@@ -8,19 +8,19 @@ import { ReactComponent as Posts } from "../../assets/main/svg/Posts.svg"
 import { ReactComponent as UpArrow } from "../../assets/main/svg/UpArrow.svg"
 
 //Analytics
-import { ReactComponent as Likes } from "../../assets/main/svg/Posts.svg"
+import { ReactComponent as Likes } from "../../assets/main/svg/Likes.svg"
 import { ReactComponent as Comments } from "../../assets/main/svg/Comments.svg"
-import { ReactComponent as LostFollowers } from "../../assets/main/svg/Comments.svg"
-import { ReactComponent as NewFollowers } from "../../assets/main/svg/Comments.svg"
-import { ReactComponent as InactiveFollowers } from "../../assets/main/svg/Menu.svg"
-import { ReactComponent as SecretFans } from "../../assets/main/svg/Following.svg"
-import { ReactComponent as YourFriends } from "../../assets/main/svg/Followers.svg"
-import { ReactComponent as YourFans } from "../../assets/main/svg/Posts.svg"
+import { ReactComponent as LostFollowers } from "../../assets/main/svg/LostFollowers.svg"
+import { ReactComponent as NewFollowers } from "../../assets/main/svg/NewFollowers.svg"
+import { ReactComponent as InactiveFollowers } from "../../assets/main/svg/InactiveFollowers.svg"
+import { ReactComponent as SecretFans } from "../../assets/main/svg/SecretFans.svg"
+import { ReactComponent as YourFriends } from "../../assets/main/svg/YourFriends.svg"
+import { ReactComponent as YourFans } from "../../assets/main/svg/YourFans.svg"
 import { ReactComponent as UpdateClock } from "../../assets/main/svg/UpdateClock.svg"
 
 //Tips & Insights
-import { ReactComponent as Reccomend } from "../../assets/main/svg/Following.svg"
-import { ReactComponent as CrookedArrow } from "../../assets/main/svg/Followers.svg"
+import { ReactComponent as Reccomend } from "../../assets/main/svg/Reccomend.svg"
+import { ReactComponent as CrookedArrow } from "../../assets/main/svg/CrookedArrow.svg"
 
 //MainHeaderSvg
 import { ReactComponent as Analytics } from "../../assets/main/svg/Analytics.svg"
@@ -31,9 +31,6 @@ import { ReactComponent as SwitchInstagramAccount } from "../../assets/main/svg/
 import { ReactComponent as TermOfService } from "../../assets/main/svg/TermOfService.svg"
 import { ReactComponent as Exit } from "../../assets/main/svg/Exit.svg"
 import { ReactComponent as BlueCross } from "../../assets/main/svg/BlueCross.svg"
-import { ReactComponent as RedExit } from "../../assets/main/svg/RedExit.svg"
-
-
 
 //------------------------------------ANOTHER------------------------------------
 
@@ -47,7 +44,8 @@ import { ReactComponent as Discount } from "../../assets/svg/Discount.svg"
 import { ReactComponent as Defence } from "../../assets/svg/Defence.svg"
 import { ReactComponent as Clock } from "../../assets/svg/Clock.svg"
 import { ReactComponent as BackIcon } from "../../assets/svg/Arrow-left.svg"
-import { ReactComponent as Recommendation } from "../../assets/main/svg/Recommendation.svg"
+import { ReactComponent as RedExit } from "../../assets/main/svg/RedExit.svg"
+
 //PaySvg
 import { ReactComponent as ApplePay } from "../../assets/svg/logos_apple-pay.svg"
 import { ReactComponent as GooglePay } from "../../assets/svg/logos_google-pay.svg"
@@ -78,12 +76,12 @@ import NotFoundIcon from "../../assets/NotFoundIcon.webp"
 import WrongIcon from "../../assets/WrongIcon.webp"
 import CheckEmailIcon from "../../assets/CheckEmailIcon.webp"
 
-
 //TEST
-import TestNews from "../../assets/test/testNews.png"
-import TestAvatar from "../../assets/test/avatartest.png"
+import TestAvatar from "../../assets/main/avatartest.webp"
+import TestNews from "../../assets/main/testNews.webp"
 
 export {
+  TestNews,
   UpArrow,
   Likes,
   Comments,
@@ -138,9 +136,7 @@ export {
   SwitchInstagramAccount,
   TermOfService,
   TestAvatar,
-  TestNews,
   BlueCross,
   Exit,
-  RedExit,
-  Recommendation,
+  RedExit
 }

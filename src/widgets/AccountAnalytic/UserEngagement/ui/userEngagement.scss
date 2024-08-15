@@ -1,0 +1,31 @@
+@import "../../../../app/style/colors.scss";
+
+.user-engagement-section {
+  width: 100%;
+  color: $appBlack;
+  position: relative;
+  margin-top: 32px;
+
+  .user-engagement-block {
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 9px;
+    row-gap: 8px;
+    margin-top: 16px;
+  }
+
+  .overall-rate-component {
+    grid-column: span 2;
+  }
+
+  @media screen and (max-width: 350px) {
+    .user-engagement-block {
+      grid-template-columns: 1fr;
+    }
+    .overall-rate-component {
+      grid-column: span 1;
+    }
+  }
+}
