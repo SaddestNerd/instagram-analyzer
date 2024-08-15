@@ -28,9 +28,19 @@
     }
     &.error {
       color: $pink;
+      border: 1px solid $pink;
+    }
+    &.error:focus {
+      border: 1px solid $pink;
     }
   }
 }
 .fixed-width {
   width: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

@@ -10,21 +10,19 @@
   background-position: center;
   background-repeat: no-repeat;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: end;
   justify-content: flex-end;
   background-color: $backgroundPurple;
 }
 
 .background-pic5 {
-  background-image: url("../../../shared/assets/Instlogo.svg");
-  background-position: center 20%;
+  background-image: url("../../../shared/assets/svg/Instlogo.svg");
+  background-position: center 15%;
   background-size: 35%;
   background-repeat: no-repeat;
 }
 .background-pic6 {
-  background-image: url("../../../shared/assets/BG6.png");
+  background-image: url("../../../shared/assets/BG6.webp");
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;

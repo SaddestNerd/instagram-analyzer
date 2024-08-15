@@ -1,7 +1,7 @@
 import React from "react"
 import "./underInfoNavigation.scss"
-import { StartNavigation } from "../../../../features"
 import NavigationSteps from "../../NavigationSteps/ui"
+import { DefaultButton } from "../../../../shared"
 
 const UnderInfoNavigation = ({
   currentForm,
@@ -22,15 +22,17 @@ const UnderInfoNavigation = ({
           totalSteps={onboardingForms.length}
           onStepChange={setCurrentForm}
         />
-        <StartNavigation
-          text={form.buttonText}
-          onClick={nextForm}
-          link={isLastForm ? "/user-enter" : "/onboarding"}
-          typeIcon="arrow"
-          widthSize="18"
-          heightSize="14"
-          altIcon="arrow"
-        />
+        <div className="onboarding-navigation-button">
+          <DefaultButton
+            text={form.buttonText}
+            onClick={nextForm}
+            link={isLastForm ? "/user-enter" : "/onboarding"}
+            typeIcon="arrow"
+            widthSize="18"
+            heightSize="14"
+            altIcon="arrow"
+          />
+        </div>
       </div>
     </div>
   )

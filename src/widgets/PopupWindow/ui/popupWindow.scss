@@ -1,0 +1,45 @@
+@import "../../../app/style/colors.scss";
+
+.popup {
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 480px;
+  background-color: #eaecf4;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  transition:
+    bottom 0.3s ease,
+    opacity 0.3s ease;
+  z-index: 10;
+  max-width: 100%;
+  opacity: 0;
+}
+.popup.show {
+  bottom: 0;
+  opacity: 1;
+}
+.popup.hide {
+  bottom: -100%;
+  opacity: 0;
+}
+.popup-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px 16px;
+  text-align: center;
+  
+  .cancel-button {
+    background-color: transparent;
+    color: $appBlue;
+    cursor: pointer;
+  }
+}
+
+.popup.red{
+  background-color: $appCard;
+}

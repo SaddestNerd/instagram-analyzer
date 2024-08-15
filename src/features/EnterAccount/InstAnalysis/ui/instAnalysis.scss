@@ -1,0 +1,20 @@
+.data-analys-inst-block {
+  position: relative;
+  width: 100%;
+  max-width: 343px;
+  .data-analys-inst-input {
+    margin-bottom: 20px;
+    svg {
+      position: absolute;
+      z-index: 1;
+      left: 20px;
+      top: 23%;
+      transform: translateY(-50%);
+    }
+    .app-input {
+      input {
+        padding-left: 55px;
+      }
+    }
+  }
+}

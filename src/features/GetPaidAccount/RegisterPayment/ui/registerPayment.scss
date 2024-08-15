@@ -1,12 +1,12 @@
 @import "../../../../app/style/colors.scss";
 
-.register-payment-form-block{
+.register-payment-form-block {
   width: calc(100%);
   .form-element {
     margin-top: 24px;
     text-align: left;
     width: calc(100%);
-  
+
     .text-element {
       margin-bottom: 14px;
       margin-left: 8px;
@@ -18,7 +18,7 @@
       padding-right: 20px;
       border-radius: 10px;
       max-width: 350px;
-    
+
       border: solid 2px $grayLight;
       background-color: $white;
       .default-input {
@@ -33,13 +33,11 @@
         .default-input-item {
           width: 70px;
         }
-        .flex{
+        .flex {
           display: flex;
           gap: 10px;
         }
       }
     }
   }
-
-
 }

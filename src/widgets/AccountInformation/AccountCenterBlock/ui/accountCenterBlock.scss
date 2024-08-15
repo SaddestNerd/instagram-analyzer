@@ -1,0 +1,44 @@
+@import "../../../../app//style/colors.scss";
+
+.account-center-blocks {
+    background-color: $appCard;
+    margin: 18px;
+    border-radius: 18px;
+    .background-icon{
+        padding: 18px;
+        background-color: $white;
+        border-radius: 100px;
+        
+    }
+    .center-blocks-upper-wrapper{
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .center-blocks-bottom-wrapper{
+        padding: 16px;
+        width: 50%;
+    }
+
+    background-repeat: no-repeat; 
+    
+
+}
+
+.account-center-blocks.News{
+    background-image: url(../../../../shared/assets/main/BG3.png);
+    background-size: 180px 210px; 
+    background-position: 110% 40px;
+}
+
+.account-center-blocks.Insights{
+    background-image: url(../../../../shared/assets/main/BG2.png);
+    background-size: 180px 210px; 
+    background-position: 110% 40px;
+}
+
+.account-center-blocks.Analytics{
+    background-image: url(../../../../shared/assets/main/BG1.png);
+    background-position: 120% 50px;
+    background-size: 200px 180px; 
+}

@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import "./centerDescription.scss"
-import { ApplePayButton, CardInfoInput, CVCInput, DefaultButton, DefaultInput, EmojiBlock, MobilePayButton, YearMonthInput } from "../../../../shared"
+import { DefaultButton, EmojiBlock, MobilePayButton } from "../../../../shared"
 import {
   BGCost,
   Emoji1,
@@ -11,14 +11,16 @@ import {
   Emoji6,
   Emoji7,
   Emoji8,
-
 } from "../../../../shared/lib/icons/icons"
 import { RegisterPayment } from "../../../../features"
 
-const CenterDescription = ({onActiveModal}) => {
-
+const CenterDescription = ({ onActiveModal, scrollToOffer }) => {
   const [openForm, setOpenForm] = useState(false)
+  const offerRef = useRef(null)
 
+  scrollToOffer.current = () => {
+    offerRef.current.scrollIntoView({ behavior: "smooth" })
+  }
   return (
     <div className="under-wrapper">
       <div className="under-wrapper-flex">
@@ -31,17 +33,19 @@ const CenterDescription = ({onActiveModal}) => {
         </p>
 
         <div className="emoji-wrapper-grid">
-          <EmojiBlock text={"Secret fans"} emoji={Emoji1} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji2} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji3} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji4} />
           <EmojiBlock text={"Secret fans"} emoji={Emoji5} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji6} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji7} />
-          <EmojiBlock text={"Secret fans"} emoji={Emoji8} />
+          <EmojiBlock text={"Blocked you"} emoji={Emoji6} />
+          <EmojiBlock text={"Top likers"} emoji={Emoji7} />
+          <EmojiBlock text={"Deleted likes"} emoji={Emoji8} />
+          <EmojiBlock text={"New followers"} emoji={Emoji1} />
+          <EmojiBlock text={"Lost followers"} emoji={Emoji2} />
+          <EmojiBlock text={"Top comments"} emoji={Emoji4} />
+          <EmojiBlock text={"Deleted comments"} emoji={Emoji3} />
         </div>
 
-        <p className="title24-semibold-outfit">Limited time special offer</p>
+        <p className="title24-semibold-outfit" ref={offerRef}>
+          Limited time special offer
+        </p>
         <p className="title16-regular-outfit">
           Complete your profile and get valuable insights today!
         </p>
@@ -63,16 +67,17 @@ const CenterDescription = ({onActiveModal}) => {
             <div className="right title20-semibold-outfit">$1.00</div>
           </div>
         </div>
-        {openForm ?
-          <RegisterPayment/> : <></>
-        }
-
+        {openForm ? <RegisterPayment /> : <></>}
       </div>
       <div className="pay-wrapper">
-          <DefaultButton text={openForm ?  "Process credit card" : "get my plan" } onClick={() => {setOpenForm(!openForm)}} /> 
+        <DefaultButton
+          text={openForm ? "Process credit card" : "get my plan"}
+          onClick={() => {
+            setOpenForm(!openForm)
+          }}
+        />
         <div className="or-wrapper title11-regular-outfit">OR</div>
-          <MobilePayButton type={"google"} onClick={onActiveModal}/>
-        {/* <GooglePayButton/> */}
+        <MobilePayButton type={"google"} onClick={onActiveModal} />
       </div>
     </div>
   )

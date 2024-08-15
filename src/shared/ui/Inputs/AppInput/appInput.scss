@@ -1,0 +1,40 @@
+@import "../../../../app/style/colors.scss";
+
+.app-input {
+  width: 100%;
+
+  .app-input-text {
+    margin-bottom: 5px;
+    text-align: left;
+    color: $appTextColor;
+  }
+
+  .app-input-item {
+    max-width: 100%;
+    width: 343px;
+    height: 56px;
+    background-color: $BG;
+    border-radius: 10px;
+    color: $black;
+    position: relative;
+    outline: none;
+    border: 1px solid $cardBorders;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+    &:focus {
+      border: 1px solid $appBlue;
+    }
+    &.error {
+      color: $pink;
+      border: 1px solid $pink;
+    }
+    &.error:focus {
+      border: 1px solid $pink;
+    }
+  }
+}
+.fixed-width {
+  width: auto;
+}

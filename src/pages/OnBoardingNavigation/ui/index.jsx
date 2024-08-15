@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import "./onBoardingNavigation.scss"
 import { UnderInfoNavigation } from "../../../widgets"
 import { onboardingForms } from "../model/onboardingModel"
+import "./onBoardingNavigation.scss"
 
 const OnBoardingNavigationPage = () => {
   const [currentForm, setCurrentForm] = useState(0)

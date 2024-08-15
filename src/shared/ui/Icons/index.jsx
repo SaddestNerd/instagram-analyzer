@@ -9,6 +9,20 @@ const iconMapping = {
   openEye: Icons.OpenEye,
   closedEye: Icons.ClosedEye,
   userIcon: Icons.UserIcon,
+  instCreate: Icons.InstCreate,
+  defence: Icons.Defence,
+  clock: Icons.Clock,
+  instCircleLoad: Icons.InstCircleLoad,
+  privateIcon: Icons.PrivateIcon,
+  notFoundIcon: Icons.NotFoundIcon,
+  wrongIcon: Icons.WrongIcon,
+  backIcon: Icons.BackIcon,
+  checkEmailIcon: Icons.CheckEmailIcon,
+  redExit: Icons.RedExit,
+  reccomend: Icons.Reccomend,
+  insights: Icons.Insights,
+  recommendation: Icons.Recommendation,
+  crookedArrow: Icons.CrookedArrow,
 }
 
 const Icon = ({

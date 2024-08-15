@@ -1,27 +1,23 @@
-import React, { useState } from "react"
+import React from "react"
 import { DefaultInput, DefaultButton } from "../../../../shared"
 import { Icon } from "../../../../shared"
 import "./accessToApp.scss"
+import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
+
 const AccessToApp = ({ onClick }) => {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-  const [showPassword, setShowPassword] = useState(false)
-
-  const togglePasswordVisibility = () => {
-    setShowPassword((prevShowPassword) => !prevShowPassword)
-  }
-
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value)
-  }
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value)
-  }
-
-  const isButtonDisabled = username.length < 6 || password.length < 6
-  const isPasswordShort = password.length < 6 && password.length > 0
-
+  const {
+    username,
+    password,
+    showPassword,
+    togglePasswordVisibility,
+    handleUsernameChange,
+    handlePasswordChange,
+    isValidUsername,
+    isMissingAt,
+    isMissingDot,
+    isButtonDisabled,
+    isPasswordShort,
+  } = useAccessForm()
   return (
     <div className="access-app-block">
       <div>
@@ -31,8 +27,18 @@ const AccessToApp = ({ onClick }) => {
           value={username}
           text="Email"
           type="email"
+          isError={!isValidUsername && username.length > 0}
         />
       </div>
+      {!isValidUsername && username.length > 0 && (
+        <p className="title11-regular-outfit error-message">
+          {isMissingAt
+            ? 'Email must contain "@" symbol.'
+            : isMissingDot
+              ? 'Email must contain a dot after the "@" symbol.'
+              : "Please enter a valid email address."}
+        </p>
+      )}
       <div className="acess-app-input">
         <DefaultInput
           placeholder="Enter your password"
@@ -63,6 +69,7 @@ const AccessToApp = ({ onClick }) => {
           text="sign up"
           onClick={onClick}
           isDisabled={isButtonDisabled}
+          link="/enter-account"
         />
       </div>
     </div>

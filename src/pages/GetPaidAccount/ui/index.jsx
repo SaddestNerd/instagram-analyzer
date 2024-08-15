@@ -1,33 +1,35 @@
-import React, { useState } from "react"
-import "./usernameEnter.scss"
+import React, { useState, useRef } from "react"
+import "./getPaidAccount.scss"
 import {
-  Discount,
-} from "../../../shared/lib/icons/icons"
-import { CenterDescription, FooterInformation, Timer, TimerBlock } from "../../../widgets"
-import {
-
-  DefaultButton,
-
-} from "../../../shared"
+  CenterDescription,
+  FooterInformation,
+  TimerBlock,
+} from "../../../widgets"
 import { PayWindow } from "../../../features"
 
-const UsernameEnterPage = () => {
-  const [activeMobalWindow, setActiveModalWindow] = useState(true);
+const GetPaidAccountPage = () => {
+  const [activeMobalWindow, setActiveModalWindow] = useState(true)
+  const scrollToOffer = useRef(null)
 
   return (
-
-
-
     <div className={`get-paid-account`}>
       <div className="background-wrapper"></div>
-      <TimerBlock/>
-      <CenterDescription onActiveModal={() => (setActiveModalWindow(true))}/>
-      <FooterInformation/>
-      <div className={"upper-window-background" + (activeMobalWindow ? " is-active" : " ")} onClick={() => (setActiveModalWindow(false))} >
-        <PayWindow svg={"apple"}/>
+      <TimerBlock onScrollToOffer={() => scrollToOffer.current()} />
+      <CenterDescription
+        onActiveModal={() => setActiveModalWindow(true)}
+        scrollToOffer={scrollToOffer}
+      />
+      <FooterInformation />
+      <div
+        className={
+          "upper-window-background" + (activeMobalWindow ? " is-active" : " ")
+        }
+        onClick={() => setActiveModalWindow(false)}
+      >
+        <PayWindow svg={"apple"} />
       </div>
     </div>
   )
 }
 
-export default UsernameEnterPage
+export default GetPaidAccountPage

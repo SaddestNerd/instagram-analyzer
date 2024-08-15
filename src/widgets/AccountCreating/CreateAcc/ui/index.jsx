@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import "./createAcc.scss"
 import { AccessToApp } from "../../../../features"
 import { Icon } from "../../../../shared"
 
-const CreateAcc = ({ nextForm }) => {
+const CreateAcc = () => {
   return (
     <div className="create-acc-section">
       <div className="create-acc-block">
