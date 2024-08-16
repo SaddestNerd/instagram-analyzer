@@ -18,7 +18,6 @@
     bottom: 0;
     width: 106px;
     height: 100%;
-    z-index: 1;
     .liked-post-img-block {
       width: 100%;
       height: 100%;
@@ -46,7 +45,7 @@
   .most-liked-post-block-iconbg {
     border-radius: 71px;
     background-color: $white;
-    padding: 8px;
+    padding: 7px 8px;
   }
 }
 

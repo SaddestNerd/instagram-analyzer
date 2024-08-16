@@ -3,27 +3,35 @@ import "./accountFooter.scss"
 import { Icon } from "../../../shared"
 import { Link } from "react-router-dom"
 
-const AccountFooter = () => {
+const AccountFooter = ({ hasNextUpdate }) => {
   return (
-    <div className="account-footer">
+    <div
+      className={`account-footer ${hasNextUpdate ? "with-next-update" : ""}`}
+    >
       <Icon type="logo" alt="logo" width={64} height={64}></Icon>
       <ul className="flex-footer-menu">
         <li className="title16-medium-urbanist">
-          <Link>Analytics</Link>
+          <Link rel="noopener noreferrer" to="/account-analytics">
+            Analytics
+          </Link>
         </li>
         <li className="title16-medium-urbanist">
-          <Link>Insights</Link>
+          <Link rel="noopener noreferrer" to="/insights">
+            Insights
+          </Link>
         </li>
         <li className="title16-medium-urbanist">
-          <Link>News</Link>
+          <Link rel="noopener noreferrer" to="/news">
+            News
+          </Link>
         </li>
       </ul>
       <ul className="flex-footer-menu">
         <li className="title12-medium-urbanist">
-          <Link>Terms of Servise</Link>
+          <Link rel="noopener noreferrer">Terms of Servise</Link>
         </li>
         <li className="title12-medium-urbanist">
-          <Link>Privacy Policy</Link>
+          <Link rel="noopener noreferrer">Privacy Policy</Link>
         </li>
       </ul>
     </div>

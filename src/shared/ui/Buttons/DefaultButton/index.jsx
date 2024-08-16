@@ -15,7 +15,7 @@ const DefaultButton = ({
   isDisabled,
 }) => {
   return (
-    <Link to={link} rel="noopener">
+    <Link to={link} rel="noopener noreferrer">
       <button
         className="default-button-item"
         onClick={onClick}

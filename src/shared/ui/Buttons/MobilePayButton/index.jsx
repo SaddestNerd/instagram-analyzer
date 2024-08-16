@@ -5,6 +5,7 @@ import { ApplePay, GooglePay } from "../../../lib/icons/icons"
 const DefaultButton = ({ text, link, onClick, isDisabled, type }) => {
   return (
     <Link
+      rel="noopener noreferrer"
       to={link}
       className={type === "apple" ? "apple-button" : "google-button"}
     >

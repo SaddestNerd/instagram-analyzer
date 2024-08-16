@@ -15,11 +15,11 @@
   z-index: 10;
   max-width: 100%;
   opacity: 0;
-  .button-flex-wrapper{
+  .button-flex-wrapper {
     display: flex;
     gap: 16px;
     width: 100%;
-    button{
+    button {
       width: 100%;
     }
   }
@@ -40,7 +40,14 @@
   gap: 16px;
   padding: 32px 16px;
   text-align: center;
-  
+
+  .title24-medium-urbanist {
+    color: $appBlack;
+  }
+  .title14-regular-urbanist {
+    color: $appTextColor;
+  }
+
   .cancel-button {
     background-color: transparent;
     color: $appBlue;
@@ -48,6 +55,6 @@
   }
 }
 
-.popup.red{
+.popup.red {
   background-color: $appCard;
 }

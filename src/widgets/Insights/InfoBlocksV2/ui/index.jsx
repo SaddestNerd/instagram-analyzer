@@ -2,56 +2,60 @@ import React from "react"
 import "./infoBlocks.scss"
 import { InsightBlock } from "../../../../shared"
 
-const InfoBlocksV2 = ({ text }) => {
+const InfoBlocks = ({ text }) => {
   return (
-    <div className="info-blocks-v2">
-      <p className="title24-medium-urbanist">{text}</p>
+    <div className="info-blocks">
+      <p className="title24-bold-urbanist">{text}</p>
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
-        strokeColor="#FFFFFF"
-        widthSize={16}
-        heightSize={16}
-        bigText={"Low Engagement Rate"}
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Optimize Your Profile"}
         littleText={
-          "The average likes per post are relativity low, indicating a need to improve engagement strategies. "
+          "Make sure your profile includes a bio, profile picture, and contact information to attract new followers."
         }
       />
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
-        strokeColor="#FFFFFF"
-        widthSize={16}
-        heightSize={16}
-        bigText={"Low Engagement Rate"}
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Add Relevant Hashtags"}
         littleText={
-          "The average likes per post are relativity low, indicating a need to improve engagement strategies.  "
+          "Add popular and niche-specific hashtags to your posts to enhance visibility and attract new followers."
         }
       />
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
-        strokeColor="#FFFFFF"
-        widthSize={16}
-        heightSize={16}
-        bigText={"Low Engagement Rate"}
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Host Giveaways"}
         littleText={
-          "The average likes per post are relativity low, indicating a need to improve engagement strategies. "
+          "Organize giveaways that ask participants to follow your account, like your posts, and tag friends to enter."
         }
       />
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
-        strokeColor="#FFFFFF"
-        widthSize={16}
-        heightSize={16}
-        bigText={"Low Engagement Rate"}
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Promote Across Platforms"}
         littleText={
-          "The average likes per post are relativity low, indicating a need to improve engagement strategies. "
+          "Advertise your Instagram account on other social media networks and your website to attract traffic and increase followers."
+        }
+      />
+      <InsightBlock
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Connect with Your Target Audience"}
+        littleText={
+          "Like, comment on, and share content from users in your niche to boost your visibility and attract new followers."
+        }
+      />
+      <InsightBlock
+        typeIcon="reccomend"
+        altIcon="ReccomendIcon"
+        bigText={"Utilize User-Generated Content"}
+        littleText={
+          "Encourage your followers to create and share content about your brand, and feature it on your profile with proper credit."
         }
       />
     </div>
   )
 }
 
-export default InfoBlocksV2
+export default InfoBlocks

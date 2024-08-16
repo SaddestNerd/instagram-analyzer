@@ -4,6 +4,9 @@
   background-color: $appCard;
   margin: 18px;
   border-radius: 18px;
+  .account-center-blocks-link {
+    text-decoration: none;
+  }
   .background-icon {
     padding: 18px;
     background-color: $white;
@@ -17,6 +20,13 @@
   .center-blocks-bottom-wrapper {
     padding: 16px;
     width: 50%;
+
+    p {
+      color: $appBlack;
+    }
+    p + p {
+      color: $appTextColor;
+    }
   }
 
   background-repeat: no-repeat;

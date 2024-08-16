@@ -4,11 +4,14 @@ import "./newsBlock.scss"
 import { Link } from "react-router-dom"
 
 const NewsBlock = ({ text, img, link }) => {
+
+  
   return (
-    <Link to={link}>
+    <Link       
+      to={link}> 
       <div className="news-block">
         <img src={img} alt="" />
-        <div className="title16-bold-urbanist">{text}</div>
+        <p className="title16-bold-urbanist">{text}</p>
       </div>
     </Link>
   )

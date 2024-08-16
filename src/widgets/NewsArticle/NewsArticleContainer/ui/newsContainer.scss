@@ -1,17 +1,19 @@
 @import "../../../../app//style/colors.scss";
 
-.news-article-block{
-  img{
+.news-article-block {
+  margin-bottom: 40px;
+  img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 16px;
     margin-bottom: 40px;
   }
-  .title20-bold-urbanist{
+  .title20-bold-urbanist {
     margin-bottom: 16px;
+    color: $black;
   }
-  .title14-regular-urbanist{
-    margin-bottom: 16px;
+  .title14-regular-urbanist {
+    color: $appTextColor;
   }
 }

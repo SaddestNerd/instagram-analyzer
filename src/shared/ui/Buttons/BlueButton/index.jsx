@@ -1,14 +1,11 @@
 import React from "react"
 import "./blueButton.scss"
-import { Link } from "react-router-dom"
 
-const BlueButton = ({ onClick, link, IconComponent }) => {
+const BlueButton = ({ onClick, IconComponent }) => {
   return (
-    <Link to={link} rel="noopener">
-      <button className="blue-button" onClick={onClick}>
-        <IconComponent />
-      </button>
-    </Link>
+    <div className="blue-button" onClick={onClick}>
+      <IconComponent />
+    </div>
   )
 }
 

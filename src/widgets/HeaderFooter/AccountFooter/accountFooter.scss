@@ -5,12 +5,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
   width: 100%;
   max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: $white;
-  padding-top: 48px;
+
+  z-index: -1;
+  &.with-next-update {
+    padding-bottom: 100px;
+  }
   img {
     margin-left: auto;
     margin-right: auto;

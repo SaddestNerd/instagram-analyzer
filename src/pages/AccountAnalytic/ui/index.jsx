@@ -6,7 +6,7 @@ import {
   LikesAndComments,
   MostLikedPost,
   Audience,
-
+  NextUpdate,
 } from "../../../widgets"
 import { ViewInsights } from "../../../features"
 
@@ -20,8 +20,15 @@ const AnalyticsPage = () => {
         <LikesAndComments />
         <MostLikedPost />
         <Audience />
-        <ViewInsights svgType={"insights"} btnText={"View insights"} text={"We have prepared for you a number of tips and insights to improve your profile"}/>
+        <ViewInsights
+          typeIcon="insights"
+          altIcon="InsightsIcon"
+          btnText="View insights"
+          text="We have prepared for you a number of tips and insights to improve your profile"
+          link="/insights"
+        />
       </div>
+      <NextUpdate />
     </div>
   )
 }

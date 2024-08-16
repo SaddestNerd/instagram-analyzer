@@ -1,47 +1,37 @@
 import React from "react"
 import "./newsContainer.scss"
 import { NewsBlock } from "../../../../features"
-import { TestNews } from "../../../../shared/lib/icons/icons"
+import { Prev1, Prev2, Prev3, Prev4, Prev5, TestNews } from "../../../../shared/lib/icons/icons"
 
-const InfoBlocks = ({ text, onClick }) => {
+const InfoBlocks = () => {
   return (
     <div className="info-blocks">
       <NewsBlock
-        img={TestNews}
+        link={"/news-article-1"}
+        img={Prev1}
         text={"Instagram Introduced New AI Tool to enhace User Experience"}
-        link={"/news-article"}
       />
       <NewsBlock
-        img={TestNews}
-        text={"Instagram Introduced New AI Tool to enhace User Experience"}
-        link={"/news-article"}
+          link={"/news-article-2"}
+        img={Prev2}
+        text={"Instagram Introduces New Features for Direct Messaging"}
+      />
+      <NewsBlock
+         link={"/news-article-3"}
+        img={Prev3}
+        text={"New Instagram Analytics Tools for Business Accounts"}
+      />
+      <NewsBlock
+          link={"/news-article-4"}
+        img={Prev4}
+        text={"Instagram Launches Collaborative Posts for Wider Reach"}
+      />
+      <NewsBlock
+        link={"/news-article-5"}
+        img={Prev5}
+        text={"Instagram Expands 'Add Yours' Sticker to All Users"}
+      />
 
-      />
-      <NewsBlock
-        img={TestNews}
-        text={"Instagram Introduced New AI Tool to enhace User Experience"}
-        link={"/news-article"}
-      />
-      <NewsBlock
-        img={TestNews}
-        text={"Instagram Introduced New AI Tool to enhace User Experience"}
-        link={"/news-article"}
-      />
-      <NewsBlock
-        img={TestNews}
-        text={"Instagram Introduced New AI Tool to enhace User Experience"}
-        link={"/news-article"}
-      />
-      <NewsBlock
-        img={TestNews}
-        text={"Instagram Introduced New AI Tool to enhace User Experience"}
-        link={"/news-article"}
-      />
-      <NewsBlock
-        img={TestNews}
-        text={"Instagram Introduced New AI Tool to enhace User Experience"}
-        link={"/news-article"}
-      />
     </div>
   )
 }

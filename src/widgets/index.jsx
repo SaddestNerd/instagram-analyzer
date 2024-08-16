@@ -26,8 +26,8 @@ export { default as RestorePassword } from "./LogInRestore/RestorePassword/ui"
 
 //------------------------------MAIN------------------------------
 //Account Information
-export { default as AccountHeader } from "./AccountInformation/AccountHeader"
-export { default as AccountFooter } from "./AccountInformation/AccountFooter"
+export { default as AccountHeader } from "./HeaderFooter/AccountHeader"
+export { default as AccountFooter } from "./HeaderFooter/AccountFooter"
 export { default as AccountUpperStatistic } from "./AccountInformation/AccountUpperStatistic"
 export { default as AccountCenterBlock } from "./AccountInformation/AccountCenterBlock"
 
@@ -37,17 +37,16 @@ export { default as UserEngagement } from "./AccountAnalytic/UserEngagement/ui"
 export { default as LikesAndComments } from "./AccountAnalytic/LikesAndComments/ui"
 export { default as MostLikedPost } from "./AccountAnalytic/MostLikedPost/ui"
 export { default as Audience } from "./AccountAnalytic/Audience/ui"
+export { default as NextUpdate } from "./AccountAnalytic/NextUpdate/ui"
 
 //Insights
 export { default as InfoBlocks } from "./Insights/InfoBlocks/ui"
 export { default as InfoBlocksV2 } from "./Insights/InfoBlocksV2/ui"
 export { default as InfoBlocksV3 } from "./Insights/InfoBlocksV3/ui"
+export { default as InfoBlocksV4 } from "./Insights/InfoBlocksV4/ui"
 
-//News 
-
+//News
 export { default as NewsContainer } from "./News/NewsContainer/ui"
 
-
 //NewsArticle
-
 export { default as NewsArticleContainer } from "./NewsArticle/NewsArticleContainer/ui"
