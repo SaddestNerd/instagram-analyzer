@@ -6,7 +6,7 @@ import { ReactComponent as Following } from "../../assets/main/svg/Following.svg
 import { ReactComponent as Followers } from "../../assets/main/svg/Followers.svg"
 import { ReactComponent as Posts } from "../../assets/main/svg/Posts.svg"
 import { ReactComponent as UpArrow } from "../../assets/main/svg/UpArrow.svg"
-
+import { ReactComponent as Lamp } from "../../assets/main/svg/Lamp.svg"
 //Analytics
 import { ReactComponent as Likes } from "../../assets/main/svg/Likes.svg"
 import { ReactComponent as Comments } from "../../assets/main/svg/Comments.svg"
@@ -80,7 +80,15 @@ import CheckEmailIcon from "../../assets/CheckEmailIcon.webp"
 import TestAvatar from "../../assets/main/avatartest.webp"
 import TestNews from "../../assets/main/testNews.webp"
 
+//Prev
+import Prev1 from "../../assets/newsPreview/Prev1.webp"
+import Prev2 from "../../assets/newsPreview/Prev2.webp"
+import Prev3 from "../../assets/newsPreview/Prev3.webp"
+import Prev4 from "../../assets/newsPreview/Prev4.webp"
+import Prev5 from "../../assets/newsPreview/Prev5.webp"
+
 export {
+  Lamp,
   TestNews,
   UpArrow,
   Likes,
@@ -139,4 +147,9 @@ export {
   BlueCross,
   Exit,
   RedExit,
+  Prev1,
+  Prev2,
+  Prev3,
+  Prev4,
+  Prev5,
 }

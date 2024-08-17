@@ -43,6 +43,7 @@ export { default as NextUpdate } from "./AccountAnalytic/NextUpdate/ui"
 export { default as InfoBlocks } from "./Insights/InfoBlocks/ui"
 export { default as InfoBlocksV2 } from "./Insights/InfoBlocksV2/ui"
 export { default as InfoBlocksV3 } from "./Insights/InfoBlocksV3/ui"
+export { default as InfoBlocksV4 } from "./Insights/InfoBlocksV4/ui"
 
 //News
 export { default as NewsContainer } from "./News/NewsContainer/ui"

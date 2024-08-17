@@ -1,6 +1,11 @@
 import React from "react"
 import "./insights.scss"
-import { InfoBlocks, InfoBlocksV2, InfoBlocksV3 } from "../../../widgets"
+import {
+  InfoBlocks,
+  InfoBlocksV2,
+  InfoBlocksV3,
+  InfoBlocksV4,
+} from "../../../widgets"
 import { ViewInsights } from "../../../features"
 
 const InsightsPage = () => {
@@ -21,14 +26,19 @@ const InsightsPage = () => {
               <InfoBlocks text={"Recommendation for Increasing Engagement"} />
             </div>
           </div>
+          <div className="color-blue-background">
+            <div className="white-background">
+              <InfoBlocksV2 text={"Recommendation for Increasing Followers"} />
+            </div>
+          </div>
           <div className="gradient-background">
-            <InfoBlocksV2 text={"Insights"} />
+            <InfoBlocksV3 text={"Insights"} />
           </div>
           <div className="color-purple-background">
             <div className="white-background">
-              <InfoBlocksV3
+              <InfoBlocksV4
                 text={
-                  "To summarize all of above, we can formulate the following basic recommendations:"
+                  "To summarize the points discussed, here are some fundamental recommendations:"
                 }
               />
               <ViewInsights

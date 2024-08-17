@@ -1,14 +1,14 @@
 @import "../../../../app//style/colors.scss";
 
-.info-blocks {
-  margin-bottom: 20px;
-  .title20-bold-urbanist {
+.info-blocks-v2 {
+  .title24-medium-urbanist {
+    margin-bottom: 20px;
+    color: $white;
+  }
+  .title24-bold-urbanist {
     margin-bottom: 20px;
   }
   .insight-wrapper-block + .insight-wrapper-block {
     margin-top: 20px;
-  }
-  .news-block {
-    margin-top: 8px;
   }
 }
