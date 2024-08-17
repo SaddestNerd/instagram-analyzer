@@ -1,7 +1,7 @@
 import React from "react"
 import "./headerMenuExitButton.scss"
 import { BlueCross } from "../../../lib/icons/icons"
-const AppButton = ({ onClick, isDisabled }) => {
+const HeaderMenuExitButton = ({ onClick, isDisabled }) => {
   return (
     <button
       className="header-exit-button"
@@ -13,4 +13,4 @@ const AppButton = ({ onClick, isDisabled }) => {
   )
 }
 
-export default AppButton
+export default HeaderMenuExitButton

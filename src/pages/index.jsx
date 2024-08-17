@@ -32,8 +32,5 @@ export { default as InsightsPage } from "./Insights/ui"
 export { default as NewsPage } from "./News/ui"
 
 //NewsArticle
-export { default as NewsArticle1 } from "./NewsArticle/ui/Article1"
-export { default as NewsArticle2 } from "./NewsArticle/ui/Article2"
-export { default as NewsArticle3 } from "./NewsArticle/ui/Article3"
-export { default as NewsArticle4 } from "./NewsArticle/ui/Article4"
-export { default as NewsArticle5 } from "./NewsArticle/ui/Article5"
+export { default as NewsArticle } from "./NewsArticle/ui"
+

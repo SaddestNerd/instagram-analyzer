@@ -4,7 +4,7 @@ import "./enterAccount.scss"
 import { useNavigate } from "react-router-dom"
 import useEnterAccountNavigate from "../model/useEnterAccountNavigate"
 
-const EnterAccountPage = () => {
+const EnterAccount = () => {
   const [currentForm, setCurrentForm] = useState(0)
   const [popupType, setPopupType] = useState(null)
   const navigate = useNavigate()
@@ -37,4 +37,4 @@ const EnterAccountPage = () => {
   )
 }
 
-export default EnterAccountPage
+export default EnterAccount

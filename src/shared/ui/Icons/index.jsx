@@ -32,7 +32,7 @@ const iconMapping = {
   crookedArrow: Icons.CrookedArrow,
   news: Icons.News,
   redExit: Icons.RedExit,
-  lamp: Icons.Lamp
+  lamp: Icons.Lamp,
 }
 
 const Icon = ({

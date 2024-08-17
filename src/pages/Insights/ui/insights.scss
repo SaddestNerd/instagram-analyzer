@@ -38,10 +38,9 @@
     .white-background {
       background-color: $white;
       padding: 34px 16px 34px 16px;
-
     }
   }
-  .color-blue-background + .color-blue-background{
+  .color-blue-background + .color-blue-background {
     .white-background {
       padding: 0px 16px 34px 16px;
       border-bottom-right-radius: 24px;

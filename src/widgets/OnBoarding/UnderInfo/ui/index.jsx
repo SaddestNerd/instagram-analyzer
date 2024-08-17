@@ -3,7 +3,7 @@ import "./underInfo.scss"
 import Icon from "../../../../shared/ui/Icons"
 import { DefaultButton } from "../../../../shared"
 
-const OnBoadrdingUnder = () => {
+const UnderInfo = () => {
   return (
     <div className="onboarding-startinfo-section">
       <div className="onboarding-startinfo-block">
@@ -22,4 +22,4 @@ const OnBoadrdingUnder = () => {
   )
 }
 
-export default OnBoadrdingUnder
+export default UnderInfo

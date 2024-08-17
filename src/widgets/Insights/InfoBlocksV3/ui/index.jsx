@@ -7,7 +7,6 @@ const InfoBlocksV3 = ({ text }) => {
     <div className="info-blocks-v3">
       <p className="title24-medium-urbanist">{text}</p>
       <InsightBlock
-
         typeIcon="lamp"
         altIcon="Lamp"
         bigText={"Low Engagement Rate"}
@@ -39,7 +38,7 @@ const InfoBlocksV3 = ({ text }) => {
           "Comments show favorable interactions with your audience, which can be leveraged to boost engagement."
         }
       />
-            <InsightBlock
+      <InsightBlock
         typeIcon="lamp"
         altIcon="Lamp"
         bigText={"Effective Use of Captions"}
@@ -47,7 +46,7 @@ const InfoBlocksV3 = ({ text }) => {
           "Posts with engaging captions generally receive more comments, highlighting the importance of well-crafted captions."
         }
       />
-                  <InsightBlock
+      <InsightBlock
         typeIcon="lamp"
         altIcon="Lamp"
         bigText={"Visual Appeal"}
@@ -55,7 +54,7 @@ const InfoBlocksV3 = ({ text }) => {
           "Posts with eye-catching visuals tend to receive more likes, emphasizing the importance of high-quality images."
         }
       />
-                  <InsightBlock
+      <InsightBlock
         typeIcon="lamp"
         altIcon="Lamp"
         bigText={"Utilize Story Features"}

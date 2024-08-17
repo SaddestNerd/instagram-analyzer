@@ -3,7 +3,7 @@ import { UnderInfoNavigation } from "../../../widgets"
 import { onboardingForms } from "../model/onboardingModel"
 import "./onBoardingNavigation.scss"
 
-const OnBoardingNavigationPage = () => {
+const OnBoardingNavigation = () => {
   const [currentForm, setCurrentForm] = useState(0)
 
   const nextForm = () => {
@@ -26,4 +26,4 @@ const OnBoardingNavigationPage = () => {
   )
 }
 
-export default OnBoardingNavigationPage
+export default OnBoardingNavigation

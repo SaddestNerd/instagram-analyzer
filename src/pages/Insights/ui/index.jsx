@@ -1,6 +1,11 @@
 import React from "react"
 import "./insights.scss"
-import { InfoBlocks, InfoBlocksV2, InfoBlocksV3, InfoBlocksV4 } from "../../../widgets"
+import {
+  InfoBlocks,
+  InfoBlocksV2,
+  InfoBlocksV3,
+  InfoBlocksV4,
+} from "../../../widgets"
 import { ViewInsights } from "../../../features"
 
 const InsightsPage = () => {

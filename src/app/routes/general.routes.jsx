@@ -13,11 +13,7 @@ import {
   InsightsPage,
   NewsPage,
   NewsArticle,
-  NewsArticle1,
-  NewsArticle2,
-  NewsArticle3,
-  NewsArticle4,
-  NewsArticle5,
+
 } from "../../pages"
 import { AccountFooter, AccountHeader } from "../../widgets"
 import ScrollToTop from "../../shared/lib/hooks/useScrollToTop"
@@ -28,9 +24,12 @@ export const useRoutes = () => {
     const hasNextUpdate = location.pathname === "/account-analytics"
     return (
       <>
-        <AccountHeader isLogo={isLogo} />
-        {element}
-        <AccountFooter hasNextUpdate={hasNextUpdate} />
+        <div className="flex-box">
+          <AccountHeader isLogo={isLogo} />
+          {element}
+          <AccountFooter hasNextUpdate={hasNextUpdate} />
+        </div>
+
       </>
     )
   }
@@ -76,30 +75,11 @@ export const useRoutes = () => {
           element={<AccountHeaderFooter element={<NewsPage />} />}
         />
         <Route
-          path="/news-article-1"
+          path="/news-article/:id"
           exact
-          element={<AccountHeaderFooter element={<NewsArticle1 />} />}
+          element={<AccountHeaderFooter element={<NewsArticle />} />}
         />
-        <Route
-          path="/news-article-2"
-          exact
-          element={<AccountHeaderFooter element={<NewsArticle2 />} />}
-        />
-        <Route
-          path="/news-article-3"
-          exact
-          element={<AccountHeaderFooter element={<NewsArticle3 />} />}
-        />
-        <Route
-          path="/news-article-4"
-          exact
-          element={<AccountHeaderFooter element={<NewsArticle4 />} />}
-        />
-        <Route
-          path="/news-article-5"
-          exact
-          element={<AccountHeaderFooter element={<NewsArticle5 />} />}
-        />
+
         <Route path="/login" exact element={<LoginRestorePage />} />
         <Route path="/*" element={<Navigate replace to="/main" />} />
       </Routes>

@@ -2,13 +2,13 @@ import React from "react"
 import "./infoBlocks.scss"
 import { InsightBlock } from "../../../../shared"
 
-const InfoBlocksV2 = ({ text }) => {
+const InfoBlocksV4 = ({ text }) => {
   return (
     <div className="info-blocks-v2">
       <p className="title24-bold-urbanist">{text}</p>
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
+        typeIcon="crookedArrow"
+        altIcon="CrookedArrowIcon"
         strokeColor="#FFFFFF"
         widthSize={16}
         heightSize={16}
@@ -19,8 +19,8 @@ const InfoBlocksV2 = ({ text }) => {
         }
       />
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
+        typeIcon="crookedArrow"
+        altIcon="CrookedArrowIcon"
         strokeColor="#FFFFFF"
         widthSize={16}
         heightSize={16}
@@ -31,8 +31,8 @@ const InfoBlocksV2 = ({ text }) => {
         }
       />
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
+        typeIcon="crookedArrow"
+        altIcon="CrookedArrowIcon"
         strokeColor="#FFFFFF"
         widthSize={16}
         heightSize={16}
@@ -43,8 +43,8 @@ const InfoBlocksV2 = ({ text }) => {
         }
       />
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
+        typeIcon="crookedArrow"
+        altIcon="CrookedArrowIcon"
         strokeColor="#FFFFFF"
         widthSize={16}
         heightSize={16}
@@ -55,8 +55,8 @@ const InfoBlocksV2 = ({ text }) => {
         }
       />
       <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
+        typeIcon="crookedArrow"
+        altIcon="CrookedArrowIcon"
         strokeColor="#FFFFFF"
         widthSize={16}
         heightSize={16}
@@ -66,9 +66,9 @@ const InfoBlocksV2 = ({ text }) => {
           "Encourage followers to share content related to your brand and showcase it on your profile. "
         }
       />
-            <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
+      <InsightBlock
+        typeIcon="crookedArrow"
+        altIcon="CrookedArrowIcon"
         strokeColor="#FFFFFF"
         widthSize={16}
         heightSize={16}
@@ -78,9 +78,9 @@ const InfoBlocksV2 = ({ text }) => {
           "Organize and feature key content by creating Highlights from your Stories, keeping it readily accessible on your profile."
         }
       />
-            <InsightBlock
-        typeIcon="insights"
-        altIcon="InsightsIcon"
+      <InsightBlock
+        typeIcon="crookedArrow"
+        altIcon="CrookedArrowIcon"
         strokeColor="#FFFFFF"
         widthSize={16}
         heightSize={16}
@@ -94,4 +94,4 @@ const InfoBlocksV2 = ({ text }) => {
   )
 }
 
-export default InfoBlocksV2
+export default InfoBlocksV4
