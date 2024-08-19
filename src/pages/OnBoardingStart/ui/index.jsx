@@ -2,7 +2,7 @@ import React from "react"
 import "./onBoarding.scss"
 import { OnBoadrdingUnder } from "../../../widgets"
 
-const OnBoardingPage = () => {
+const OnBoarding = () => {
   return (
     <div className="onboarding-wrapper">
       <OnBoadrdingUnder />
@@ -10,4 +10,4 @@ const OnBoardingPage = () => {
   )
 }
 
-export default OnBoardingPage
+export default OnBoarding

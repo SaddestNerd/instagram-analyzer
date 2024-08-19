@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./defaultButton.scss"
 import { ApplePay, GooglePay } from "../../../lib/icons/icons"
-const DefaultButton = ({ text, link, onClick, isDisabled, type }) => {
+const MobilePayButton = ({ text, link, onClick, isDisabled, type }) => {
   return (
     <Link
       rel="noopener noreferrer"
@@ -23,4 +23,4 @@ const DefaultButton = ({ text, link, onClick, isDisabled, type }) => {
   )
 }
 
-export default DefaultButton
+export default MobilePayButton

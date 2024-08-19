@@ -2,7 +2,7 @@ import React from "react"
 import "./accountCreating.scss"
 import { CreateAcc } from "../../../widgets"
 
-const AccountCreatingPage = () => {
+const AccountCreating = () => {
   return (
     <div className="account-creating-wrapper">
       <CreateAcc />
@@ -10,4 +10,4 @@ const AccountCreatingPage = () => {
   )
 }
 
-export default AccountCreatingPage
+export default AccountCreating

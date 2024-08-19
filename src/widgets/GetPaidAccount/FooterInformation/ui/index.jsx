@@ -2,6 +2,7 @@ import React from "react"
 import "./footerInformation.scss"
 
 import { Emoji9 } from "../../../../shared/lib/icons/icons"
+import { Link } from "react-router-dom"
 
 const FooterInformation = () => {
   return (
@@ -30,7 +31,12 @@ const FooterInformation = () => {
         </div>
         <p className="title14-regular-outfit">
           Have a questions? Reach our friendly support team{" "}
-          <span className="title14-semibold-outfit">here</span>
+          <a
+            href=" mailto:support@followstats.app"
+            className="title14-semibold-outfit"
+          >
+            here
+          </a>
         </p>
       </div>
       <div className="contact-background-wrapper">
@@ -40,8 +46,24 @@ const FooterInformation = () => {
         </div>
       </div>
       <ul className="footer-nav">
-        <li className="title14-semibold-outfit">Privacy Policy</li>
-        <li className="title14-semibold-outfit">Terms of use</li>
+        <li className="title14-semibold-outfit">
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            to={"/privacy-policy"}
+          >
+            Privacy Policy
+          </Link>
+        </li>
+        <li className="title14-semibold-outfit">
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            to={"/terms-of-servise"}
+          >
+            Terms of Servise
+          </Link>
+        </li>
       </ul>
     </div>
   )

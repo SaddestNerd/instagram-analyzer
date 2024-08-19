@@ -14,7 +14,13 @@ const AnalysingProfile = ({ progress }) => {
         </p>
         <div className="analysing-profile-clock">
           <div className="analysing-profile-img">
-            <Icon type="clock" width={16} height={16} alt="icon"></Icon>
+            <Icon
+              type="clock"
+              width={16}
+              height={16}
+              alt="icon"
+              className="clock-img-block"
+            ></Icon>
           </div>
           <p className="title14-regular-urbanist clock-text">
             From now on, your data is being recorded and tracked in real time.

@@ -3,7 +3,7 @@ import "./accountInformation.scss"
 import { AccountCenterBlock, AccountUpperStatistic } from "../../../widgets"
 import { Analytics, News, Insights } from "../../../shared/lib/icons/icons"
 
-const AccountInformationPage = () => {
+const AccountInformation = () => {
   return (
     <div className="account-information-page">
       <div className="upper-gradient"></div>
@@ -35,4 +35,4 @@ const AccountInformationPage = () => {
   )
 }
 
-export default AccountInformationPage
+export default AccountInformation

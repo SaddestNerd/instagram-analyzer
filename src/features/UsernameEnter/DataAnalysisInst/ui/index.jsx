@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { DefaultInput, DefaultButton } from "../../../../shared"
-import "./enterUserWithIcon.scss"
+import "./dataAnalysisInst.scss"
 import Icon from "../../../../shared/ui/Icons"
 
 const DataAnalysisInst = ({ onClick }) => {

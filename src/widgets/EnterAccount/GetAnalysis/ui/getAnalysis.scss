@@ -29,6 +29,11 @@
       width: 343px;
       box-sizing: border-box;
       padding: 12px 29px;
+
+      .defence-img-block {
+        padding: 8px;
+        background-color: $appBlue;
+      }
       .get-analysis-defence123 {
         margin-top: 200px;
       }

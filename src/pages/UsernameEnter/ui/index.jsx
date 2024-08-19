@@ -4,7 +4,7 @@ import { InstagramAccount, Searching } from "../../../widgets"
 import { useNavigate } from "react-router-dom"
 import useUsernameEnterNavigate from "../model/useUsernameEnterNavigate"
 
-const UsernameEnterPage = () => {
+const UsernameEnter = () => {
   const [currentForm, setCurrentForm] = useState(0)
   const navigate = useNavigate()
   const { progress } = useUsernameEnterNavigate(currentForm, navigate)
@@ -26,4 +26,4 @@ const UsernameEnterPage = () => {
   )
 }
 
-export default UsernameEnterPage
+export default UsernameEnter

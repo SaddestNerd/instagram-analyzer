@@ -10,7 +10,7 @@ const Restore = ({ onClick, nextForm }) => {
     isValidUsername,
     isMissingAt,
     isMissingDot,
-    isButtonDisabled,
+    isButtonDisabledEmail,
   } = useAccessForm()
   return (
     <div className="restore-block">
@@ -38,7 +38,7 @@ const Restore = ({ onClick, nextForm }) => {
         <AppButton
           text="Restore password"
           onClick={onClick}
-          isDisabled={isButtonDisabled}
+          isDisabled={isButtonDisabledEmail}
         />
       </div>
     </div>

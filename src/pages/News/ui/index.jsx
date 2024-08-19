@@ -2,7 +2,7 @@ import React from "react"
 import "./news.scss"
 import { NewsContainer } from "../../../widgets"
 
-const NewsPage = () => {
+const News = () => {
   return (
     <div className="news-page">
       <div className="upper-gradient"></div>
@@ -20,4 +20,4 @@ const NewsPage = () => {
   )
 }
 
-export default NewsPage
+export default News

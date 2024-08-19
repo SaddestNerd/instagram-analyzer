@@ -11,6 +11,7 @@ export { default as Searching } from "./UsernameEnter/Searching/ui"
 export { default as CenterDescription } from "./GetPaidAccount/CenterDescription/ui"
 export { default as FooterInformation } from "./GetPaidAccount/FooterInformation/ui"
 export { default as TimerBlock } from "./GetPaidAccount/TimerBlock/ui"
+export { default as TimerHeaderBlock } from "./GetPaidAccount/TimerHeaderBlock/ui"
 
 //Account Creating
 export { default as CreateAcc } from "./AccountCreating/CreateAcc/ui"
@@ -50,3 +51,9 @@ export { default as NewsContainer } from "./News/NewsContainer/ui"
 
 //NewsArticle
 export { default as NewsArticleContainer } from "./NewsArticle/NewsArticleContainer/ui"
+
+//TermsOfUseContainer
+export { default as TermsOfUseContainer } from "./TermsOfUse/TermsOfUseContainer/ui"
+
+//PrivacyPolicyContainer
+export { default as PrivacyPolicyContainer } from "./PrivacyPolicy/PrivacyPolicyContainer/ui"

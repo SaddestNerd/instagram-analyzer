@@ -1,5 +1,5 @@
 import React from "react"
-import "./analytics.scss"
+import "./accountAnalytic.scss"
 import {
   LatestPosts,
   UserEngagement,
@@ -10,7 +10,7 @@ import {
 } from "../../../widgets"
 import { ViewInsights } from "../../../features"
 
-const AnalyticsPage = () => {
+const AccountAnalytic = () => {
   return (
     <div className="analytics-wrapper">
       <div className="upper-gradient"></div>
@@ -33,4 +33,4 @@ const AnalyticsPage = () => {
   )
 }
 
-export default AnalyticsPage
+export default AccountAnalytic

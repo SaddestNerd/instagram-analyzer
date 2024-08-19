@@ -2,7 +2,7 @@ import React from "react"
 import "./infoBlocks.scss"
 import { InsightBlock } from "../../../../shared"
 
-const InfoBlocksV2 = ({ text }) => {
+const InfoBlocksV4 = ({ text }) => {
   return (
     <div className="info-blocks-v2">
       <p className="title24-bold-urbanist">{text}</p>
@@ -94,4 +94,4 @@ const InfoBlocksV2 = ({ text }) => {
   )
 }
 
-export default InfoBlocksV2
+export default InfoBlocksV4

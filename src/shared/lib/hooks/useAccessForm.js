@@ -27,6 +27,8 @@ export const useAccessForm = () => {
     username.length < 6 || password.length < 6 || !isValidUsername
   const isPasswordShort = password.length < 6 && password.length > 0
 
+  const isButtonDisabledEmail = username.length < 6 || !isValidUsername
+
   return {
     username,
     password,
@@ -39,5 +41,6 @@ export const useAccessForm = () => {
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
+    isButtonDisabledEmail,
   }
 }
