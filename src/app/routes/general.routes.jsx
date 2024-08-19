@@ -13,6 +13,8 @@ import {
   InsightsPage,
   NewsPage,
   NewsArticle,
+  PrivacyPolicy,
+  TermsOfUse
 
 } from "../../pages"
 import { AccountFooter, AccountHeader } from "../../widgets"
@@ -82,6 +84,8 @@ export const useRoutes = () => {
 
         <Route path="/login" exact element={<LoginRestorePage />} />
         <Route path="/*" element={<Navigate replace to="/main" />} />
+        <Route path="/terms-of-servise" exact element={<TermsOfUse />} />
+        <Route path="/privacy-policy" exact element={<PrivacyPolicy />} />
       </Routes>
     </>
   )

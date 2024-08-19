@@ -46,14 +46,14 @@ const HeaderMenu = ({ onClickExit, headerOpen, onClickPopup }) => {
         <HeaderMenuElement
           IconComponent={TermOfService}
           text={"Term of Service"}
-          // link="/account-analytics"
+          link="/terms-of-servise"
           rel="noopener noreferrer"
           onClick={onClickExit}
         />
         <HeaderMenuElement
           IconComponent={PrivacyPolicy}
           text={"Privacy Policy"}
-          // link="/account-analytics"
+          link="/privacy-policy"
           rel="noopener noreferrer"
           onClick={onClickExit}
         />

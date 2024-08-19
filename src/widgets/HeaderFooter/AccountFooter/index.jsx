@@ -27,11 +27,11 @@ const AccountFooter = ({ hasNextUpdate }) => {
         </li>
       </ul>
       <ul className="flex-footer-menu">
-        <li className="title12-medium-urbanist">
-          <Link rel="noopener noreferrer">Terms of Servise</Link>
+      <li className="title12-medium-urbanist">
+          <Link rel="noopener noreferrer" to={"/terms-of-servise"}>Terms of Servise</Link>
         </li>
         <li className="title12-medium-urbanist">
-          <Link rel="noopener noreferrer">Privacy Policy</Link>
+          <Link rel="noopener noreferrer" to={"/privacy-policy"}>Privacy Policy</Link>
         </li>
       </ul>
     </div>

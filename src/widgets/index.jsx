@@ -50,3 +50,9 @@ export { default as NewsContainer } from "./News/NewsContainer/ui"
 
 //NewsArticle
 export { default as NewsArticleContainer } from "./NewsArticle/NewsArticleContainer/ui"
+
+//TermsOfUseContainer
+export { default as TermsOfUseContainer } from "./TermsOfUse/TermsOfUseContainer/ui"
+
+//PrivacyPolicyContainer
+export { default as PrivacyPolicyContainer } from "./PrivacyPolicy/PrivacyPolicyContainer/ui"
