@@ -31,7 +31,12 @@ const FooterInformation = () => {
         </div>
         <p className="title14-regular-outfit">
           Have a questions? Reach our friendly support team{" "}
-          <span className="title14-semibold-outfit">here</span>
+          <a
+            href=" mailto:support@followstats.app"
+            className="title14-semibold-outfit"
+          >
+            here
+          </a>
         </p>
       </div>
       <div className="contact-background-wrapper">
@@ -41,12 +46,23 @@ const FooterInformation = () => {
         </div>
       </div>
       <ul className="footer-nav">
-
         <li className="title14-semibold-outfit">
-          <Link rel="noopener noreferrer" to={"/privacy-policy"}>Privacy Policy</Link>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            to={"/privacy-policy"}
+          >
+            Privacy Policy
+          </Link>
         </li>
         <li className="title14-semibold-outfit">
-          <Link rel="noopener noreferrer" to={"/terms-of-servise"}>Terms of Servise</Link>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            to={"/terms-of-servise"}
+          >
+            Terms of Servise
+          </Link>
         </li>
       </ul>
     </div>

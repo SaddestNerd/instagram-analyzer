@@ -5,7 +5,7 @@
   z-index: 1;
   position: relative;
   font-family: "Urbanist-Medium";
-
+  color: $black;
   h1 {
     display: block;
     font-size: 1.5em;
@@ -47,7 +47,7 @@
     padding-inline-start: 40px;
 
     li:before {
-      content: '—';
+      content: "—";
       position: relative;
       left: -5px;
     }

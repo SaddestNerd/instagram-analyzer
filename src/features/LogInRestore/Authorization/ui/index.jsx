@@ -1,37 +1,59 @@
-import React from "react"
+import React, { useCallback, useState } from "react"
 import { AppInput, AppButton } from "../../../../shared"
 import { Icon } from "../../../../shared"
 import "./authorization.scss"
 import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
+import {
+	registerUser,
+	loginUser,
+	getUserInfo,
+	logoutUser,
+	resetPassword,
+	bearerRoute,
+} from '../../../../shared/api/axios/requests/auth/auth.service'
+
 
 const Authorization = ({ onClick, nextForm }) => {
   const {
-    username,
+    email,
     password,
     showPassword,
     togglePasswordVisibility,
-    handleUsernameChange,
+    handleEmailChange,
     handlePasswordChange,
-    isValidUsername,
+    isValidEmail,
     isMissingAt,
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
   } = useAccessForm()
+  
+	const [userInfo, setUserInfo] = useState(null)
+
+	const handleLogin = useCallback(async () => {
+		await loginUser(email, password)
+	}, [email, password])
+  
+  const handleGetUserInfo = useCallback(async () => {
+		const info = await getUserInfo()
+		setUserInfo(info)
+	}, [])
+
+
   return (
     <div className="authorization-block">
       <div>
         <AppInput
           placeholder="Enter your email address"
-          onChange={handleUsernameChange}
-          value={username}
+          onChange={handleEmailChange}
+          value={email}
           text="Email Address"
           type="email"
-          isError={!isValidUsername && username.length > 0}
+          isError={!isValidEmail && email.length > 0}
           classAppInput="app-input-item"
         />
       </div>
-      {!isValidUsername && username.length > 0 && (
+      {!isValidEmail && email.length > 0 && (
         <p className="title14-medium-urbanist error-message">
           {isMissingAt
             ? 'Email must contain "@" symbol.'
@@ -67,7 +89,7 @@ const Authorization = ({ onClick, nextForm }) => {
         </p>
       )}
       <div className="title16-medium-urbanist forgot-message">
-        <button onClick={nextForm}>Forgot password</button>
+        <button  onClick={nextForm}>Forgot password</button>
       </div>
       {/* {УСЛОВИЕ(
         <p className="title14-regular-urbanist error-message error-center">
@@ -80,7 +102,7 @@ const Authorization = ({ onClick, nextForm }) => {
       <div className="authorization-button">
         <AppButton
           text="Sign up"
-          onClick={onClick}
+          onClick={handleLogin}
           isDisabled={isButtonDisabled}
         />
       </div>

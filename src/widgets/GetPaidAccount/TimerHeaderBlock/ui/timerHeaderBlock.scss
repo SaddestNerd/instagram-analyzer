@@ -1,0 +1,38 @@
+@import "../../../../app/style/colors.scss";
+
+.timer-header-section {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  right: 0px;
+  top: 0px;
+  color: $white;
+  z-index: 5;
+  width: 100%;
+  max-width: 480px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .timer-header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    background-color: $purple;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    gap: 30px;
+
+    .timer-header-text {
+      margin-bottom: 8px;
+    }
+  }
+}

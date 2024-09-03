@@ -1,12 +1,12 @@
-import React from "react";
-import "./newsArticle.scss";
-import { NewsArticleContainer } from "../../../widgets";
-import { useParams } from "react-router-dom";
-import { newsData } from "../model/newsData";
+import React from "react"
+import "./newsArticle.scss"
+import { NewsArticleContainer } from "../../../widgets"
+import { useParams } from "react-router-dom"
+import { newsData } from "../model/newsData"
 
 const NewsArticle = () => {
-  const { id } = useParams();
-  const item = newsData[id];
+  const { id } = useParams()
+  const item = newsData[id]
 
   return (
     <div className="news-aricle-page">
@@ -19,7 +19,7 @@ const NewsArticle = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NewsArticle;
+export default NewsArticle

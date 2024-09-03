@@ -11,6 +11,7 @@ export { default as Searching } from "./UsernameEnter/Searching/ui"
 export { default as CenterDescription } from "./GetPaidAccount/CenterDescription/ui"
 export { default as FooterInformation } from "./GetPaidAccount/FooterInformation/ui"
 export { default as TimerBlock } from "./GetPaidAccount/TimerBlock/ui"
+export { default as TimerHeaderBlock } from "./GetPaidAccount/TimerHeaderBlock/ui"
 
 //Account Creating
 export { default as CreateAcc } from "./AccountCreating/CreateAcc/ui"

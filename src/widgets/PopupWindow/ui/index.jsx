@@ -93,7 +93,7 @@ const PopupWindow = ({ type, onClose, isRed }) => {
               <AppButton
                 color="red"
                 text="Yes, log out"
-                link="/enter-account"
+                link="/login"
               ></AppButton>
               <AppButton
                 color="white"

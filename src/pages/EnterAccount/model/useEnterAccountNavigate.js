@@ -12,7 +12,7 @@ const useEnterAccountNavigate = (currentForm, navigate) => {
           } else {
             clearInterval(interval)
             setTimeout(() => {
-              // navigate("/main")
+              navigate("/account-information")
             }, 1000)
             return prev
           }

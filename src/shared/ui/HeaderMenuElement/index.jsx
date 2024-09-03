@@ -2,9 +2,21 @@ import React from "react"
 import "./headerMenuElement.scss"
 import { Link } from "react-router-dom"
 
-const HeaderMenuElement = ({ IconComponent, text, isRed, onClick, link }) => {
+const HeaderMenuElement = ({
+  IconComponent,
+  text,
+  isRed,
+  onClick,
+  link,
+  target,
+}) => {
   return (
-    <Link to={link} className="header-menu-link">
+    <Link
+      to={link}
+      target={target}
+      rel="noopener noreferrer"
+      className="header-menu-link"
+    >
       <div
         onClick={onClick}
         className={"header-menu-element" + (isRed ? " red" : "")}

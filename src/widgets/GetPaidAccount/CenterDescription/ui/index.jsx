@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import "./centerDescription.scss"
 import { DefaultButton, EmojiBlock, MobilePayButton } from "../../../../shared"
 import {
@@ -13,14 +13,57 @@ import {
   Emoji8,
 } from "../../../../shared/lib/icons/icons"
 import { RegisterPayment } from "../../../../features"
+import { useRecurly } from "@recurly/react-recurly"
+import usePaymentData from "../../../../shared/lib/hooks/payment/payment.hook"
+import GetPaymentData from "../../../../shared/lib/hooks/payment/paymentSelector.hook"
+import { useNavigate } from 'react-router-dom';
 
-const CenterDescription = ({ onActiveModal, scrollToOffer }) => {
+const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice }) => {
   const [openForm, setOpenForm] = useState(false)
   const offerRef = useRef(null)
+  const recurly = useRecurly()
 
   scrollToOffer.current = () => {
     offerRef.current.scrollIntoView({ behavior: "smooth" })
   }
+
+  const { subscribe } = usePaymentData();
+  const { loading, registerToken } = GetPaymentData();
+  const formRef = useRef()
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "volodymyr.bukhalo3@gmail.com",
+  })
+  const navigate = useNavigate()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    recurly.token(formRef.current, async (err, token) => {
+      if (err) {
+        console.log(err);
+      } else {
+        subscribe(formData.email, formData.firstName, formData.lastName, token.id);
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (registerToken) {
+      if (!loading) {
+        navigate(`/account-create?token=${registerToken}`);
+      }
+    }
+  }, [registerToken])
+
+  const changeHandlerData = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value })
+  }
+
+
+
+
   return (
     <div className="under-wrapper">
       <div className="under-wrapper-flex">
@@ -67,17 +110,15 @@ const CenterDescription = ({ onActiveModal, scrollToOffer }) => {
             <div className="right title20-semibold-outfit">$1.00</div>
           </div>
         </div>
-        {openForm ? <RegisterPayment /> : <></>}
+        {openForm ? <RegisterPayment formRef={formRef} changeHandlerData={changeHandlerData} handleSubmit={handleSubmit} formData={formData}/> : <></>}
       </div>
       <div className="pay-wrapper">
-        <DefaultButton
-          text={openForm ? "Process credit card" : "get my plan"}
-          onClick={() => {
-            setOpenForm(!openForm)
-          }}
-        />
+        {openForm ? 
+          <DefaultButton text={"Process credit card"}  onClick={handleSubmit}/> :
+          <DefaultButton text={"Get my plan"} onClick={() => { setOpenForm(!openForm)}}/> }
+
         <div className="or-wrapper title11-regular-outfit">OR</div>
-        <MobilePayButton type={"google"} onClick={onActiveModal} />
+        <MobilePayButton type={isAppleDevice ? "apple" : "google"} onClick={onActiveModal} />
       </div>
     </div>
   )

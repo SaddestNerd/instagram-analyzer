@@ -1,22 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import "./timer.scss"
 
-const Timer = () => {
-  const [time, setTime] = useState(15 * 60)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime((prevTime) => {
-        if (prevTime <= 0) {
-          return 15 * 60
-        }
-        return prevTime - 1
-      })
-    }, 1000)
-
-    return () => clearInterval(interval)
-  }, [])
-
+const Timer = ({ time }) => {
   const minutes = String(Math.floor(time / 60)).padStart(2, "0")
   const seconds = String(time % 60).padStart(2, "0")
 

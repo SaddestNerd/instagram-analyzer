@@ -34,7 +34,6 @@ export { default as NewsPage } from "./News/ui"
 //NewsArticle
 export { default as NewsArticle } from "./NewsArticle/ui"
 
-
 //TermsOfUse
 
 export { default as TermsOfUse } from "./TermsOfUse/ui"
@@ -42,3 +41,6 @@ export { default as TermsOfUse } from "./TermsOfUse/ui"
 //PrivacyPolicy
 
 export { default as PrivacyPolicy } from "./PrivacyPolicy/ui"
+
+
+export { default as GetPaidAccountPageTEST } from "./GetPaidAccountTest/ui"

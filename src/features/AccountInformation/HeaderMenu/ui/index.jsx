@@ -19,42 +19,38 @@ const HeaderMenu = ({ onClickExit, headerOpen, onClickPopup }) => {
           IconComponent={SwitchInstagramAccount}
           text={"Switch Instagram Account"}
           link="/enter-account"
-          rel="noopener noreferrer"
           onClick={onClickExit}
         />
         <HeaderMenuElement
           IconComponent={Analytics}
           text={"Analytics"}
           link="/account-analytics"
-          rel="noopener noreferrer"
           onClick={onClickExit}
         />
         <HeaderMenuElement
           IconComponent={Insights}
           text={"Insights"}
           link="/insights"
-          rel="noopener noreferrer"
           onClick={onClickExit}
         />
         <HeaderMenuElement
           IconComponent={News}
           text={"News"}
           link="/news"
-          rel="noopener noreferrer"
           onClick={onClickExit}
         />
         <HeaderMenuElement
           IconComponent={TermOfService}
           text={"Term of Service"}
           link="/terms-of-servise"
-          rel="noopener noreferrer"
+          target="_blank"
           onClick={onClickExit}
         />
         <HeaderMenuElement
           IconComponent={PrivacyPolicy}
           text={"Privacy Policy"}
           link="/privacy-policy"
-          rel="noopener noreferrer"
+          target="_blank"
           onClick={onClickExit}
         />
         <HeaderMenuElement
