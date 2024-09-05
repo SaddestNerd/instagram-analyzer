@@ -1,14 +1,27 @@
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import "./popupWindow.scss"
 import { AppButton, Icon } from "../../../shared"
-
+import {Auth} from '../../../shared/api/axios/requests/auth/auth.service'
+import { useNavigate } from "react-router-dom"
 const PopupWindow = ({ type, onClose, isRed }) => {
   const [show, setShow] = useState(false)
+  const navigate = useNavigate();
 
   useEffect(() => {
     setShow(true)
     return () => setShow(false)
   }, [])
+
+  const handleLogin = useCallback(async () => {
+    try {
+      const result = await Auth.logoutUser();
+      if (result) {
+        navigate('/login');
+      } 
+    } catch (error) {
+      console.log(error);
+    }
+  }, [navigate]);
 
   const renderContent = () => {
     switch (type) {
@@ -93,7 +106,7 @@ const PopupWindow = ({ type, onClose, isRed }) => {
               <AppButton
                 color="red"
                 text="Yes, log out"
-                link="/login"
+                onClick={handleLogin}
               ></AppButton>
               <AppButton
                 color="white"

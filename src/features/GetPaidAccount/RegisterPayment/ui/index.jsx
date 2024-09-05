@@ -1,13 +1,10 @@
-import React, { useRef, useState } from "react"
-import "./registerPayment.scss"
-import { CardInfoInput, DefaultInput } from "../../../../shared"
-import { CardElement } from "@recurly/react-recurly"
+import React from "react";
+import "./registerPayment.scss";
+import { DefaultInput, CardNumberElementInput, CardYearElementInput, CardMonthElementInput, CardCvvElementInput } from "../../../../shared";
 
 
 const RegisterPayment = ({ handleSubmit, changeHandlerData, formRef, formData }) => {
-
-
-
+  
   return (
     <div className="register-payment-form-block">
       <form onSubmit={handleSubmit} ref={formRef}>
@@ -30,24 +27,45 @@ const RegisterPayment = ({ handleSubmit, changeHandlerData, formRef, formData })
               name="lastName"
             />
 
-            <DefaultInput text={"Email"} placeholder={"Enter your email"}
+            <DefaultInput
+              text={"Email"}
+              placeholder={"Enter your email"}
               dataRecurly="email"
               name="email"
               value={formData.email}
-              onChange={changeHandlerData} />
-
+              onChange={changeHandlerData}
+            />
           </div>
         </div>
+
         <div className="form-element">
           <p className="title18-semibold-outfit text-element">Credit card</p>
           <div className="form-wrapper">
-            <CardElement onSubmit={handleSubmit} />
+            <CardNumberElementInput
+              text={"Card number"}
+            />
+            <div className="form-flex">
+              <div className="flex">
+                <CardMonthElementInput
+                  placeholder={"MM"}
+                  text={"Expires on"}
+                />
+                 <CardYearElementInput
+                  placeholder={"YY"}
+                  text={"_"}
+                />
+              </div>
+
+              <CardCvvElementInput
+                  placeholder={"YY"}
+                  text={"CVC"}
+                />
+            </div>
           </div>
         </div>
       </form>
-
     </div>
-  )
-}
+  );
+};
 
-export default RegisterPayment
+export default RegisterPayment;

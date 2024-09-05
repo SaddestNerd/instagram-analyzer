@@ -3,14 +3,8 @@ import { AppInput, AppButton } from "../../../../shared"
 import { Icon } from "../../../../shared"
 import "./authorization.scss"
 import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
-import {
-	registerUser,
-	loginUser,
-	getUserInfo,
-	logoutUser,
-	resetPassword,
-	bearerRoute,
-} from '../../../../shared/api/axios/requests/auth/auth.service'
+import { Auth } from '../../../../shared/api/axios/requests/auth/auth.service'
+import { useNavigate } from "react-router-dom"
 
 
 const Authorization = ({ onClick, nextForm }) => {
@@ -21,24 +15,25 @@ const Authorization = ({ onClick, nextForm }) => {
     togglePasswordVisibility,
     handleEmailChange,
     handlePasswordChange,
-    isValidEmail,
-    isMissingAt,
-    isMissingDot,
-    isButtonDisabled,
-    isPasswordShort,
+    isLoginError,
+    setIsLoginError
   } = useAccessForm()
-  
-	const [userInfo, setUserInfo] = useState(null)
 
-	const handleLogin = useCallback(async () => {
-		await loginUser(email, password)
-	}, [email, password])
-  
-  const handleGetUserInfo = useCallback(async () => {
-		const info = await getUserInfo()
-		setUserInfo(info)
-	}, [])
+  const [error, setError] = useState(null);
 
+  const navigate = useNavigate();
+  const handleLogin = useCallback(async () => {
+    try {
+      const result = await Auth.loginUser(email, password);
+      if (result) {
+        navigate('/account-information');
+      } else {
+        setIsLoginError(true);
+      }
+    } catch (error) {
+      setError(error.message);
+    }
+  }, [email, password, navigate, setError]);
 
   return (
     <div className="authorization-block">
@@ -49,19 +44,11 @@ const Authorization = ({ onClick, nextForm }) => {
           value={email}
           text="Email Address"
           type="email"
-          isError={!isValidEmail && email.length > 0}
+          isError={isLoginError}
           classAppInput="app-input-item"
         />
       </div>
-      {!isValidEmail && email.length > 0 && (
-        <p className="title14-medium-urbanist error-message">
-          {isMissingAt
-            ? 'Email must contain "@" symbol.'
-            : isMissingDot
-              ? 'Email must contain a dot after the "@" symbol.'
-              : "Please enter a valid email address."}
-        </p>
-      )}
+
       <div className="authorization-input">
         <AppInput
           placeholder="Enter your password"
@@ -69,7 +56,7 @@ const Authorization = ({ onClick, nextForm }) => {
           value={password}
           text="Password"
           type={showPassword ? "text" : "password"}
-          isError={isPasswordShort}
+          isError={isLoginError}
           classAppInput="app-input-item"
         />
         <span className="password-toggle" onClick={togglePasswordVisibility}>
@@ -83,27 +70,21 @@ const Authorization = ({ onClick, nextForm }) => {
           />
         </span>
       </div>
-      {isPasswordShort && (
-        <p className="title14-regular-urbanist error-message">
-          The password must be 6 characters long or more.
-        </p>
-      )}
+
       <div className="title16-medium-urbanist forgot-message">
-        <button  onClick={nextForm}>Forgot password</button>
+        <button onClick={nextForm}>Forgot password</button>
       </div>
-      {/* {УСЛОВИЕ(
-        <p className="title14-regular-urbanist error-message error-center">
-          УСЛОВИЕ
-         There is no user record corresponding to this identifier. The user May have been deleted.
-         УСЛОВИЕ
-         The password is invalid or the user does not have a password.
-        </p>
-      )} */}
+      {isLoginError && (<p className="title14-regular-urbanist error-message error-center">
+        Invalid password or username
+      </p>)
+
+      }
+
+
       <div className="authorization-button">
         <AppButton
           text="Sign up"
           onClick={handleLogin}
-          isDisabled={isButtonDisabled}
         />
       </div>
     </div>

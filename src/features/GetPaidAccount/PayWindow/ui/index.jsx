@@ -22,7 +22,6 @@ const PayWindow = ({ svg, isAppleDevice }) => {
     emailRef.current = e.target.value 
   }
 
-
   useEffect(() => {
     if (!loading) {
       if(isAppleDevice){

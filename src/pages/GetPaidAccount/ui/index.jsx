@@ -9,12 +9,6 @@ import {
 import { PayWindow } from "../../../features"
 import { useGetPaidAccount } from "../model/getPaidAccountTimer"
 
-
-
-
-
-
-
 const GetPaidAccountPage = () => {
   const {
     activeModalWindow,

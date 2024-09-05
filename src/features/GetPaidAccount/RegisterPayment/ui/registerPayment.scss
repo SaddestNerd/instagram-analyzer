@@ -17,8 +17,7 @@
       padding-left: 20px;
       padding-right: 20px;
       border-radius: 10px;
-      max-width: 350px;
-      padding-bottom: 10px;   
+      max-width: 350px; 
       border: solid 2px $grayLight;
       background-color: $white;
       .default-input {
@@ -30,8 +29,8 @@
       .form-flex {
         display: flex;
         justify-content: space-between;
-        .default-input-item {
-          width: 70px;
+        .recurly-element-number {
+          width: 70px !important;
         }
         .flex {
           display: flex;

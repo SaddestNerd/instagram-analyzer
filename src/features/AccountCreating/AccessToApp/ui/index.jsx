@@ -4,6 +4,8 @@ import { Icon } from "../../../../shared"
 import "./accessToApp.scss"
 import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
 import useAuthData from "../../../../shared/lib/hooks/auth/auth.hook"
+import { useNavigate } from "react-router-dom"
+
 
 const AccessToApp = ({ token }) => {
   const {
@@ -22,11 +24,15 @@ const AccessToApp = ({ token }) => {
 
   const { signUp } = useAuthData();
 
-  const handleSubmit = () => {
+  const navigate = useNavigate();
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
     signUp(email, password, token)
   };
-  
-  console.log(email, password, token)
+
+
+
   return (
     <div className="access-app-block">
       <div>

@@ -1,17 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import { getCurrency, getPlan, postSubscribeWithCard, postSubscribeWithGooglePay, postSubscribeWithApplePay } from '../../../../features/Slices/Payment/thunks';
 import { resetSubscribeState  } from '../../../../features/Slices/Payment/slice';
 
 const usePaymentData = () => {
   const dispatch = useDispatch();
-  const { currency, plan, loading, error, success } = useSelector(state => state.payment);
 
-  useEffect(() => {
-    dispatch(getCurrency());
+  const dispatchPlan = () => {
     dispatch(getPlan());
-  }, [dispatch]);
-
+  };
+  const dispatchCurrency = () => {
+    dispatch(getCurrency());
+  };
 
   const subscribe = (email, firstName, lastName, tokenId) => {
     dispatch(postSubscribeWithCard({ email, firstName, lastName, tokenId }));
@@ -30,7 +29,7 @@ const usePaymentData = () => {
     dispatch(resetSubscribeState());
   };
 
-  return { loading, error, success, subscribe, subscribeGooglePay, subscribeApplePay, resetState, currency, plan };
+  return {  subscribe, subscribeGooglePay, subscribeApplePay, resetState, dispatchPlan, dispatchCurrency };
 };
 
 export default usePaymentData;

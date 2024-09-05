@@ -21,7 +21,13 @@ export const endpoints = {
           subscribeWithGooglePay: "api/payment/subscribe-with-google-pay",
           subscribeWithApplePay: "api/payment/subscribe-with-apple-pay"
         }
-    }
+    },
+    instagram: {
+      get:{
+        instagramProfile: "api/instagram/profile",
+        analyticProfile: "api/instagram/profile-analytic",
+      }
+   }
   },
 }
 

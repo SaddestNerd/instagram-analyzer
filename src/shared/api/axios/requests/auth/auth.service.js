@@ -13,7 +13,6 @@ const { get, post } = endpoints.general.auth
 
 const handleError = (error, message) => {
 	console.error(message, error)
-	alert(message)
 }
 
 const registerUser = async (email, password) => {
@@ -43,14 +42,6 @@ const getUserInfo = async () => {
 	} catch (error) {
 		handleError(error, 'Failed to retrieve user info')
 		return null
-	}
-}
-
-const logoutUser = async () => {
-	try {
-		await signOut(auth)
-	} catch (error) {
-		handleError(error, 'Logout failed')
 	}
 }
 
@@ -93,7 +84,6 @@ export const Auth = {
 
 	signUpUser: async ({email, password, token}) => {
 		try {
-
 			const response = await api.post(
 				post.signUp,
 				{ email, password },
@@ -101,6 +91,7 @@ export const Auth = {
 			);	
 			if (response.status === 201) {
 				await signInWithEmailAndPassword(auth, email, password);
+				return response;
 			}
 		} catch (error) {
 			handleError(error, 'Registration failed');
@@ -109,19 +100,40 @@ export const Auth = {
 	
 	loginUser: async (email, password) => {
 		try {
-			await signInWithEmailAndPassword(auth, email, password)
+			await signInWithEmailAndPassword(auth, email, password);
+			return true;
 		} catch (error) {
-			handleError(error, 'Login failed')
+			handleError(error, 'Login failed');
+			return false;
+		}
+	},
+
+	logoutUser: async () => {
+		try {
+			await signOut(auth);
+			return true;
+		} catch (error) {
+			handleError(error, 'Logout failed')
+			return false;
+		}
+	},
+
+	resetPassword: async (email) => {
+		try {
+			await sendPasswordResetEmail(auth, email)
+			alert('Password reset email sent successfully. Please check your email.')
+			return true;
+		} catch (error) {
+			handleError(error, 'Password change failed')
+			return false;
 		}
 	}
-	
 };
 
 export {
 	registerUser,
 	loginUser,
 	getUserInfo,
-	logoutUser,
 	resetPassword,
 	bearerRoute,
 }

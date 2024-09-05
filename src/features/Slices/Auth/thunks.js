@@ -35,18 +35,15 @@ export const postSignUpUser = createAsyncThunk(
     try {
       const {
         data: { data },
-      } = await Auth.signUpUser({
-        email,
-        password,
-        token
-      })
-      return data
+      } = await Auth.signUpUser({ email, password, token });
+      return data;
     } catch (error) {
       if (error.response && error.response.data.message) {
-        return rejectWithValue(error.response.data.message)
+        return rejectWithValue(error.response.data.message);
       } else {
-        return rejectWithValue(error.message)
+        return rejectWithValue(error.message);
       }
     }
   }
-)
+);
+

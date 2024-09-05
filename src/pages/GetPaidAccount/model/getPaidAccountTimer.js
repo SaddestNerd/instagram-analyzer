@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 
 export const useGetPaidAccount = () => {
-  const [activeModalWindow, setActiveModalWindow] = useState(true)
+  const [activeModalWindow, setActiveModalWindow] = useState(false)
   const [showHeaderTimer, setShowHeaderTimer] = useState(false)
   const [time, setTime] = useState(15 * 60)
   const scrollToOffer = useRef(null)
