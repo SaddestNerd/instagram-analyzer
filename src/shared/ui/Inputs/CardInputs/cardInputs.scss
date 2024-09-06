@@ -1,0 +1,44 @@
+@import "../../../../app/style/colors.scss";
+
+.recurly-element {
+  width: 100% !important;
+  height: 56px !important;
+  background-color: $BG !important;
+  border-radius: 10px;
+  color: $black;
+  position: relative;
+  outline: none;
+  border: 1px solid $cardBorders !important;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  margin-top: 0px;
+
+  .default-input-text {
+    margin-bottom: 5px;
+    text-align: left;
+    color: $black;
+  }
+}
+.fixed-width {
+  width: auto;
+}
+.recurly-element-number {
+  max-width: 100% !important;
+  width: 343px !important;
+
+  .recurly-element-focus {
+    color: $black !important;
+    border: 1px solid $purple !important;
+  }
+  .recurly-element-invalid {
+    color: $pink !important;
+    border: 1px solid $pink !important;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

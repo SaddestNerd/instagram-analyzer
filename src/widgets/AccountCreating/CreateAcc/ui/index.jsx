@@ -3,7 +3,7 @@ import "./createAcc.scss"
 import { AccessToApp } from "../../../../features"
 import { Icon } from "../../../../shared"
 
-const CreateAcc = () => {
+const CreateAcc = ({token}) => {
   return (
     <div className="create-acc-section">
       <div className="create-acc-block">
@@ -18,7 +18,7 @@ const CreateAcc = () => {
         <p className="title16-regular-outfit">
           Enter your Instagram username to get full data analysis
         </p>
-        <AccessToApp />
+        <AccessToApp token={token}/>
       </div>
     </div>
   )

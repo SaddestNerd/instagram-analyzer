@@ -3,34 +3,49 @@ import { DefaultInput, DefaultButton } from "../../../../shared"
 import { Icon } from "../../../../shared"
 import "./accessToApp.scss"
 import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
+import useAuthData from "../../../../shared/lib/hooks/auth/auth.hook"
+import { useNavigate } from "react-router-dom"
 
-const AccessToApp = ({ onClick }) => {
+
+const AccessToApp = ({ token }) => {
   const {
-    username,
+    email,
     password,
     showPassword,
     togglePasswordVisibility,
-    handleUsernameChange,
+    handleEmailChange,
     handlePasswordChange,
-    isValidUsername,
+    isValidEmail,
     isMissingAt,
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
   } = useAccessForm()
+
+  const { signUp } = useAuthData();
+
+  const navigate = useNavigate();
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    signUp(email, password, token)
+  };
+
+
+
   return (
     <div className="access-app-block">
       <div>
         <DefaultInput
           placeholder="Enter your email"
-          onChange={handleUsernameChange}
-          value={username}
+          onChange={handleEmailChange}
+          value={email}
           text="Email"
           type="email"
-          isError={!isValidUsername && username.length > 0}
+          isError={!isValidEmail && email.length > 0}
         />
       </div>
-      {!isValidUsername && username.length > 0 && (
+      {!isValidEmail && email.length > 0 && (
         <p className="title11-regular-outfit error-message">
           {isMissingAt
             ? 'Email must contain "@" symbol.'
@@ -67,9 +82,9 @@ const AccessToApp = ({ onClick }) => {
       <div className="acess-app-button">
         <DefaultButton
           text="sign up"
-          onClick={onClick}
+          onClick={handleSubmit}
           isDisabled={isButtonDisabled}
-          link="/enter-account"
+       
         />
       </div>
     </div>

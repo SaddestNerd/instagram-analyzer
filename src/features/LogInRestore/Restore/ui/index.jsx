@@ -1,31 +1,49 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { AppInput, AppButton } from "../../../../shared"
 import "./restore.scss"
 import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
+import { useNavigate } from "react-router-dom"
+import { Auth } from "../../../../shared/api/axios/requests/auth/auth.service"
 
-const Restore = ({ onClick, nextForm }) => {
+
+const Restore = ({ onClick, goBack }) => {
   const {
-    username,
-    handleUsernameChange,
-    isValidUsername,
+    email,
+    handleEmailChange,
+    isValidEmail,
     isMissingAt,
     isMissingDot,
     isButtonDisabledEmail,
   } = useAccessForm()
+
+  const navigate = useNavigate();
+
+  const handleReset = useCallback(async () => {
+    try {
+      const result = await Auth.resetPassword(email);
+      if (result) {
+        goBack()
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  }, [email, navigate]);
+
+  
   return (
     <div className="restore-block">
       <div>
         <AppInput
           placeholder="Enter your email address"
-          onChange={handleUsernameChange}
-          value={username}
+          onChange={handleEmailChange}
+          value={email}
           text="Email Address"
           type="email"
-          isError={!isValidUsername && username.length > 0}
+          isError={!isValidEmail && email.length > 0}
           classAppInput="app-input-item"
         />
       </div>
-      {!isValidUsername && username.length > 0 && (
+      {!isValidEmail && email.length > 0 && (
         <p className="title14-medium-urbanist error-message">
           {isMissingAt
             ? 'Email must contain "@" symbol.'
@@ -37,7 +55,7 @@ const Restore = ({ onClick, nextForm }) => {
       <div className="restore-button">
         <AppButton
           text="Restore password"
-          onClick={onClick}
+          onClick={handleReset}
           isDisabled={isButtonDisabledEmail}
         />
       </div>

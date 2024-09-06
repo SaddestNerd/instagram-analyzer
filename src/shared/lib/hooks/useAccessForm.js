@@ -1,46 +1,52 @@
 import { useState } from "react"
 
 export const useAccessForm = () => {
-  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
+  const  [isLoginError, setIsLoginError] = useState(false)
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword)
   }
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value)
+  const handleEmailChange = (e) => {
+    setIsLoginError(false)
+    setEmail(e.target.value)
   }
 
   const handlePasswordChange = (e) => {
+    setIsLoginError(false)
     setPassword(e.target.value)
   }
 
   const emailRegex =
     /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
-  const isValidUsername = emailRegex.test(username)
-  const isMissingAt = !username.includes("@")
-  const isMissingDot = username.includes("@") && !username.includes(".")
+  const isValidEmail = emailRegex.test(email)
+  const isMissingAt = !email.includes("@")
+  const isMissingDot = email.includes("@") && !email.includes(".")
+
 
   const isButtonDisabled =
-    username.length < 6 || password.length < 6 || !isValidUsername
+  email.length < 6 || password.length < 6 || !isValidEmail
   const isPasswordShort = password.length < 6 && password.length > 0
 
-  const isButtonDisabledEmail = username.length < 6 || !isValidUsername
+  const isButtonDisabledEmail = email.length < 6 || !isValidEmail
 
   return {
-    username,
+    email,
     password,
     showPassword,
     togglePasswordVisibility,
-    handleUsernameChange,
+    handleEmailChange,
     handlePasswordChange,
-    isValidUsername,
+    isValidEmail,
     isMissingAt,
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
     isButtonDisabledEmail,
+    isLoginError,
+    setIsLoginError,
   }
 }

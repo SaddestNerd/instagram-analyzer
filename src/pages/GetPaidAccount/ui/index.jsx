@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import "./getPaidAccount.scss"
 import {
   CenterDescription,
@@ -19,8 +19,11 @@ const GetPaidAccountPage = () => {
     timerBlockRef,
   } = useGetPaidAccount()
 
+  const isAppleDevice = /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) && !window.MSStream;
+
   return (
     <div className={`get-paid-account`}>
+
       <div className="background-wrapper"></div>
       <div ref={timerBlockRef}>
         <TimerBlock
@@ -31,6 +34,7 @@ const GetPaidAccountPage = () => {
       <CenterDescription
         onActiveModal={() => setActiveModalWindow(true)}
         scrollToOffer={scrollToOffer}
+        isAppleDevice={isAppleDevice}
       />
       <FooterInformation />
       <TimerHeaderBlock time={time} show={showHeaderTimer} />
@@ -39,8 +43,9 @@ const GetPaidAccountPage = () => {
           "upper-window-background" + (activeModalWindow ? " is-active" : " ")
         }
         onClick={() => setActiveModalWindow(false)}
+  
       >
-        <PayWindow svg={"apple"} />
+        <PayWindow isAppleDevice={isAppleDevice} svg={isAppleDevice ? "apple" : "google"} />
       </div>
     </div>
   )

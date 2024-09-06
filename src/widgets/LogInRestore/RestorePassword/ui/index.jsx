@@ -19,7 +19,7 @@ const RestorePassword = ({ showPopup, goBack }) => {
         <p className="title14-regular-urbanist">
           Please enter the email address you provided when creating your account
         </p>
-        <Restore onClick={handleClick} />
+        <Restore onClick={handleClick} goBack={goBack} />
       </div>
     </div>
   )

@@ -1,8 +1,26 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./likesAndComments.scss"
 import { AnalyticBlock } from "../../../../shared"
+import useInstagramData from "../../../../shared/lib/hooks/instagram/instagram.hook"
+import GetInstagamData from "../../../../shared/lib/hooks/instagram/instagramSelector.hook"
 
 const LikesAndComments = () => {
+  const { dispatchInstagramAnalysisAccount } = useInstagramData()
+  const { loading, profileAnalysis } = GetInstagamData()
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        await dispatchInstagramAnalysisAccount()
+      } catch (error) {
+        console.error("Error:", error)
+      }
+    }
+    fetchData()
+  }, [])
+
+  if (loading) return <></>
+
   return (
     <div className="like-comment-section">
       <p className="title20-bold-urbanist analytic-widget-title-color">
@@ -10,8 +28,8 @@ const LikesAndComments = () => {
       </p>
       <div className="like-comment-block">
         <AnalyticBlock
-          text="132.17"
-          title="Avg. Likes/Post"
+          text={profileAnalysis?.totalLikes}
+          title="Likes"
           className="analytic-block-iconbg"
           type="likes"
           width={24}
@@ -20,7 +38,7 @@ const LikesAndComments = () => {
           strokeColor="#315DF4"
         />
         <AnalyticBlock
-          text="30"
+          text={profileAnalysis?.totalComments}
           title="Comments"
           className="analytic-block-iconbg"
           type="comments"
