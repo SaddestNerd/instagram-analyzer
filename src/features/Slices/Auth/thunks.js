@@ -5,7 +5,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { endpoints } from "../../../shared/api/axios/endpoints/endpoints"
 
 
-const { get, post } = endpoints.general.auth
+const { post } = endpoints.general.auth
 
 
 

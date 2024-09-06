@@ -15,16 +15,12 @@ import {
   NewsArticle,
   PrivacyPolicy,
   TermsOfUse,
-  GetPaidAccountPageTEST,
 } from "../../pages"
 import { AccountFooter, AccountHeader } from "../../widgets"
 import ScrollToTop from "../../shared/lib/hooks/useScrollToTop"
-import { auth } from "../../shared/lib/config/firebaseConfig"
-import { useAuthState } from "react-firebase-hooks/auth";
 import PrivateRoute from "./PrivateRoute"
 
 export const useRoutes = () => {
-  const [user, loading] = useAuthState(auth);
 
   const AccountHeaderFooter = ({ element, isLogo }) => {
     const location = useLocation()
@@ -98,7 +94,7 @@ export const useRoutes = () => {
           <Route path="/*" element={<Navigate replace to="/main" />} />
           <Route path="/terms-of-servise" exact element={<TermsOfUse />} />
           <Route path="/privacy-policy" exact element={<PrivacyPolicy />} />
-          <Route path="/get-account-test" exact element={<GetPaidAccountPageTEST />} />
+
       </Routes>
     </>
   )

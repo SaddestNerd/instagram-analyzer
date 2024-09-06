@@ -1,8 +1,5 @@
-import axios from 'axios'
-
 import { endpoints } from "../../endpoints"
 import api from "../../api"
-import { useCallback, useMemo } from 'react'
 
 const { get, post } = endpoints.general.payment
 

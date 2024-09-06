@@ -5,7 +5,9 @@
   position: relative;
   text-align: center;
   color: $appBlack;
-
+  img{
+    border-radius: 100px;
+  }
   .title14-regular-urbanist {
     color: $appTextColor;
   }

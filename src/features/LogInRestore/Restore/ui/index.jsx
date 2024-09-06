@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 import { Auth } from "../../../../shared/api/axios/requests/auth/auth.service"
 
 
-const Restore = ({ onClick, goBack }) => {
+const Restore = ({ goBack }) => {
   const {
     email,
     handleEmailChange,

@@ -24,7 +24,7 @@ const MostLikedPostBlock = ({
       <div className="most-liked-post-img-container">
         <img
           className="liked-post-img-block"
-          src={imgSrc}
+          src={`data:image/jpeg;base64,${imgSrc}`}
           alt={"TopPost"}
           crossOrigin="anonymous"
           onError={handleError}

@@ -32,9 +32,3 @@ export const endpoints = {
 }
 
 
-const API_URL = 'http://localhost:5000'
-const REGISTER_URL = `${API_URL}/register`
-const BEARER_URL = `${API_URL}/bearer`
-
-
-export { REGISTER_URL, BEARER_URL }

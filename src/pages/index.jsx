@@ -43,4 +43,3 @@ export { default as TermsOfUse } from "./TermsOfUse/ui"
 export { default as PrivacyPolicy } from "./PrivacyPolicy/ui"
 
 
-export { default as GetPaidAccountPageTEST } from "./GetPaidAccountTest/ui"

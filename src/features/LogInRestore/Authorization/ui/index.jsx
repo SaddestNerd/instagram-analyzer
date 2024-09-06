@@ -1,13 +1,12 @@
-import React, { useCallback, useState } from "react"
+import React, { useCallback } from "react"
 import { AppInput, AppButton } from "../../../../shared"
 import { Icon } from "../../../../shared"
 import "./authorization.scss"
 import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
-import { Auth } from '../../../../shared/api/axios/requests/auth/auth.service'
+import { Auth } from "../../../../shared/api/axios/requests/auth/auth.service"
 import { useNavigate } from "react-router-dom"
 
-
-const Authorization = ({ onClick, nextForm }) => {
+const Authorization = ({ nextForm }) => {
   const {
     email,
     password,
@@ -16,24 +15,23 @@ const Authorization = ({ onClick, nextForm }) => {
     handleEmailChange,
     handlePasswordChange,
     isLoginError,
-    setIsLoginError
+    setIsLoginError,
   } = useAccessForm()
 
-  const [error, setError] = useState(null);
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const handleLogin = useCallback(async () => {
     try {
-      const result = await Auth.loginUser(email, password);
+      const result = await Auth.loginUser(email, password)
       if (result) {
-        navigate('/account-information');
+        navigate("/account-information")
       } else {
-        setIsLoginError(true);
+        setIsLoginError(true)
       }
     } catch (error) {
-      setError(error.message);
+      setIsLoginError(true);
     }
-  }, [email, password, navigate, setError]);
+  }, [email, password, navigate, setIsLoginError])
 
   return (
     <div className="authorization-block">
@@ -74,18 +72,14 @@ const Authorization = ({ onClick, nextForm }) => {
       <div className="title16-medium-urbanist forgot-message">
         <button onClick={nextForm}>Forgot password</button>
       </div>
-      {isLoginError && (<p className="title14-regular-urbanist error-message error-center">
-        Invalid password or username
-      </p>)
-
-      }
-
+      {isLoginError && (
+        <p className="title14-regular-urbanist error-message error-center">
+          Invalid password or username
+        </p>
+      )}
 
       <div className="authorization-button">
-        <AppButton
-          text="Sign up"
-          onClick={handleLogin}
-        />
+        <AppButton text="Sign up" onClick={handleLogin} />
       </div>
     </div>
   )
