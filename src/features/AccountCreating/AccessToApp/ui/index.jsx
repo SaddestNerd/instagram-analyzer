@@ -1,10 +1,10 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { DefaultInput, DefaultButton } from "../../../../shared"
 import { Icon } from "../../../../shared"
 import "./accessToApp.scss"
 import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
 import useAuthData from "../../../../shared/lib/hooks/auth/auth.hook"
-import { useNavigate } from "react-router-dom"
+import GetAuthData from "../../../../shared/lib/hooks/auth/authSelector.hook"
 
 
 const AccessToApp = ({ token }) => {
@@ -20,19 +20,28 @@ const AccessToApp = ({ token }) => {
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
+    isLoginError,
+    setIsLoginError
   } = useAccessForm()
 
   const { signUp } = useAuthData();
+  const { error } = GetAuthData();
 
-  const navigate = useNavigate();
-  
+
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     signUp(email, password, token)
+    
   };
 
+  useEffect(() => {
+    setIsLoginError(true)
+  }, [error])
 
-
+  console.log(isLoginError, error)
+  
   return (
     <div className="access-app-block">
       <div>
@@ -79,12 +88,17 @@ const AccessToApp = ({ token }) => {
           The password must be 6 characters long or more.
         </p>
       )}
+      {isLoginError && (
+        <p className="title11-regular-outfit error-message">
+          {error}
+        </p>
+      )}
       <div className="acess-app-button">
         <DefaultButton
           text="sign up"
           onClick={handleSubmit}
           isDisabled={isButtonDisabled}
-       
+
         />
       </div>
     </div>

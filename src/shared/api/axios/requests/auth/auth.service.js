@@ -9,7 +9,7 @@ import { REGISTER_URL, BEARER_URL, endpoints } from './../../endpoints/endpoints
 import api from "../../api"
 
 
-const { get, post } = endpoints.general.auth
+const { post } = endpoints.general.auth
 
 const handleError = (error, message) => {
 	console.error(message, error)

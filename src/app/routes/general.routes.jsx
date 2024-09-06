@@ -19,12 +19,9 @@ import {
 } from "../../pages"
 import { AccountFooter, AccountHeader } from "../../widgets"
 import ScrollToTop from "../../shared/lib/hooks/useScrollToTop"
-import { auth } from "../../shared/lib/config/firebaseConfig"
-import { useAuthState } from "react-firebase-hooks/auth";
 import PrivateRoute from "./PrivateRoute"
 
 export const useRoutes = () => {
-  const [user, loading] = useAuthState(auth);
 
   const AccountHeaderFooter = ({ element, isLogo }) => {
     const location = useLocation()

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect} from "react"
 import "./accountUpperStatistic.scss"
 import { StatisticBlock } from "../../../shared"
 import Avatar from "../../../shared/ui/Avatar"
@@ -6,8 +6,6 @@ import useInstagramData from "../../../shared/lib/hooks/instagram/instagram.hook
 import GetInstagamData from "../../../shared/lib/hooks/instagram/instagramSelector.hook"
 
 const AccountUpperStatistic = () => {
-
-
 
   const { dispatchInstagramAccount } = useInstagramData();
   const { loading, profile } = GetInstagamData();

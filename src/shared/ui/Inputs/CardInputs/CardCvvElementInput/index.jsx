@@ -1,17 +1,13 @@
 import React from "react"
-import { useFormatNuber } from "../../../../lib/hooks/useFormatNuber"
 import {
   CardCvvElement,
 } from "@recurly/react-recurly"
 import "../cardInputs.scss"
 
 const CardCvvElementInput = ({
-  onChange = () => {},
   placeholder,
   text,
-  maxLength,
 }) => {
-  const { inputValue, handleInputChange } = useFormatNuber(maxLength, onChange)
 
   return (
     <div className="default-input fixed-width">
