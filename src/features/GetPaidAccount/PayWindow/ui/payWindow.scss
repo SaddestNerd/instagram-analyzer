@@ -37,6 +37,14 @@
   .pay-window-block {
     width: 343px;
     max-width: 100%;
+    height: 220px;
+  }
+  .loader-wrapper{
+    height: 220px;
+    .loader{
+      top: 50%;
+      position: absolute;
+    }
   }
   .gpay-card-info-container{
     min-width:  100% !important;

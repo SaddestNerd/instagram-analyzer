@@ -60,7 +60,7 @@ const paymentSlice = createSlice({
       .addCase(postSubscribeWithCard.fulfilled, (state, { payload }) => {
         state.loading = false
         state.error = null
-        state.registerToken = payload;
+        state.registerToken = payload
       })
       .addCase(postSubscribeWithCard.rejected, (state, { payload }) => {
         state.loading = false
@@ -72,10 +72,11 @@ const paymentSlice = createSlice({
         state.error = null
         state.success = false
       })
-      .addCase(postSubscribeWithGooglePay.fulfilled, (state) => {
+      .addCase(postSubscribeWithGooglePay.fulfilled, (state, { payload }) => {
         state.loading = false
         state.error = null
         state.success = true
+        state.registerToken = payload
       })
       .addCase(postSubscribeWithGooglePay.rejected, (state, { payload }) => {
         state.loading = false
@@ -87,10 +88,11 @@ const paymentSlice = createSlice({
         state.error = null
         state.success = false
       })
-      .addCase(postSubscribeWithApplePay.fulfilled, (state) => {
+      .addCase(postSubscribeWithApplePay.fulfilled, (state, { payload }) => {
         state.loading = false
         state.error = null
         state.success = true
+        state.registerToken = payload
       })
       .addCase(postSubscribeWithApplePay.rejected, (state, { payload }) => {
         state.loading = false

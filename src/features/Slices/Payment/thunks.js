@@ -76,13 +76,13 @@ export const getPlan = createAsyncThunk(
       const name = paymentData.paymentMethodData.info.billingAddress.name
       try {
         const {
-          data: { data },
+          data: { token },
         } = await Payment.postSubscribeWithGooglePay({
             email,
             name,
             tokenId
         })
-        return data
+        return token
       } catch (error) {
         if (error.response && error.response.data.message) {
           return rejectWithValue(error.response.data.message)
@@ -95,19 +95,20 @@ export const getPlan = createAsyncThunk(
 
   export const postSubscribeWithApplePay = createAsyncThunk(
     post.subscribeWithApplePay,
-    async ({paymentData, email, tokenId }, { rejectWithValue }) => {
-      const familyName = paymentData.paymentMethodData.info.billingAddress.familyName
-      const givenName = paymentData.paymentMethodData.info.billingAddress.givenName
+    async ({payment, email, tokenId }, { rejectWithValue }) => {
+      const familyName = payment.billingContact.familyName;
+      const givenName = payment.billingContact.givenName;
+   
       try {
         const {
-          data: { data },
+          data: { token },
         } = await Payment.postSubscribeWithApplePay({
             email,
             familyName,
             givenName,
             tokenId
         })
-        return data
+        return token
       } catch (error) {
         if (error.response && error.response.data.message) {
           return rejectWithValue(error.response.data.message)

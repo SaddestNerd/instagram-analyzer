@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import Icon from "../Icons"
 import "./mostLikedPostBlock.scss"
-import MostLikedPost from "../../../shared/assets/main/MostLikedPost.webp"
+import defaultIMG from "../../../shared/assets/main/defaultIMG.jpg"
 
 const MostLikedPostBlock = ({
   title,
@@ -13,14 +13,21 @@ const MostLikedPostBlock = ({
   color,
   strokeColor,
   className,
+  imageURL,
 }) => {
+  const [imgSrc, setImgSrc] = useState(imageURL || defaultIMG)
+  const handleError = () => {
+    setImgSrc(defaultIMG)
+  }
   return (
     <div className="most-liked-post-component">
       <div className="most-liked-post-img-container">
         <img
           className="liked-post-img-block"
-          src={MostLikedPost}
-          alt="MostLikedPostPng"
+          src={imgSrc}
+          alt={"TopPost"}
+          crossOrigin="anonymous"
+          onError={handleError}
         ></img>
       </div>
       <div className="most-liked-post-details">

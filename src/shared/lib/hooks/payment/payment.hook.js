@@ -20,16 +20,15 @@ const usePaymentData = () => {
     dispatch(postSubscribeWithGooglePay({ email, tokenId, paymentData}));
   };
 
-  const subscribeApplePay = (email, paymentData, tokenId) => {
-    alert({email, paymentData, tokenId})
-    dispatch(postSubscribeWithApplePay({ email, paymentData, tokenId }));
+  const subscribeApplePay = ({email, payment, tokenId}) => {
+    dispatch(postSubscribeWithApplePay({ email, payment, tokenId }));
   };
 
   const resetState = () => {
     dispatch(resetSubscribeState());
   };
 
-  return {  subscribe, subscribeGooglePay, subscribeApplePay, resetState, dispatchPlan, dispatchCurrency };
+  return {subscribe, subscribeGooglePay, subscribeApplePay, resetState, dispatchPlan, dispatchCurrency};
 };
 
 export default usePaymentData;

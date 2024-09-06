@@ -14,6 +14,7 @@ const AnalyticBlock = ({
   className,
   classNameClock,
 }) => {
+  const roundedText = text ? Math.round(Number(text)) : text
   return (
     <div className="analytic-block-component">
       <div className={className}>
@@ -28,7 +29,7 @@ const AnalyticBlock = ({
       </div>
       <p className="title12-regular-urbanist">{title}</p>
       {text ? (
-        <p className="title24-medium-urbanist">{text}</p>
+        <p className="title24-medium-urbanist">{roundedText}</p>
       ) : (
         <div className={classNameClock}>
           <Icon
