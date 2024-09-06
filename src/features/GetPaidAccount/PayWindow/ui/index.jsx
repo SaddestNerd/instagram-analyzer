@@ -6,6 +6,7 @@ import { useRecurly, useCheckoutPricing } from "@recurly/react-recurly"
 import usePaymentData from "../../../../shared/lib/hooks/payment/payment.hook"
 import GetPaymentData from "../../../../shared/lib/hooks/payment/paymentSelector.hook"
 import { useNavigate } from "react-router-dom"
+import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
 
 const PayWindow = ({ svg, isAppleDevice }) => {
   const googlePayButtonRef = useRef(null)
@@ -16,29 +17,35 @@ const PayWindow = ({ svg, isAppleDevice }) => {
     dispatchPlan,
     dispatchCurrency,
   } = usePaymentData()
+  const {
+    email,
+    handleEmailChange,
+    isValidEmail,
+    isMissingAt,
+    isMissingDot,
+    isButtonDisabledEmail,
+  } = useAccessForm()
 
-  const [email, setEmail] = useState("")
+  const [emailLine, setEmail] = useState("")
   const [errorLabel, setErrorLabel] = useState(null)
-  const emailRef = useRef(email)
+  const emailRef = useRef(emailLine)
   const navigate = useNavigate()
   const { loading, registerToken, error, currency, plan } = GetPaymentData()
-  const [selectedCurrency, setSelectedCurrency] = useState("USD");
-  const [selectedPlan, setSelectedPlan] = useState("plan-code");
+  const [selectedCurrency, setSelectedCurrency] = useState("USD")
+  const [selectedPlan, setSelectedPlan] = useState("plan-code")
   useEffect(() => {
-
-    dispatchPlan();
-    dispatchCurrency();
-  }, []);
+    dispatchPlan()
+    dispatchCurrency()
+  }, [])
 
   useEffect(() => {
-  
     if (plan) {
-      setSelectedPlan(plan.planCode);
+      setSelectedPlan(plan.planCode)
     }
     if (currency) {
-      setSelectedCurrency(currency.currencyCode);
+      setSelectedCurrency(currency.currencyCode)
     }
-  }, []);
+  }, [])
 
   const [{ price, loading: pricingLoading }, setCheckoutPricing] =
     useCheckoutPricing({
@@ -48,19 +55,8 @@ const PayWindow = ({ svg, isAppleDevice }) => {
         },
       ],
       currency: selectedCurrency,
-    });
+    })
 
-  // useEffect(() => {
-  //   if (!pricingLoading) {
-  //     console.log("Checkout pricing:", price.now.total);
-  //   }
-  // }, []);
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value)
-    emailRef.current = e.target.value
-    setErrorLabel(null)
-  }
 
   useEffect(() => {
     if (registerToken) {
@@ -69,7 +65,7 @@ const PayWindow = ({ svg, isAppleDevice }) => {
       }
     }
   }, [registerToken])
-  
+
   useEffect(() => {
     if (!loading && currency && plan) {
       if (isAppleDevice) {
@@ -168,7 +164,15 @@ const PayWindow = ({ svg, isAppleDevice }) => {
           <p className="title16-regular-outfit">
             Enter your e-mail to get an invoice
           </p>
-
+          {!isValidEmail && email.length > 0 && (
+            <p className="title14-medium-urbanist error-message-upper">
+              {isMissingAt
+                ? 'Email must contain "@" symbol.'
+                : isMissingDot
+                  ? 'Email must contain a dot after the "@" symbol.'
+                  : "Please enter a valid email address."}
+            </p>
+          )}
           <DefaultInput
             text={"Email"}
             placeholder={"Enter your email"}
@@ -176,6 +180,7 @@ const PayWindow = ({ svg, isAppleDevice }) => {
             name="email"
             value={email}
             onChange={handleEmailChange}
+            isError={!isValidEmail && email.length > 0}
           />
           {errorLabel && (
             <p className="title11-regular-outfit error-message">
@@ -184,11 +189,13 @@ const PayWindow = ({ svg, isAppleDevice }) => {
           )}
           {isAppleDevice ? (
             <button
+              // disabled={isButtonDisabledEmail}
               class="apple-pay-button apple-pay-button-black"
               id="my-apple-pay-button"
             ></button>
           ) : (
             <div
+              // disabled={isButtonDisabledEmail}
               id="google-pay-button-container"
               className="google-pay-button-container"
             />
