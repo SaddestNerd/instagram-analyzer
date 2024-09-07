@@ -21,7 +21,7 @@
     margin-bottom: 54px;
     position: relative;
   }
-  .error-message-upper{
+  .error-message-upper {
     color: $pink;
     text-align: center;
     margin-bottom: 24px;
@@ -87,9 +87,14 @@
   }
 }
 .apple-pay-button {
-  width: 100%; /* apple specified minimum is 175px, there is no maximum */
-  height: 56px; /* apple specified minimum is 32px, maximum is 64px */
+  width: 100%;
+  height: 56px;
   border-radius: 10px;
+  &[disabled] {
+    background-color: $grayLight;
+    cursor: not-allowed;
+    border-radius: 10px;
+  }
 }
 @supports not (-webkit-appearance: -apple-pay-button) {
   .apple-pay-button {
@@ -97,7 +102,7 @@
     background-size: 100% 60%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 0px;
     box-sizing: border-box;
     min-width: 200px;
@@ -116,5 +121,47 @@
     background-image: -webkit-named-image(apple-pay-logo-black);
     background-color: white;
     border: 0.5px solid black;
+  }
+}
+
+
+.google-pay-button-container {
+
+  &[disabled] {
+    background-color: $grayLight;
+    cursor: not-allowed;
+    border-radius: 10px;
+    .gpay-card-info-container {
+      background-color: $grayLight;
+      cursor: not-allowed;
+      pointer-events: none;
+      outline: 1px solid $grayLight;
+
+      .gpay-card-info-animation-container {
+        background-color: $grayLight;
+        cursor: not-allowed;
+      }
+    }
+    .gpay-card-info-animated-progress-bar-container {
+      background-color: $grayLight;
+      cursor: not-allowed;
+    }
+
+    iframe {
+      background-color: $grayLight;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+
+.gpay-card-info-container {
+  background-color: #000;
+  color: #fff;
+
+  &[disabled] {
+    background-color: transparent; 
+    color: #666;
+    cursor: not-allowed;
   }
 }

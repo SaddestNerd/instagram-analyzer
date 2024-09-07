@@ -1,11 +1,10 @@
-import axios from 'axios'
 import { auth } from './../../../../lib/config/firebaseConfig'
 import {
 	signOut,
 	sendPasswordResetEmail,
 	signInWithEmailAndPassword,
 } from 'firebase/auth'
-import { REGISTER_URL, BEARER_URL, endpoints } from './../../endpoints/endpoints'
+import { endpoints } from './../../endpoints/endpoints'
 import api from "../../api"
 
 
@@ -14,61 +13,6 @@ const { post } = endpoints.general.auth
 const handleError = (error, message) => {
 	console.error(message, error)
 }
-
-const registerUser = async (email, password) => {
-	try {
-		const response = await axios.post(REGISTER_URL, { email, password })
-		const { status } = response.data
-		if (status === 201) {
-			await signInWithEmailAndPassword(auth, email, password)
-		}
-	} catch (error) {
-		handleError(error, 'Registration failed')
-	}
-}
-
-const loginUser = async (email, password) => {
-	try {
-		await signInWithEmailAndPassword(auth, email, password)
-	} catch (error) {
-		handleError(error, 'Login failed')
-	}
-}
-
-const getUserInfo = async () => {
-	try {
-		const user = auth.currentUser
-		return user
-	} catch (error) {
-		handleError(error, 'Failed to retrieve user info')
-		return null
-	}
-}
-
-const resetPassword = async () => {
-	try {
-		const user = auth.currentUser
-		await sendPasswordResetEmail(auth, user.email)
-		alert('Password reset email sent successfully. Please check your email.')
-	} catch (error) {
-		handleError(error, 'Password change failed')
-	}
-}
-
-const bearerRoute = async () => {
-	try {
-		const user = auth.currentUser
-		const idToken = await user.getIdToken()
-		const response = await axios.get(BEARER_URL, {
-			headers: { Authorization: `Bearer ${idToken}` },
-		})
-		return response.data
-	} catch (error) {
-		handleError(error, 'Bearer failed')
-	}
-}
-
-
 
 export const Auth = {
 	checkSignUpToken: async ({ token }) => {
@@ -129,11 +73,3 @@ export const Auth = {
 		}
 	}
 };
-
-export {
-	registerUser,
-	loginUser,
-	getUserInfo,
-	resetPassword,
-	bearerRoute,
-}

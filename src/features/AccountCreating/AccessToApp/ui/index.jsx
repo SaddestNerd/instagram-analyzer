@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { DefaultInput, DefaultButton } from "../../../../shared"
 import { Icon } from "../../../../shared"
 import "./accessToApp.scss"

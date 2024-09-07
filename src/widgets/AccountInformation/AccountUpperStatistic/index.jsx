@@ -28,7 +28,7 @@ const AccountUpperStatistic = () => {
 
   return (
     <div className="account-upper-statistic">
-      <Avatar fullname={profile?.fullName} nickname={profile?.username} img={profile?.pictureURL}/>
+      <Avatar fullname={profile?.fullName} nickname={profile?.username} img={profile?.pictureBase64}/>
       <div className="flex-statistics">
         <StatisticBlock svg={"Followers"} name={"Followers"} stat={profile?.followersCount} />
         <StatisticBlock svg={"Posts"} name={"Posts"} stat={profile?.postsCount} />

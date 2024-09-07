@@ -38,7 +38,7 @@ const MostLikedPost = () => {
             alt="likesIcon" 
             strokeColor="#315DF4"
             text={post.likesCount.toString()}
-            imageURL={post.pictureURL}
+            imageURL={post.pictureBase64}
           />
         ))}
       </div>

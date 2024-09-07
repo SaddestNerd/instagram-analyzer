@@ -189,13 +189,13 @@ const PayWindow = ({ svg, isAppleDevice }) => {
           )}
           {isAppleDevice ? (
             <button
-              // disabled={isButtonDisabledEmail}
+              disabled={isButtonDisabledEmail}
               class="apple-pay-button apple-pay-button-black"
               id="my-apple-pay-button"
             ></button>
           ) : (
             <div
-              // disabled={isButtonDisabledEmail}
+              disabled={isButtonDisabledEmail}
               id="google-pay-button-container"
               className="google-pay-button-container"
             />

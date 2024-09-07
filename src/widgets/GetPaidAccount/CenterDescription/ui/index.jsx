@@ -64,7 +64,7 @@ const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice }) => {
         navigate(`/account-create?token=${registerToken}`);
       }
     }
-  }, [registerToken])
+  }, [registerToken, navigate, loading])
 
   const changeHandlerData = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
@@ -85,7 +85,7 @@ const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice }) => {
     if (currency) {
       setSelectedCurrency(currency.currencyCode);
     }
-  }, []);
+  }, [plan, currency]);
 
   const [{ price, loading: pricingLoading }, setCheckoutPricing] =
     useCheckoutPricing({
@@ -96,12 +96,6 @@ const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice }) => {
       ],
       currency: selectedCurrency,
     });
-
-  // useEffect(() => {
-  //   if (!pricingLoading) {
-  //     console.log("Checkout pricing:", price);
-  //   }
-  // }, []);
 
 
   if (pricingLoading) return <></>

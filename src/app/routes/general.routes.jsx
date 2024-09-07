@@ -15,7 +15,6 @@ import {
   NewsArticle,
   PrivacyPolicy,
   TermsOfUse,
-  GetPaidAccountPageTEST,
 } from "../../pages"
 import { AccountFooter, AccountHeader } from "../../widgets"
 import ScrollToTop from "../../shared/lib/hooks/useScrollToTop"
@@ -95,7 +94,7 @@ export const useRoutes = () => {
           <Route path="/*" element={<Navigate replace to="/main" />} />
           <Route path="/terms-of-servise" exact element={<TermsOfUse />} />
           <Route path="/privacy-policy" exact element={<PrivacyPolicy />} />
-          <Route path="/get-account-test" exact element={<GetPaidAccountPageTEST />} />
+
       </Routes>
     </>
   )
