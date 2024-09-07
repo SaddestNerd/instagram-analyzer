@@ -27,6 +27,11 @@ export const endpoints = {
         instagramProfile: "api/instagram/profile",
         analyticProfile: "api/instagram/profile-analytic",
       }
+   },
+   user: {
+    patch: {
+      instagramUserByUsername:  "api/user/instagram-username",
+    }
    }
   },
 }

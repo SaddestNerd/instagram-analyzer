@@ -8,7 +8,7 @@ import GetPaymentData from "../../../../shared/lib/hooks/payment/paymentSelector
 import { useNavigate } from "react-router-dom"
 import { useAccessForm } from "../../../../shared/lib/hooks/useAccessForm"
 
-const PayWindow = ({ svg, isAppleDevice }) => {
+const PayWindow = ({ svg, isAppleDevice, price }) => {
   const googlePayButtonRef = useRef(null)
   const recurly = useRecurly()
   const {
@@ -19,43 +19,26 @@ const PayWindow = ({ svg, isAppleDevice }) => {
   } = usePaymentData()
   const {
     email,
-    handleEmailChange,
+    setEmail,
     isValidEmail,
     isMissingAt,
     isMissingDot,
     isButtonDisabledEmail,
   } = useAccessForm()
 
-  const [emailLine, setEmail] = useState("")
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value)
+    emailRef.current = e.target.value
+    setErrorLabel(null)
+  }
   const [errorLabel, setErrorLabel] = useState(null)
-  const emailRef = useRef(emailLine)
+  const emailRef = useRef(email)
   const navigate = useNavigate()
   const { loading, registerToken, error, currency, plan } = GetPaymentData()
-  const [selectedCurrency, setSelectedCurrency] = useState("USD")
-  const [selectedPlan, setSelectedPlan] = useState("plan-code")
-  useEffect(() => {
-    dispatchPlan()
-    dispatchCurrency()
-  }, [])
+  
 
-  useEffect(() => {
-    if (plan) {
-      setSelectedPlan(plan.planCode)
-    }
-    if (currency) {
-      setSelectedCurrency(currency.currencyCode)
-    }
-  }, [])
 
-  const [{ price, loading: pricingLoading }, setCheckoutPricing] =
-    useCheckoutPricing({
-      subscriptions: [
-        {
-          plan: selectedPlan,
-        },
-      ],
-      currency: selectedCurrency,
-    })
 
 
   useEffect(() => {
@@ -189,13 +172,13 @@ const PayWindow = ({ svg, isAppleDevice }) => {
           )}
           {isAppleDevice ? (
             <button
-              // disabled={isButtonDisabledEmail}
+              disabled={isButtonDisabledEmail}
               class="apple-pay-button apple-pay-button-black"
               id="my-apple-pay-button"
             ></button>
           ) : (
             <div
-              // disabled={isButtonDisabledEmail}
+              disabled={isButtonDisabledEmail}
               id="google-pay-button-container"
               className="google-pay-button-container"
             />

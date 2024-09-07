@@ -3,13 +3,7 @@ import { AppInput, AppButton } from "../../../../shared"
 import "./instAnalysis.scss"
 import Icon from "../../../../shared/ui/Icons"
 
-const InstAnalysis = ({ onClick }) => {
-  const [username, setUsername] = useState("")
-
-  const handleChange = (e) => {
-    const value = e.target.value
-    setUsername(value)
-  }
+const InstAnalysis = ({ onClick, handleChange, nickname }) => {
 
   return (
     <div className="data-analys-inst-block">
@@ -18,14 +12,14 @@ const InstAnalysis = ({ onClick }) => {
         <AppInput
           placeholder="“Sherlock” for example"
           onChange={handleChange}
-          value={username}
+          value={nickname}
           type="text"
         />
       </div>
       <AppButton
         text="Get my analysis"
         onClick={onClick}
-        isDisabled={username.length < 1}
+        isDisabled={nickname.length < 1}
       />
     </div>
   )

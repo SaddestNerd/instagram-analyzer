@@ -4,22 +4,7 @@ import { AnalyticBlock } from "../../../../shared"
 import useInstagramData from "../../../../shared/lib/hooks/instagram/instagram.hook"
 import GetInstagamData from "../../../../shared/lib/hooks/instagram/instagramSelector.hook"
 
-const LikesAndComments = () => {
-  const { dispatchInstagramAnalysisAccount } = useInstagramData()
-  const { loading, profileAnalysis } = GetInstagamData()
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await dispatchInstagramAnalysisAccount()
-      } catch (error) {
-        console.error("Error:", error)
-      }
-    }
-    fetchData()
-  }, [])
-
-  if (loading) return <></>
+const LikesAndComments = ({profileAnalysis}) => {
 
   return (
     <div className="like-comment-section">

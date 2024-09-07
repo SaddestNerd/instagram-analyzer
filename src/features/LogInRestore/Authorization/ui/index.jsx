@@ -14,8 +14,13 @@ const Authorization = ({ nextForm }) => {
     togglePasswordVisibility,
     handleEmailChange,
     handlePasswordChange,
+    isValidEmail,
+    isMissingAt,
+    isMissingDot,
+    isButtonDisabled,
+    isPasswordShort,
     isLoginError,
-    setIsLoginError,
+    setIsLoginError
   } = useAccessForm()
 
 
@@ -42,9 +47,18 @@ const Authorization = ({ nextForm }) => {
           value={email}
           text="Email Address"
           type="email"
-          isError={isLoginError}
+          isError={isLoginError || !isValidEmail && email.length > 0}
           classAppInput="app-input-item"
         />
+        {!isValidEmail && email.length > 0 && (
+        <p className="title14-medium-urbanist error-message">
+          {isMissingAt
+            ? 'Email must contain "@" symbol.'
+            : isMissingDot
+              ? 'Email must contain a dot after the "@" symbol.'
+              : "Please enter a valid email address."}
+        </p>
+      )}
       </div>
 
       <div className="authorization-input">
@@ -54,7 +68,7 @@ const Authorization = ({ nextForm }) => {
           value={password}
           text="Password"
           type={showPassword ? "text" : "password"}
-          isError={isLoginError}
+          isError={isLoginError || isPasswordShort}
           classAppInput="app-input-item"
         />
         <span className="password-toggle" onClick={togglePasswordVisibility}>
@@ -68,7 +82,11 @@ const Authorization = ({ nextForm }) => {
           />
         </span>
       </div>
-
+      {isPasswordShort && (
+        <p className="title14-medium-urbanist error-message">
+          At least 6 symbols
+        </p>
+      )}
       <div className="title16-medium-urbanist forgot-message">
         <button onClick={nextForm}>Forgot password</button>
       </div>
@@ -79,7 +97,7 @@ const Authorization = ({ nextForm }) => {
       )}
 
       <div className="authorization-button">
-        <AppButton text="Sign up" onClick={handleLogin} />
+        <AppButton text="Sign up" onClick={handleLogin}/>
       </div>
     </div>
   )
