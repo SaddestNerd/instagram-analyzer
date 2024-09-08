@@ -31,6 +31,9 @@ export const endpoints = {
    user: {
     patch: {
       instagramUserByUsername:  "api/user/instagram-username",
+    },
+    get: {
+      me: "api/user/me"
     }
    }
   },

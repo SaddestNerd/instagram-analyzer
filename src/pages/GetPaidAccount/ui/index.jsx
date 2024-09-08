@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react"
-import "./getPaidAccount.scss"
+import React, { useEffect, useState } from "react";
+import "./getPaidAccount.scss";
 import {
   CenterDescription,
   FooterInformation,
   TimerBlock,
   TimerHeaderBlock,
-} from "../../../widgets"
-import { PayWindow } from "../../../features"
-import { useGetPaidAccount } from "../model/getPaidAccountTimer"
-import usePaymentData from "../../../shared/lib/hooks/payment/payment.hook"
-import GetPaymentData from "../../../shared/lib/hooks/payment/paymentSelector.hook"
-import { useRecurly, useCheckoutPricing } from "@recurly/react-recurly"
+} from "../../../widgets";
+import { PayWindow } from "../../../features";
+import { useGetPaidAccount } from "../model/getPaidAccountTimer";
+import usePaymentData from "../../../shared/lib/hooks/payment/payment.hook";
+import GetPaymentData from "../../../shared/lib/hooks/payment/paymentSelector.hook";
+import { useRecurly, useCheckoutPricing } from "@recurly/react-recurly";
+import { Loader } from "../../../shared";
 
 const GetPaidAccountPage = () => {
-
+  const [isLoaded, setIsLoaded] = useState(false); // New state to manage the delay
   const isAppleDevice = /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) && !window.MSStream;
 
   const {
@@ -23,17 +24,17 @@ const GetPaidAccountPage = () => {
     time,
     scrollToOffer,
     timerBlockRef,
-  } = useGetPaidAccount()
+  } = useGetPaidAccount();
 
   const {
     dispatchPlan,
     dispatchCurrency,
-  } = usePaymentData()
+  } = usePaymentData();
 
-  const { currency, plan } = GetPaymentData()
+  const { currency, plan } = GetPaymentData();
 
-  const [selectedCurrency, setSelectedCurrency] = useState("USD")
-  const [selectedPlan, setSelectedPlan] = useState("plan-code")
+  const [selectedCurrency, setSelectedCurrency] = useState(process.env.REACT_APP_DEFAULT_CURRENCY);
+  const [selectedPlan, setSelectedPlan] = useState(process.env.REACT_APP_DEFAULT_PLAN);
 
   useEffect(() => {
     dispatchPlan();
@@ -59,7 +60,16 @@ const GetPaidAccountPage = () => {
       currency: selectedCurrency,
     });
 
-  if (pricingLoading) return <></>
+  // Adding 1 second loading delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000); // 1 second delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isLoaded || pricingLoading) return  <div className="account-creating-wrapper"><div className="create-acc-section"><Loader/></div></div>
 
 
   return (

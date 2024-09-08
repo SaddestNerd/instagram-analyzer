@@ -167,13 +167,13 @@ const PayWindow = ({ svg, isAppleDevice, price }) => {
           />
           {errorLabel && (
             <p className="title11-regular-outfit error-message">
-              {errorLabel[0]}
+              {errorLabel[0]} 
             </p>
           )}
           {isAppleDevice ? (
             <button
               disabled={isButtonDisabledEmail}
-              class="apple-pay-button apple-pay-button-black"
+              className="apple-pay-button apple-pay-button-black"
               id="my-apple-pay-button"
             ></button>
           ) : (
@@ -184,7 +184,7 @@ const PayWindow = ({ svg, isAppleDevice, price }) => {
             />
           )}
         </div>
-      )}
+      )} 
     </div>
   )
 }

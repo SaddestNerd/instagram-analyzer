@@ -40,7 +40,7 @@ const AccessToApp = ({ token }) => {
     setIsLoginError(true)
   }, [error])
 
-  console.log(isLoginError, error)
+
   
   return (
     <div className="access-app-block">

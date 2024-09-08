@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { HeaderMenuElement, HeaderMenuExitButton } from "../../../../shared"
 import "./headerMenu.scss"
 import {
@@ -10,8 +10,12 @@ import {
   SwitchInstagramAccount,
   TermOfService,
 } from "../../../../shared/lib/icons/icons"
+import { Auth } from "../../../../shared/api/axios/requests/auth/auth.service"
 
 const HeaderMenu = ({ onClickExit, headerOpen, onClickPopup }) => {
+
+
+
   return (
     <div className="header-menu-wrapper">
       <div className={"header-menu" + (headerOpen ? " isActive" : "")}>

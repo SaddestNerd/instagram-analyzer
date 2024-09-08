@@ -44,6 +44,7 @@ const AccountAnalytic = () => {
     </div>
   }
 
+  console.log(profileAnalysis);
 
   return (
     <div className="analytics-wrapper">
@@ -53,7 +54,7 @@ const AccountAnalytic = () => {
         <UserEngagement profileAnalysis={profileAnalysis}/>
         <LikesAndComments profileAnalysis={profileAnalysis}/>
         <MostLikedPost profileAnalysis={profileAnalysis}/>
-        <Audience />
+        <Audience profileAnalysis={profileAnalysis} />
         <ViewInsights
           typeIcon="insights"
           altIcon="InsightsIcon"
