@@ -19,20 +19,19 @@ import usePaymentData from "../../../../shared/lib/hooks/payment/payment.hook"
 import GetPaymentData from "../../../../shared/lib/hooks/payment/paymentSelector.hook"
 import { useNavigate } from 'react-router-dom';
 
-const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice }) => {
+const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice, price }) => {
   const [openForm, setOpenForm] = useState(false)
   const offerRef = useRef(null)
   const recurly = useRecurly()
-  const { dispatchPlan, dispatchCurrency } = usePaymentData();
-  const [selectedCurrency, setSelectedCurrency] = useState("USD");
-  const [selectedPlan, setSelectedPlan] = useState("plan-code");
+
 
   scrollToOffer.current = () => {
     offerRef.current.scrollIntoView({ behavior: "smooth" })
   }
   const [errorLabel, setErrorLabel] = useState(null)
   const { subscribe } = usePaymentData();
-  const { loading, registerToken, error, currency, plan } = GetPaymentData();
+  const { loading, registerToken, error, } = GetPaymentData();
+
   const formRef = useRef()
   const [formData, setFormData] = useState({
     firstName: "",
@@ -70,36 +69,6 @@ const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice }) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
     setErrorLabel(null)
   }
-
-  useEffect(() => {
-
-    dispatchPlan();
-    dispatchCurrency();
-  }, []);
-
-  useEffect(() => {
-  
-    if (plan) {
-      setSelectedPlan(plan.planCode);
-    }
-    if (currency) {
-      setSelectedCurrency(currency.currencyCode);
-    }
-  }, [plan, currency]);
-
-  const [{ price, loading: pricingLoading }, setCheckoutPricing] =
-    useCheckoutPricing({
-      subscriptions: [
-        {
-          plan: selectedPlan,
-        },
-      ],
-      currency: selectedCurrency,
-    });
-
-
-  if (pricingLoading) return <></>
-
 
   return (
     <div className="under-wrapper">

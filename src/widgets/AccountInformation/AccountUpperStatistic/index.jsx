@@ -1,34 +1,14 @@
-import React, { useEffect} from "react"
+import React from "react"
 import "./accountUpperStatistic.scss"
 import { StatisticBlock } from "../../../shared"
 import Avatar from "../../../shared/ui/Avatar"
-import useInstagramData from "../../../shared/lib/hooks/instagram/instagram.hook"
-import GetInstagamData from "../../../shared/lib/hooks/instagram/instagramSelector.hook"
-
-const AccountUpperStatistic = () => {
-
-  const { dispatchInstagramAccount } = useInstagramData();
-  const { loading, profile } = GetInstagamData();
 
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await dispatchInstagramAccount();
-
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    }
-    fetchData();
-  }, [])
-
-
-  if (loading) return <></>
+const AccountUpperStatistic = ({profile}) => {
 
   return (
     <div className="account-upper-statistic">
-      <Avatar fullname={profile?.fullName} nickname={profile?.username} img={profile?.pictureBase64}/>
+      <Avatar fullname={profile?.fullName ? profile?.fullName : profile?.username} nickname={profile?.username} img={profile?.pictureBase64}/>
       <div className="flex-statistics">
         <StatisticBlock svg={"Followers"} name={"Followers"} stat={profile?.followersCount} />
         <StatisticBlock svg={"Posts"} name={"Posts"} stat={profile?.postsCount} />

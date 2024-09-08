@@ -3,7 +3,7 @@ import "./getAnalysis.scss"
 import { InstAnalysis } from "../../../../features"
 import { Icon } from "../../../../shared"
 
-const GetAnalysis = ({ nextForm, showPopup }) => {
+const GetAnalysis = ({ handleSubmit, handleChange, showPopup, nickname }) => {
   return (
     <div className="get-analysis-section">
       <div className="get-analysis-block">
@@ -18,7 +18,7 @@ const GetAnalysis = ({ nextForm, showPopup }) => {
         <p className="title14-regular-urbanist">
           Enter your Instagram username to get full data analysis
         </p>
-        <InstAnalysis onClick={nextForm} />
+        <InstAnalysis onClick={handleSubmit} nickname={nickname} handleChange={handleChange} />
         <div className="get-analysis-defence">
           <Icon type="defence" width={28} height={28} alt="icon"></Icon>
           <p className="title14-regular-urbanist defence-text">

@@ -2,11 +2,16 @@ import React from "react"
 import "./accountFooter.scss"
 import { Icon } from "../../../shared"
 import { Link } from "react-router-dom"
+import GetInstagamData from "../../../shared/lib/hooks/instagram/instagramSelector.hook"
 
 const AccountFooter = ({ hasNextUpdate }) => {
+
+
+  const { loading, error } = GetInstagamData()
+
   return (
     <div
-      className={`account-footer ${hasNextUpdate ? "with-next-update" : ""}`}
+      className={`account-footer ${loading || error ? "null-margin" : ""} ${hasNextUpdate ? "with-next-update" : ""}`}
     >
       <Icon type="logo" alt="logo" width={64} height={64}></Icon>
       <ul className="flex-footer-menu">

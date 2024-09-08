@@ -5,21 +5,8 @@ import useInstagramData from "../../../../shared/lib/hooks/instagram/instagram.h
 import GetInstagamData from "../../../../shared/lib/hooks/instagram/instagramSelector.hook"
 import { format } from "date-fns"
 
-const MostLikedPost = () => {
-  const { dispatchInstagramAnalysisAccount } = useInstagramData()
-  const { loading, profileAnalysis } = GetInstagamData()
+const MostLikedPost = ({profileAnalysis}) => {
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await dispatchInstagramAnalysisAccount()
-      } catch (error) {
-        console.error("Error:", error)
-      }
-    }
-    fetchData()
-  }, [])
-  if (loading) return <></>
   const top3Posts = profileAnalysis?.top3Posts || []
   return (
     <div className="most-liked-section">

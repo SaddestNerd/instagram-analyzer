@@ -1,24 +1,9 @@
-import React, { useEffect } from "react"
+import React from "react"
 import "./userEngagement.scss"
 import { OverallRate, AnalyticBlock } from "../../../../shared"
-import useInstagramData from "../../../../shared/lib/hooks/instagram/instagram.hook"
-import GetInstagamData from "../../../../shared/lib/hooks/instagram/instagramSelector.hook"
 
-const UserEngagement = () => {
-  const { dispatchInstagramAnalysisAccount } = useInstagramData()
-  const { loading, profileAnalysis } = GetInstagamData()
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await dispatchInstagramAnalysisAccount()
-      } catch (error) {
-        console.error("Error:", error)
-      }
-    }
-    fetchData()
-  }, [])
-  if (loading) return <></>
+const UserEngagement = ({profileAnalysis}) => {
 
   return (
     <div className="user-engagement-section">
