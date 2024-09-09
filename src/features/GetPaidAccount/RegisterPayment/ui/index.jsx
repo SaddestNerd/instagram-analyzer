@@ -3,8 +3,11 @@ import "./registerPayment.scss";
 import { DefaultInput, CardNumberElementInput, CardYearElementInput, CardMonthElementInput, CardCvvElementInput } from "../../../../shared";
 
 
-const RegisterPayment = ({ handleSubmit, changeHandlerData, formRef, formData }) => {
+const RegisterPayment = ({ handleSubmit, changeHandlerData, formRef, formData, isError, isMissingAt, isMissingDot  }) => {
+
+
   
+
   return (
     <div className="register-payment-form-block">
       <form onSubmit={handleSubmit} ref={formRef}>
@@ -18,6 +21,8 @@ const RegisterPayment = ({ handleSubmit, changeHandlerData, formRef, formData })
               dataRecurly="first_name"
               name="firstName"
             />
+
+
             <DefaultInput
               text={"Last name"}
               placeholder={"Enter your last name"}
@@ -34,7 +39,17 @@ const RegisterPayment = ({ handleSubmit, changeHandlerData, formRef, formData })
               name="email"
               value={formData.email}
               onChange={changeHandlerData}
+              isError={formData.email.length > 0 && isError}
             />
+            { formData.email.length > 0 && isError && (
+              <p className="title11-regular-outfit error-message null-padding">
+                {isMissingAt
+                  ? "Email must contain '@' symbol."
+                  : isMissingDot
+                    ? "Email must contain '.' after '@'."
+                    : "Please enter a valid email address."}
+              </p>
+            )}
           </div>
         </div>
 
@@ -50,16 +65,16 @@ const RegisterPayment = ({ handleSubmit, changeHandlerData, formRef, formData })
                   placeholder={"MM"}
                   text={"Expires on"}
                 />
-                 <CardYearElementInput
+                <CardYearElementInput
                   placeholder={"YY"}
                   text={"_"}
                 />
               </div>
 
               <CardCvvElementInput
-                  placeholder={"YY"}
-                  text={"CVC"}
-                />
+                placeholder={"YY"}
+                text={"CVC"}
+              />
             </div>
           </div>
         </div>

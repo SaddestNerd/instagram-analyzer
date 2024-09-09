@@ -30,7 +30,9 @@ export const useAccessForm = () => {
   const isButtonDisabled =
   email.length < 6 || password.length < 6 || !isValidEmail
   const isPasswordShort = password.length < 6 && password.length > 0
-
+  const isPasswordHasUpperCase = /[A-Z]/.test(password);
+  const isPasswordHasLowerCase = /[a-z]/.test(password);
+  const isPasswordHasNumberOrSymbol = /[\d\W]/.test(password);
   const isButtonDisabledEmail = email.length < 6 || !isValidEmail
 
   return {
@@ -45,6 +47,9 @@ export const useAccessForm = () => {
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
+    isPasswordHasUpperCase,
+    isPasswordHasLowerCase,
+    isPasswordHasNumberOrSymbol,
     isButtonDisabledEmail,
     isLoginError,
     setIsLoginError,

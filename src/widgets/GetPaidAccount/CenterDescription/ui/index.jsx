@@ -18,6 +18,7 @@ import { useRecurly, useCheckoutPricing } from "@recurly/react-recurly"
 import usePaymentData from "../../../../shared/lib/hooks/payment/payment.hook"
 import GetPaymentData from "../../../../shared/lib/hooks/payment/paymentSelector.hook"
 import { useNavigate } from 'react-router-dom';
+import { validateEmail } from "../../../../shared/lib/hooks/validateEmail"
 
 const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice, price }) => {
   const [openForm, setOpenForm] = useState(false)
@@ -38,6 +39,9 @@ const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice, price 
     lastName: "",
     email: "",
   })
+
+  const { isValidEmail, isMissingAt, isMissingDot, isError } = validateEmail(formData.email);
+
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
@@ -69,6 +73,7 @@ const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice, price 
     setFormData({ ...formData, [event.target.name]: event.target.value })
     setErrorLabel(null)
   }
+
 
   return (
     <div className="under-wrapper">
@@ -116,14 +121,14 @@ const CenterDescription = ({ onActiveModal, scrollToOffer, isAppleDevice, price 
             <div className="right title20-semibold-outfit">{price.currency.symbol}{price.now.total}</div>
           </div>
         </div>
-        {openForm ? <RegisterPayment formRef={formRef} changeHandlerData={changeHandlerData} handleSubmit={handleSubmit} formData={formData} /> : <></>}
+        {openForm ? <RegisterPayment formRef={formRef} changeHandlerData={changeHandlerData} handleSubmit={handleSubmit} formData={formData} isValidEmail={isValidEmail} isMissingAt={isMissingAt} isMissingDot={isMissingDot} isError={isError}/> : <></>}
       </div>
       {errorLabel && (<p className="title14-regular-urbanist error-message error-center">
         {errorLabel}
       </p>)}
       <div className="pay-wrapper">
         {openForm ?
-          <DefaultButton text={"Process credit card"} onClick={handleSubmit} /> :
+          <DefaultButton text={"Process credit card"} onClick={handleSubmit} isDisabled={isError} /> :
           <DefaultButton text={"Get my plan"} onClick={() => { setOpenForm(!openForm) }} />}
 
         <div className="or-wrapper title11-regular-outfit">OR</div>
