@@ -24,8 +24,6 @@ const AccountInformation = () => {
     fetchData();
   }, [])
 
-  console.log(error)
-
   if (loading) {
     return <div className="account-information-page"><div className="upper-gradient"></div><Loader/></div>
   }

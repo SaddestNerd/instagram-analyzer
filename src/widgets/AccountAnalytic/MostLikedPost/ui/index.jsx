@@ -24,7 +24,7 @@ const MostLikedPost = ({profileAnalysis}) => {
             height={24}
             alt="likesIcon" 
             strokeColor="#315DF4"
-            text={post.likesCount.toString()}
+            text={post.likesCount.toString() ? post?.likesCount.toString() : "0"}
             imageURL={post.pictureBase64}
           />
         ))}

@@ -13,11 +13,11 @@ const UserEngagement = ({profileAnalysis}) => {
       <div className="user-engagement-block">
         <OverallRate />
         <AnalyticBlock
-          text={profileAnalysis?.avgLikes}
+          text={profileAnalysis?.avgLikes ? profileAnalysis?.avgLikes : "0"}
           title="Avg. Likes/Post"
         />
         <AnalyticBlock
-          text={profileAnalysis?.avgComments}
+          text={profileAnalysis?.avgComments ? profileAnalysis?.avgComments : "0"}
           title="Avg. Comments/Post"
         />
       </div>

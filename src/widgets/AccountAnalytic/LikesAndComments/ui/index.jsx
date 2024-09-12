@@ -13,7 +13,7 @@ const LikesAndComments = ({profileAnalysis}) => {
       </p>
       <div className="like-comment-block">
         <AnalyticBlock
-          text={profileAnalysis?.totalLikes}
+          text={profileAnalysis?.totalLikes ? profileAnalysis?.totalLikes : "0"}
           title="Likes"
           className="analytic-block-iconbg"
           type="likes"
@@ -23,7 +23,7 @@ const LikesAndComments = ({profileAnalysis}) => {
           strokeColor="#315DF4"
         />
         <AnalyticBlock
-          text={profileAnalysis?.totalComments}
+          text={profileAnalysis?.totalComments ? profileAnalysis?.totalComments : "0"} 
           title="Comments"
           className="analytic-block-iconbg"
           type="comments"

@@ -4,7 +4,7 @@ export const useAccessForm = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
-  const  [isLoginError, setIsLoginError] = useState(false)
+  const [isLoginError, setIsLoginError] = useState(false)
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword)
@@ -26,12 +26,20 @@ export const useAccessForm = () => {
   const isMissingAt = !email.includes("@")
   const isMissingDot = email.includes("@") && !email.includes(".")
 
-
   const isButtonDisabled =
-  email.length < 6 || password.length < 6 || !isValidEmail
+    email.length < 6 || password.length < 6 || !isValidEmail
   const isPasswordShort = password.length < 6 && password.length > 0
-
+  const isPasswordHasUpperCase = /[A-Z]/.test(password)
+  const isPasswordHasLowerCase = /[a-z]/.test(password)
+  const isPasswordHasNumberOrSymbol = /[\d\W]/.test(password)
   const isButtonDisabledEmail = email.length < 6 || !isValidEmail
+  const isButtonDisabledEmailPassword =
+    email.length < 6 ||
+    password.length < 6 ||
+    !isValidEmail ||
+    !isPasswordHasUpperCase ||
+    !isPasswordHasLowerCase ||
+    !isPasswordHasNumberOrSymbol
 
   return {
     email,
@@ -45,9 +53,13 @@ export const useAccessForm = () => {
     isMissingDot,
     isButtonDisabled,
     isPasswordShort,
+    isPasswordHasUpperCase,
+    isPasswordHasLowerCase,
+    isPasswordHasNumberOrSymbol,
     isButtonDisabledEmail,
+    isButtonDisabledEmailPassword,
     isLoginError,
     setIsLoginError,
-    setEmail
+    setEmail,
   }
 }

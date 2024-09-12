@@ -71,5 +71,18 @@ export const Auth = {
 			handleError(error, 'Password change failed')
 			return false;
 		}
-	}
+	},
+	getUserInfo: async () => {
+		try {
+		  const user = auth.currentUser
+		  const decodedToken = await auth.currentUser.getIdTokenResult()
+	  
+		  console.log('Claims:', decodedToken.claims)
+	  
+		  return user
+		} catch (error) {
+		  handleError(error, 'Failed to retrieve user info')
+		  return null
+		}
+	  }
 };

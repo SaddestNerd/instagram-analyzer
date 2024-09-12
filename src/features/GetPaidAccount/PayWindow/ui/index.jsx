@@ -24,20 +24,27 @@ const PayWindow = ({ svg, isAppleDevice, price }) => {
     isMissingAt,
     isMissingDot,
     isButtonDisabledEmail,
+    isLoginError,
+    setIsLoginError
   } = useAccessForm()
 
 
+  const [errorLabel, setErrorLabel] = useState(null)
+  
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
     emailRef.current = e.target.value
     setErrorLabel(null)
   }
-  const [errorLabel, setErrorLabel] = useState(null)
+
+
   const emailRef = useRef(email)
   const navigate = useNavigate()
   const { loading, registerToken, error, currency, plan } = GetPaymentData()
   
-
+  useEffect(() => {
+    setIsLoginError(true)
+  }, [error])
 
 
 
@@ -48,6 +55,7 @@ const PayWindow = ({ svg, isAppleDevice, price }) => {
       }
     }
   }, [registerToken])
+  
 
   useEffect(() => {
     if (!loading && currency && plan) {
@@ -65,7 +73,7 @@ const PayWindow = ({ svg, isAppleDevice, price }) => {
                 payment,
                 tokenId: token.id,
               })
-              setErrorLabel(error)
+              // setErrorLabel(error)
             },
           },
         })
@@ -103,7 +111,7 @@ const PayWindow = ({ svg, isAppleDevice, price }) => {
                 email: emailRef.current,
                 tokenId: token.id,
               })
-              setErrorLabel(error)
+              // setErrorLabel(error)
             },
           },
         })
@@ -165,15 +173,15 @@ const PayWindow = ({ svg, isAppleDevice, price }) => {
             onChange={handleEmailChange}
             isError={!isValidEmail && email.length > 0}
           />
-          {errorLabel && (
-            <p className="title11-regular-outfit error-message">
-              {errorLabel[0]}
+          {isLoginError && (
+            <p className="title14-regular-outfit error-message">
+              {error} 
             </p>
           )}
           {isAppleDevice ? (
             <button
               disabled={isButtonDisabledEmail}
-              class="apple-pay-button apple-pay-button-black"
+              className="apple-pay-button apple-pay-button-black"
               id="my-apple-pay-button"
             ></button>
           ) : (
@@ -184,7 +192,7 @@ const PayWindow = ({ svg, isAppleDevice, price }) => {
             />
           )}
         </div>
-      )}
+      )} 
     </div>
   )
 }

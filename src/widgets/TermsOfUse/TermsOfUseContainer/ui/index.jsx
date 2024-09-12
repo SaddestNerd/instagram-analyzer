@@ -4,10 +4,10 @@ import "./termsOfUseContainer.scss"
 const TermsOfUseContainer = () => {
   return (
     <div className="terms-container">
-      <div class="content-box">
+      <div className="content-box">
         <h1>END USER LICENSE AGREEMENT</h1>
-        <p class="head">Last Updated: Feb 27, 2024</p>
-        <ol class="main">
+        <p className="head">Last Updated: Feb 27, 2024</p>
+        <ol className="main">
           <p>
             This End User License Agreement is a valid agreement between You and
             the Us. Please, read this EULA carefully. The rules of the EULA are
@@ -18,14 +18,14 @@ const TermsOfUseContainer = () => {
             the EULA and agree to be bound by it.
           </p>
           <li>
-            <span class="main-list">DEFINITIONS AND TERMS</span>
+            <span className="main-list">DEFINITIONS AND TERMS</span>
             <p>
               In order to understand the rules of the EULA clearly you shall
               familiarize yourself with the meaning of terms used in the EULA.
               In this EULA the following terms, when capitalized, shall have the
               following meanings:
             </p>
-            <ol class="secondary">
+            <ol className="secondary">
               <li>
                 “Account” – means a personal account of a user of the Platform
                 services, which is provided by the Platform Administrator under
@@ -118,8 +118,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">LEGAL CAPACITY AND AGE</span>
-            <ol class="secondary">
+            <span className="main-list">LEGAL CAPACITY AND AGE</span>
+            <ol className="secondary">
               <li>
                 The Application is designed for users over 16. If You install
                 and/or use the App, You confirm that You are at least 16 years
@@ -136,8 +136,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">CHANGES OF THE EULA</span>
-            <ol class="secondary">
+            <span className="main-list">CHANGES OF THE EULA</span>
+            <ol className="secondary">
               <li>
                 We may introduce changes to this EULA from time to time. You
                 shall regularly check the latest version of the EULA at the
@@ -153,8 +153,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">DEVICE</span>
-            <ol class="secondary">
+            <span className="main-list">DEVICE</span>
+            <ol className="secondary">
               <li>
                 If You intend to download onto and/or run the App on any Device
                 not owned by You, You must have the owner’s permission to do so.
@@ -179,8 +179,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">INTELLECTUAL PROPERTY</span>
-            <ol class="secondary">
+            <span className="main-list">INTELLECTUAL PROPERTY</span>
+            <ol className="secondary">
               <li>
                 We hereby grant You a non-exclusive, personal, limited,
                 revocable and non-transferable license to access, download and
@@ -227,8 +227,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">UPDATES</span>
-            <ol class="secondary">
+            <span className="main-list">UPDATES</span>
+            <ol className="secondary">
               <li>
                 We may, though not obliged, update the App from time to time,
                 making such updates, supplements or new versions of the App
@@ -256,8 +256,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">PURCHASING SUBSCRIPTION. TRIAL PERIOD</span>
-            <ol class="secondary">
+            <span className="main-list">PURCHASING SUBSCRIPTION. TRIAL PERIOD</span>
+            <ol className="secondary">
               <li>
                 The App as a whole or its certain part (additional Content) is
                 provided on a paid subscription basis. The fee may vary
@@ -265,7 +265,7 @@ const TermsOfUseContainer = () => {
               </li>
               <li>
                 Purchase from the App Store or Google Play.
-                <ol class="no-pad">
+                <ol className="no-pad">
                   <li>
                     When You purchase a Subscription from the App Store or
                     Google Play, the Platform Administrator charges Your Account
@@ -300,7 +300,7 @@ const TermsOfUseContainer = () => {
               </li>
               <li>
                 Direct Purchase from the Company.
-                <ol class="no-pad">
+                <ol className="no-pad">
                   <li>
                     You may purchase a Subscription directly from the Company,
                     in which case it is the Company and the external payment
@@ -341,7 +341,7 @@ const TermsOfUseContainer = () => {
               </li>
               <li>
                 AUTOMATIC RENEWAL OF SUBSCRIPTION. CANCELLATION OF SUBSCRIPTION
-                <ol class="no-pad">
+                <ol className="no-pad">
                   <li>
                     The Subscription will renew automatically for the same
                     period at the end of the Subscription term at the cost of
@@ -376,11 +376,11 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">REFUND POLICY</span>
-            <ol class="secondary">
+            <span className="main-list">REFUND POLICY</span>
+            <ol className="secondary">
               <li>
                 MONEY-BACK GUARANTEE RULES
-                <ol class="no-pad">
+                <ol className="no-pad">
                   <li>
                     Please kindly note that we offer refunds to our customers
                     who made direct purchase from the Company.
@@ -391,7 +391,7 @@ const TermsOfUseContainer = () => {
                       support@followstats.app{" "}
                     </a>
                     containing the following information:
-                    <ul class="subsecondary">
+                    <ul className="subsecondary">
                       <li>
                         Name and Surname of the customer, who purchased the
                         services;
@@ -440,8 +440,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">USER-GENERATED CONTENT</span>
-            <ol class="secondary">
+            <span className="main-list">USER-GENERATED CONTENT</span>
+            <ol className="secondary">
               <li>
                 Some of Our Apps provide You with an opportunity to track
                 analytical data with regard to Your social network profile.
@@ -475,8 +475,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">LINKS TO EXTERNAL SITES AND SERVICES</span>
-            <ol class="secondary">
+            <span className="main-list">LINKS TO EXTERNAL SITES AND SERVICES</span>
+            <ol className="secondary">
               <li>
                 The App may contain links to external sites and services (for
                 example, applications for mobile devices). If You decide to
@@ -496,8 +496,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">DISCLAIMER</span>
-            <ol class="secondary">
+            <span className="main-list">DISCLAIMER</span>
+            <ol className="secondary">
               <li>
                 To the fullest extent permitted by applicable law, We and Our
                 affiliates, officers, employees, agents, partners, and licensors
@@ -514,7 +514,7 @@ const TermsOfUseContainer = () => {
               </li>
               <li>
                 <p>We make no warranty that:</p>
-                <ul class="subsecondary">
+                <ul className="subsecondary">
                   <li>the App will meet Your requirements;</li>
                   <li>the App will be error-free, secure, or uninterrupted;</li>
                   <li>any App functionality errors will be corrected;</li>
@@ -540,8 +540,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">TRANSFER OF RIGHTS</span>
-            <ol class="secondary">
+            <span className="main-list">TRANSFER OF RIGHTS</span>
+            <ol className="secondary">
               <li>
                 We may transfer Our rights and obligations under this EULA to
                 any other organization or individual without Your consent. We
@@ -556,8 +556,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">YOUR VIOLATION OF THE EULA</span>
-            <ol class="secondary">
+            <span className="main-list">YOUR VIOLATION OF THE EULA</span>
+            <ol className="secondary">
               <li>
                 We may end Your rights to use the App at any time by contacting
                 You if You have broken the rules of this EULA in a serious way.
@@ -566,7 +566,7 @@ const TermsOfUseContainer = () => {
               </li>
               <li>
                 <p>If We end Your rights to use the App:</p>
-                <ul class="subsecondary">
+                <ul className="subsecondary">
                   <li>
                     You must stop all activities authorized by this EULA,
                     including Your use of the App; and
@@ -581,8 +581,8 @@ const TermsOfUseContainer = () => {
             </ol>
           </li>
           <li>
-            <span class="main-list">MISCELLANEOUS</span>
-            <ol class="secondary">
+            <span className="main-list">MISCELLANEOUS</span>
+            <ol className="secondary">
               <li>
                 Each of the paragraphs of this EULA operates separately. If any
                 court or relevant authority decides that any of them is

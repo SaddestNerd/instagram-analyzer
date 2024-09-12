@@ -13,10 +13,32 @@
     padding: 30px 16px;
     color: $black;
 
-    .analysing-profile-p {
-      color: $darkGray;
-      margin-bottom: 14px;
+    .text-with-dots {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: $appBlue;
+      gap: 8px;
     }
+    
+.loader-dots {
+  width: 30px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#315df4 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: dots 1s infinite linear;
+}
+@keyframes dots {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+    
     .analysing-profile-clock {
       max-width: 100%;
       margin-top: 40px;

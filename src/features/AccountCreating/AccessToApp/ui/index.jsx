@@ -19,7 +19,11 @@ const AccessToApp = ({ token }) => {
     isMissingAt,
     isMissingDot,
     isButtonDisabled,
+    isButtonDisabledEmailPassword,
     isPasswordShort,
+    isPasswordHasUpperCase,
+    isPasswordHasLowerCase,
+    isPasswordHasNumberOrSymbol,
     isLoginError,
     setIsLoginError
   } = useAccessForm()
@@ -27,21 +31,17 @@ const AccessToApp = ({ token }) => {
   const { signUp } = useAuthData();
   const { error } = GetAuthData();
 
-
-
-
   const handleSubmit = (event) => {
     event.preventDefault();
     signUp(email, password, token)
-    
+
   };
 
   useEffect(() => {
     setIsLoginError(true)
   }, [error])
 
-  console.log(isLoginError, error)
-  
+
   return (
     <div className="access-app-block">
       <div>
@@ -83,11 +83,23 @@ const AccessToApp = ({ token }) => {
           />
         </span>
       </div>
-      {isPasswordShort && (
+      {isPasswordShort && password.length > 0 ? (
         <p className="title11-regular-outfit error-message">
           The password must be 6 characters long or more.
         </p>
-      )}
+      ) : !isPasswordHasUpperCase && password.length > 0 ? (
+        <p className="title11-regular-outfit error-message">
+          The password must contain at least one uppercase letter.
+        </p>
+      ) : !isPasswordHasLowerCase && password.length > 0 ? (
+        <p className="title11-regular-outfit error-message">
+          The password must contain at least one lowercase letter.
+        </p>
+      ) : !isPasswordHasNumberOrSymbol && password.length > 0 ? (
+        <p className="title11-regular-outfit error-message">
+          The password must contain at least one number or symbol.
+        </p>
+      ) : null}
       {isLoginError && (
         <p className="title11-regular-outfit error-message">
           {error}
@@ -97,7 +109,7 @@ const AccessToApp = ({ token }) => {
         <DefaultButton
           text="sign up"
           onClick={handleSubmit}
-          isDisabled={isButtonDisabled}
+          isDisabled={isButtonDisabledEmailPassword}
 
         />
       </div>

@@ -2,7 +2,7 @@ import React from "react"
 import "./audience.scss"
 import { AnalyticBlock } from "../../../../shared"
 
-const Audience = () => {
+const Audience = ({profileAnalysis}) => {
   return (
     <div className="audience-section">
       <p className="title20-bold-urbanist analytic-widget-title-color">
@@ -10,7 +10,7 @@ const Audience = () => {
       </p>
       <div className="audience-block">
         <AnalyticBlock
-          text="0"
+          text={profileAnalysis?.lostFollowers ? profileAnalysis?.lostFollowers : "0"}
           title="Lost Followers"
           className="analytic-block-iconbg"
           type="lostFollowers"
@@ -21,7 +21,7 @@ const Audience = () => {
           classNameClock="analytic-block-iconClockbg"
         />
         <AnalyticBlock
-          text="0"
+          text={ profileAnalysis?.newFollowers ? profileAnalysis?.newFollowers: "0"}
           title="New Followers"
           className="analytic-block-iconbg"
           type="newFollowers"

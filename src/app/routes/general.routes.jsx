@@ -30,7 +30,7 @@ export const useRoutes = () => {
       <>
         <div className="flex-box">
           <AccountHeader isLogo={isLogo} />
-          {element}
+            {element}
           <AccountFooter hasNextUpdate={hasNextUpdate} />
         </div>
       </>
@@ -54,7 +54,7 @@ export const useRoutes = () => {
         <Route path="/account-create" exact element={<AccountCreatingPage />} />
         <Route path="/enter-account" exact element={<EnterAccountPage />} />
 
-
+      
         <Route element={<PrivateRoute />}> 
           <Route
             path="/account-information"

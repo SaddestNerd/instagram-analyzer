@@ -4,7 +4,7 @@ import "./privacyPolicy.scss"
 const TermsOfUseContainer = () => {
   return (
     <div className="terms-container">
-      <div class="content-box">
+      <div className="content-box">
         <h1>Privacy Policy</h1>
         <p>
           <i>Last Updated: Feb 27, 2024</i>

@@ -7,6 +7,12 @@ const AnalysingProfile = ({ progress }) => {
     <div className="analysing-profile-section">
       <div className="analysing-profile-block">
         <CircleProgressBar progress={progress} />
+        {progress === 100 && (
+          <div className="text-with-dots">
+          <p className="title16-semibold-urbanist waiting-text">Wait, the server is still receiving data</p>
+          <div className="loader-dots"></div>
+        </div>
+        )}
         <p className="title24-medium-urbanist">Analysing your account</p>
         <p className="title14-regular-urbanist">
           Your profile data is being processed, detailed profile analysis will

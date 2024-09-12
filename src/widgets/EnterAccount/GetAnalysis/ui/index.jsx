@@ -26,15 +26,6 @@ const GetAnalysis = ({ handleSubmit, handleChange, showPopup, nickname }) => {
             We will never action on your behalf.
           </p>
         </div>
-        <button onClick={() => showPopup("privateAccount")}>
-          Test Private Account Popup
-        </button>
-        <button onClick={() => showPopup("accountNotFound")}>
-          Test Account Not Found Popup
-        </button>
-        <button onClick={() => showPopup("somethingWentWrong")}>
-          Test Something Went Wrong Popup
-        </button>
       </div>
     </div>
   )
