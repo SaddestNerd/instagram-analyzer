@@ -8,13 +8,14 @@ import "./style/fonts.scss"
 import { RecurlyProvider, Elements } from "@recurly/react-recurly"
 import { Provider } from 'react-redux';
 import store from "./store/store"
-
+import ImagePreloader from '../shared/lib/config/ImagePreloader';
 
 function App() {
   const routes = useRoutes()
 
   return (
     <div className="App">
+      <ImagePreloader />
       <Provider store={store}>
         <RecurlyProvider publicKey="fra-1W3TP1d41gok1zJBD4Cn3O">
           <Elements>
